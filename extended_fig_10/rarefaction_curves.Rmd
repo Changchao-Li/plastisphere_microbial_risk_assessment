@@ -1,0 +1,309 @@
+
+```{r}
+library(vegan)
+library(picante)
+library(ggplot2)   
+
+alpha_index <- function(x, method = 'richness', tree = NULL, base = exp(1)) {
+    if (method == 'richness') result <- rowSums(x > 0)   
+    else if (method == 'chao1') result <- estimateR(x)[2, ]   
+    else if (method == 'ace') result <- estimateR(x)[4, ]    
+    else if (method == 'shannon') result <- diversity(x, index = 'shannon', base = base)   
+    else if (method == 'simpson') result <- diversity(x, index = 'simpson')   
+    else if (method == 'pielou') result <- diversity(x, index = 'shannon', base = base) / log(estimateR(x)[1, ], base)   
+    else if (method == 'gc') result <- 1 - rowSums(x == 1) / rowSums(x)    
+    else if (method == 'pd' & !is.null(tree)) {   
+        pd <- pd(x, tree, include.root = FALSE)
+        result <- pd[ ,1]
+        names(result) <- rownames(pd)
+    }
+    result
+}
+ 
+
+alpha_curves <- function(x, step, method = 'richness', rare = NULL, tree = NULL, base = exp(1)) {
+    x_nrow <- nrow(x)
+    if (is.null(rare)) rare <- rowSums(x) else rare <- rep(rare, x_nrow)
+    alpha_rare <- list()
+    
+    for (i in 1:x_nrow) {
+        step_num <- seq(0, rare[i], step)
+        if (max(step_num) < rare[i]) step_num <- c(step_num, rare[i])
+        
+        alpha_rare_i <- NULL
+        for (step_num_n in step_num) alpha_rare_i <- c(alpha_rare_i, alpha_index(x = rrarefy(x[i, ], step_num_n), method = method, tree = tree, base = base))
+        names(alpha_rare_i) <- step_num
+        alpha_rare <- c(alpha_rare, list(alpha_rare_i))
+    }
+    
+    names(alpha_rare) <- rownames(x)
+    alpha_rare
+}
+ 
+```
+
+
+```{r}
+
+otu <- read.csv("bac_otutab_paired.csv", row.names = 1)
+
+otu_t <- t(otu)
+
+richness_curves <- alpha_curves(otu_t, step = 2000, method = 'richness')
+
+plot_richness <- data.frame()
+for (i in names(richness_curves)) {
+    richness_curves_i <- (richness_curves[[i]])
+    richness_curves_i <- data.frame(rare = names(richness_curves_i), alpha = richness_curves_i, sample = i, stringsAsFactors = FALSE)
+    plot_richness <- rbind(plot_richness, richness_curves_i)
+}
+ 
+rownames(plot_richness) <- NULL
+plot_richness$rare <- as.numeric(plot_richness$rare)
+plot_richness$alpha <- as.numeric(plot_richness$alpha)
+
+
+group <- read.csv("bac_metadata_paired.csv")
+
+plot_richness2 <- merge(plot_richness, group, by = "sample", all.x = T)
+
+
+p1 <- ggplot(plot_richness2) +
+  
+  geom_line(aes(rare, alpha, group = sample, color = Habitat)) +
+  
+  labs(x = 'Number of sequences', y = 'Richness', color = NULL) +
+  
+  scale_color_manual(values =  c("#7B9DBB", "#EFB04B")) +
+  
+  theme_bw() +
+  
+  theme(legend.position = c(0.2, 0.8), )+
+  
+  geom_vline(xintercept = 24000, linetype = 2) +
+  
+  scale_x_continuous(breaks = seq(0, 24000, 5000), labels = as.character(seq(0, 24000, 5000)))
+
+
+p1
+
+```
+
+
+```{r}
+
+otu <- read.csv('t_otutab_fungi_paired.csv', row.names = 1)
+
+richness_curves <- alpha_curves(otu, step = 500, method = 'richness')
+
+plot_richness <- data.frame()
+for (i in names(richness_curves)) {
+    richness_curves_i <- (richness_curves[[i]])
+    richness_curves_i <- data.frame(rare = names(richness_curves_i), alpha = richness_curves_i, sample = i, stringsAsFactors = FALSE)
+    plot_richness <- rbind(plot_richness, richness_curves_i)
+}
+ 
+rownames(plot_richness) <- NULL
+plot_richness$rare <- as.numeric(plot_richness$rare)
+plot_richness$alpha <- as.numeric(plot_richness$alpha)
+
+
+group <- read.csv("fung_metadata_paired.csv")
+
+plot_richness2 <- merge(plot_richness, group, by = "sample", all.x = T)
+
+
+p2 <- ggplot(plot_richness2) +
+  
+  geom_line(aes(rare, alpha, group = sample, color = Habitat)) +
+  
+  labs(x = 'Number of sequences', y = 'Richness', color = NULL) +
+  
+  scale_color_manual(values =  c("#7B9DBB", "#EFB04B")) +
+  
+  theme_bw() +
+  
+  theme(legend.position = c(0.2, 0.8), )+
+  
+  geom_vline(xintercept = 5700, linetype = 2) +
+  
+  scale_x_continuous(breaks = seq(0, 5700, 1000), labels = as.character(seq(0, 5700, 1000)))
+
+
+p2
+
+```
+
+
+```{r}
+
+otu <- read.csv('algae_otutab_paired.csv', row.names = 1)
+
+otu_t <- t(otu)
+
+richness_curves <- alpha_curves(otu_t, step = 500, method = 'richness')
+
+plot_richness <- data.frame()
+for (i in names(richness_curves)) {
+    richness_curves_i <- (richness_curves[[i]])
+    richness_curves_i <- data.frame(rare = names(richness_curves_i), alpha = richness_curves_i, sample = i, stringsAsFactors = FALSE)
+    plot_richness <- rbind(plot_richness, richness_curves_i)
+}
+ 
+rownames(plot_richness) <- NULL
+plot_richness$rare <- as.numeric(plot_richness$rare)
+plot_richness$alpha <- as.numeric(plot_richness$alpha)
+
+
+group <- read.csv("algae_metadata_paired.csv")
+
+plot_richness2 <- merge(plot_richness, group, by = "sample", all.x = T)
+
+
+p3 <- ggplot(plot_richness2) +
+  
+  geom_line(aes(rare, alpha, group = sample, color = Habitat)) +
+  
+  labs(x = 'Number of sequences', y = 'Richness', color = NULL) +
+  
+  scale_color_manual(values =  c("#7B9DBB", "#EFB04B")) +
+  
+  theme_bw() +
+  
+  theme(legend.position = c(0.2, 0.8), )+
+  
+  geom_vline(xintercept = 4500, linetype = 2) +
+  
+  scale_x_continuous(breaks = seq(0, 4500, 1000), labels = as.character(seq(0, 4500, 1000)))
+
+
+p3
+
+
+```
+
+
+
+```{r}
+library(devtools)
+#install_github("microbiota/amplicon")
+suppressWarnings(suppressMessages(library(amplicon)))
+
+library("BiocManager")
+
+p_list = c("phyloseq", "microbiome")
+for(p in p_list){
+  if (!requireNamespace(p, quietly = TRUE))
+    BiocManager::install(p)}
+
+
+```
+
+
+```{r}
+
+alpha_sample_rare = function(otutab, metadata, group_col = "Habitat", length = 52, rep = 30, count_cutoff = 1) {
+
+  if (!requireNamespace("ggplot2", quietly = TRUE)) install.packages("ggplot2")
+  library(ggplot2)
+  
+  count <- otutab
+  count[count < count_cutoff] <- 0
+  count[count >= count_cutoff] <- 1
+  
+  sample_names <- colnames(count)
+  groups <- metadata[match(sample_names, rownames(metadata)), group_col]
+  group_list <- split(sample_names, groups)
+  
+  group_n <- sapply(group_list, length)
+  min_n <- min(group_n)
+  x <- unique(as.integer(seq(1, min_n, length.out = length)))
+  
+  result <- data.frame(sample = integer(), richness = numeric(), group = character())
+  
+  for (group_name in names(group_list)) {
+    group_samples <- group_list[[group_name]]
+    count_group <- count[, group_samples, drop = FALSE]
+    n_group <- length(group_samples)
+    
+    for (i in x) {
+      if (i > n_group) next
+      m <- min(choose(n_group, i), rep)
+      for (j in 1:m) {
+        idx <- sample(n_group, i)
+        temp <- count_group[, idx, drop = FALSE]
+        temp1 <- temp[rowSums(temp) > 0, , drop = FALSE]
+        richness <- dim(temp1)[1]
+        result <- rbind(result, data.frame(sample = i, richness = richness, group = group_name))
+      }
+    }
+  }
+  
+  result$sample <- as.numeric(as.character(result$sample))
+  
+  p <- ggplot(result, aes(x = sample, y = richness, color = group)) +
+    stat_summary(fun = mean, geom = "point") +
+    theme_bw() +
+    theme(legend.position = c(0.2, 0.8), )+
+    labs(x = "Sample size", y = "Feature richness", color = group_col) +
+    scale_color_manual(values = c("#7B9DBB", "#EFB04B")) 
+  
+  return(p)
+}
+
+```
+
+
+
+```{r}
+
+bac <- read.csv('bac_otutab_paired.csv', row.names = 1)
+
+group <- read.csv("bac_metadata_paired.csv", row.names = 1)
+
+
+p4 = alpha_sample_rare(bac, group, group_col = "Habitat", length= 52, rep=30, count_cutoff=1)
+
+p4
+```
+
+
+```{r}
+fungi <- read.csv('t_otutab_fungi_paired.csv', row.names = 1)
+
+fungi <- t(fungi)
+
+group <- read.csv("fung_metadata_paired.csv", row.names = 1)
+
+p5 = alpha_sample_rare(fungi, group, group_col = "Habitat", length= 52, rep=30, count_cutoff=1)
+
+p5
+```
+
+
+```{r}
+algae <- read.csv('algae_otutab_paired.csv', row.names = 1)
+
+group <- read.csv("algae_metadata_paired.csv", row.names = 1)
+
+
+p6 = alpha_sample_rare(algae, group, group_col = "Habitat", length= 52, rep=30, count_cutoff=1)
+
+p6
+
+```
+
+
+```{r}
+
+library(cowplot)
+
+pa <- plot_grid(p1, p2, p3, p4, p5, p6, nrow = 2, rel_widths = c(1,1,1))
+
+pa
+
+#ggsave("rarefaction_curves.pdf", pa, width = 260, height = 156, units = c("mm"))
+
+```
+
+

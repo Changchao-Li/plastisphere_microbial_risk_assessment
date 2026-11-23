@@ -1,0 +1,319 @@
+
+
+```{r}
+library(tidyverse)
+library(reshape)
+library(psych)
+library(RColorBrewer)
+library(magrittr)
+library(ggh4x)
+library(ggplot2)  
+library(dplyr)  
+library(ggpmisc)
+library(ggsci)
+library(ggpubr)
+library(rstatix)
+library(tidyr)
+
+col_pool = c("#F59B7B", "#ED8828", "#A4DDD3", "#81B21F","#8D73BA","#EFB04B",
+              "#ABD7EC","#33ABC1", "#FCC41E", "#B6BBBD", "#8FB4DC", "#EB7E60")
+
+col_pla_env = c("#7B9DBB", "#EFB04B")
+col_pla_other = c("#8FB4DC", "#EFB04B")
+col_site = c("#F59B7B", "#ED8828", "#B6BBBD","#8D73BA","#FCC41E","#8FB4DC")
+col_link_type <- c("#EB7E60", "#C6EAE3", "#8FB4DC")
+LOG_TRANSFORM <- FALSE  
+col_site <- setNames(col_site, c("Reserve", "Beach", "Port", "Mariculture", "Estuary", "WWTP"))
+site_levels <- names(col_site)
+
+```
+
+
+```{r}
+env <- read.csv('envdata.csv', row.names = 1)
+spe <- read.csv('multi_risks_01scaled.csv',  row.names = 1)
+pp <- corr.test(env,spe,method="pearson",adjust = "fdr")
+cor <- pp$r
+
+pvalue <- matrix(p.adjust(pp$p, method = "fdr"), nrow = nrow(pp$p), dimnames = dimnames(pp$p))
+
+df <- melt(cor) %>% mutate(pvalue=melt(pvalue)[,3],
+                           p_signif=symnum(pvalue, corr = FALSE, na = FALSE,
+                                           cutpoints = c(0, 0.001, 0.01, 0.05, 0.1, 1),
+                                           symbols = c("***", "**", "*", "", " "))) %>%
+  set_colnames(c("env","risk","r","p","p_signif"))
+
+p3a <- df %>%
+  ggplot(.,aes(env, risk, col=r,fill=r))+
+  geom_tile(color="grey80",fill="white",size=0.3)+
+  geom_point(aes(size =abs(r),col=r),shape=21) +
+  geom_text(aes(label=p_signif),size= 4,color="black",hjust=0.5,vjust=0.7)+
+  scale_color_gradientn(colours = rev(col_link_type)) +
+  scale_fill_gradientn(colours = rev(col_link_type),
+                       breaks=c(0.4,0.2,0,-0.2),
+                       guide=guide_legend(range = c(1,6),direction="vertical",
+                                          theme = theme(legend.key.spacing.y= unit(1.32,"cm"),
+                                                        legend.text = element_blank(),
+                                                        legend.margin = margin(c(2,-1.2,1,0),unit="cm")))) +
+
+
+  scale_x_discrete(expand=c(0,0), position = 'top')+
+
+  scale_y_discrete(expand=c(0,0), position = 'left') +
+
+  theme(axis.text.x=element_text(angle =45,hjust = 0,vjust = 0,
+                                 color="black", size = 8),
+        axis.text.y=element_text(color="black",size =8),
+        axis.ticks= element_blank(),
+        panel.spacing.y = unit(0,"cm"),
+        panel.background = element_blank(),
+        legend.box = "horizontal",
+        legend.background = element_blank(),
+        legend.box.background = element_blank()) +
+  scale_size(range=c(1,6),guide=NULL)
+
+
+p3a
+
+```
+
+
+```{r}
+
+data <- read.csv("Pla_risk_&_Anthropogenic_Impact.csv")
+
+microbial_risks <- c('Pathogenic_bacteria', 'Pathogenic_fungi', 'Toxic_algae', 'ARGs')
+
+env_data <- data %>%
+  pivot_longer(cols = c('Pollution_level'), names_to = "Environmental_Factor", values_to = "Environmental_Value")
+
+microbial_data <- data %>%
+  pivot_longer(cols = all_of(microbial_risks), names_to = "Microbial_Risk", values_to = "Microbial_Value")
+
+plot_data <- merge(env_data, microbial_data, by = c("SampleID", "group"))
+
+plot_data <- plot_data %>%
+  group_by(Environmental_Factor, Microbial_Risk, group) %>%
+  do({
+    model <- lm(Microbial_Value ~ Environmental_Value, data = .)
+    data.frame(., p_value = summary(model)$coefficients[2, 4])
+  }) %>%
+  mutate(linetype = ifelse(p_value < 1, "dashed", "solid")) %>%
+  ungroup()
+
+p3b <- ggplot(plot_data, aes(x = Environmental_Value, y = Microbial_Value, color = group, linetype = linetype)) +
+
+  geom_point(alpha = 0.6, size = 1) +
+
+  geom_smooth(method = 'lm', formula = y ~ x, se = F,
+              aes(color = group, fill = group), show.legend = F, linewidth = 0.5) +
+
+  stat_poly_eq(aes(label = ifelse(..p.value.. > 1, "", paste(..rr.label.., stat(p.value.label), sep = '~~~'))),
+               formula = y ~ x, parse = TRUE,
+               label.x.npc = 'right', label.y.npc = 'top', size = 2) +
+
+  facet_wrap(~Microbial_Risk, nrow = 1, scales = "free") +
+
+  scale_color_manual(values = c("#7B9DBB", "#EFB04B", "#81B21F")) +
+
+  theme_bw() +
+
+  labs(x = 'Polluted level', y = 'Microbial Risk') +
+
+  theme(axis.text = element_blank(), axis.ticks = element_blank(), legend.position = "none",panel.grid.major=element_blank(),panel.grid.minor=element_blank()) +
+
+  theme(strip.background = element_rect(fill=c("#FFF6E1")))+
+
+  theme(strip.text = element_text(size = 7,colour = "#B8733A"))
+
+p3b
+
+```
+
+
+```{r}
+
+library(ggplot2)
+library(dplyr)
+library(readr)
+
+data <- read.csv("Anthropogenic_Impact_Index.csv")
+
+summary_data <- data %>%
+  group_by(Site) %>%
+  summarise(
+    mean_Pollution_level = mean(Pollution_level, na.rm = TRUE),
+    se_Pollution_level = sd(Pollution_level, na.rm = TRUE) / sqrt(n()),
+    .groups = "drop"
+  )
+
+summary_data$Site <- factor(summary_data$Site,
+                            levels = c("Reserve", "Beach", "Port", "Mariculture", "Estuary", "WWTP"))
+
+
+p3c <- ggplot(summary_data, aes(x = Site, y = mean_Pollution_level, color = Site)) +
+
+  geom_point(position = position_dodge(width = 0.5), size = 2) + 
+
+  geom_errorbar(aes(ymin = mean_Pollution_level - se_Pollution_level,
+                    ymax = mean_Pollution_level + se_Pollution_level),
+                position = position_dodge(width = 0.5), width = 0) +
+
+  scale_color_manual(values = col_site) +
+
+  theme_bw() +
+
+  theme(legend.position = "none", panel.grid=element_blank(),
+        axis.text = element_text(colour = "black"),
+        axis.text.x = element_text(angle = 0))
+
+p3c
+
+```
+
+
+```{r}
+
+data <- read.csv("pla_multi_risks.csv")
+data$Site <- factor(data$Site, levels = site_levels) 
+
+tf_abund <- if (LOG_TRANSFORM) log10 else identity
+tf_fc    <- if (LOG_TRANSFORM) log2  else identity
+
+data_zscore <- data %>%
+  group_by(Risk_type) %>%
+  mutate(
+    Abundance_z   = as.numeric(scale(tf_abund(Abundance))),  
+    Fold_change_z = as.numeric(scale(tf_fc(Fold_change)))   
+  ) %>%
+  ungroup()
+
+summary_data <- data_zscore %>%
+  group_by(Risk_type, Site) %>%
+  summarise(
+    Abundance_mean = mean(Abundance_z, na.rm = TRUE),
+    Fold_change_mean = mean(Fold_change_z, na.rm = TRUE),
+    Abundance_se = sd(Abundance_z, na.rm = TRUE) / sqrt(n()),
+    Fold_change_se = sd(Fold_change_z, na.rm = TRUE) / sqrt(n()),
+    .groups = "drop"
+  )
+
+
+lim_d1 <- summary_data %>%
+  group_by(Risk_type) %>%
+  summarise(xl = max(abs(Abundance_mean) + Abundance_se, na.rm = TRUE),
+            yl = max(abs(Fold_change_mean) + Fold_change_se, na.rm = TRUE), .groups = "drop")
+blank_d1 <- bind_rows(transmute(lim_d1, Risk_type, x = -xl, y = -yl),
+                      transmute(lim_d1, Risk_type, x =  xl, y =  yl))
+
+
+p3d <- ggplot(summary_data, aes(x = Abundance_mean, y = Fold_change_mean, color = Site)) +
+
+  geom_blank(data = blank_d1, aes(x = x, y = y), inherit.aes = FALSE) +
+
+  geom_errorbar(aes(ymin = Fold_change_mean - Fold_change_se,
+                    ymax = Fold_change_mean + Fold_change_se),
+                width = 0, linewidth = 0.5) +
+
+  geom_errorbarh(aes(xmin = Abundance_mean - Abundance_se,
+                     xmax = Abundance_mean + Abundance_se),
+                 height = 0, linewidth = 0.5) +
+
+  geom_point(size = 2, alpha = 1) +
+
+  geom_vline(xintercept = 0, linetype = "solid", color = "#688899", linewidth = 0.5) +
+  geom_hline(yintercept = 0, linetype = "solid", color = "#315B65", linewidth = 0.5) +
+
+  facet_wrap(~Risk_type, nrow = 1, scales = "free") +
+
+  theme_minimal() +
+
+  scale_color_manual(values = col_site) +
+
+  labs(x = "Abundance",  y = "Enrichment fold", color = "Site") +
+
+  theme(strip.text = element_text(size = 8), axis.text = element_blank(),
+        axis.ticks = element_blank(), panel.grid = element_blank(),
+        legend.position = "none")
+
+p3d
+
+```
+
+
+```{r}
+
+data <- read.csv("pla_multi_risks.csv")
+data$Site <- factor(data$Site, levels = site_levels)  
+
+tf_abund <- if (LOG_TRANSFORM) log10 else identity
+tf_rich  <- if (LOG_TRANSFORM) log10 else identity
+
+data_zscore <- data %>%
+  group_by(Risk_type) %>%
+  mutate(
+    Abundance_z  = as.numeric(scale(tf_abund(Abundance))),  
+    Richness_z   = as.numeric(scale(tf_rich(Richness)))     
+  ) %>%
+  ungroup()
+
+summary_data <- data_zscore %>%
+  group_by(Risk_type, Site) %>%
+  summarise(
+    Abundance_mean = mean(Abundance_z, na.rm = TRUE),
+    Richness_mean = mean(Richness_z, na.rm = TRUE),
+    Abundance_se = sd(Abundance_z, na.rm = TRUE) / sqrt(n()),
+    Richness_se = sd(Richness_z, na.rm = TRUE) / sqrt(n()),
+    .groups = "drop"
+  )
+
+lim_d2 <- summary_data %>%
+  group_by(Risk_type) %>%
+  summarise(xl = max(abs(Abundance_mean) + Abundance_se, na.rm = TRUE),
+            yl = max(abs(Richness_mean) + Richness_se, na.rm = TRUE), .groups = "drop")
+blank_d2 <- bind_rows(transmute(lim_d2, Risk_type, x = -xl, y = -yl),
+                      transmute(lim_d2, Risk_type, x =  xl, y =  yl))
+
+
+p3e <- ggplot(summary_data, aes(x = Abundance_mean, y = Richness_mean, color = Site)) +
+
+  geom_blank(data = blank_d2, aes(x = x, y = y), inherit.aes = FALSE) +
+
+  geom_errorbar(aes(ymin = Richness_mean - Richness_se, ymax = Richness_mean + Richness_se),
+                width = 0, linewidth = 0.5) +
+  geom_errorbarh(aes(xmin = Abundance_mean - Abundance_se, xmax = Abundance_mean + Abundance_se),
+                 height = 0, linewidth = 0.5) +
+
+  geom_point(size = 2, alpha = 1) +
+
+  geom_vline(xintercept = 0, linetype = "solid", color = "#8A9B6D", linewidth = 0.5) +
+  geom_hline(yintercept = 0, linetype = "solid", color = "#315B65", linewidth = 0.5) +
+
+  facet_wrap(~Risk_type, nrow = 1, scales = "free") +
+
+  theme_minimal() +
+
+  scale_color_manual(values = col_site) +
+
+  labs(x = "Abundance",y = "Richness", color = "Site") +
+
+  theme(strip.text = element_text(size = 8), axis.text = element_blank(),
+        axis.ticks = element_blank(), panel.grid = element_blank(),
+        legend.position = "none")
+
+p3e
+
+```
+
+
+```{r}
+
+library(cowplot)
+
+p3 <- plot_grid(p3a, plot_grid(p3b, p3c, nrow = 1, rel_widths = c(3,1.3)), p3d, p3e, ncol = 1, rel_heights = c(1.5, 0.9, 1.1, 1.1))
+
+p3
+
+ggsave(plot = p3, "Figure3_v1.pdf", width = 200, height = 220, units = c("mm"))
+
+```

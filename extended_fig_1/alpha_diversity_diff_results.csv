@@ -1,0 +1,7 @@
+index,Kingdom,estimate,.y.,group1,group2,n1,n2,statistic,p,conf.low,conf.high,method,alternative,p.adj,p.adj.signif,level
+Algae_Richness,Algae,-0.138002515,Value_normalized,Environment,Plastisphere,92,92,1115.5,0.00011,-0.20683635,-0.07210511,Wilcoxon,two.sided,0.00011,***,enriched
+Algae_Shannon,Algae,-0.100945924,Value_normalized,Environment,Plastisphere,92,92,1316,0.002,-0.162302084,-0.038469197,Wilcoxon,two.sided,0.002,**,enriched
+Bacteria_Richness,Bacteria,-0.145728936,Value_normalized,Environment,Plastisphere,93,93,920.5,2.11E-06,-0.206337481,-0.087776489,Wilcoxon,two.sided,2.11E-06,****,enriched
+Bacteria_Shannon,Bacteria,-0.193229351,Value_normalized,Environment,Plastisphere,93,93,627.5,4.01E-09,-0.247234847,-0.141238325,Wilcoxon,two.sided,4.01E-09,****,enriched
+Fungi_Richness,Fungi,0.060021692,Value_normalized,Environment,Plastisphere,51,51,819,0.145,-0.025439996,0.155526061,Wilcoxon,two.sided,0.145,ns,ns
+Fungi_Shannon,Fungi,0.059585301,Value_normalized,Environment,Plastisphere,51,51,858,0.068,-0.002881489,0.118926637,Wilcoxon,two.sided,0.068,ns,ns

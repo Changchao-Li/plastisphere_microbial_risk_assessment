@@ -1,0 +1,481 @@
+
+```{r}
+library(vegan)
+library(aPCoA)
+library(ggplot2)
+library(ggrepel)
+library(dplyr) 
+library(ggpmisc)
+library(ggsci)
+library(reshape)
+library(ggpubr)
+library(rstatix)
+
+col_pool = c("#F59B7B", "#ED8828", "#A4DDD3", "#81B21F","#8D73BA","#EFB04B",
+              "#ABD7EC","#33ABC1", "#FCC41E", "#B6BBBD", "#8FB4DC", "#EB7E60")
+
+col_pla_env = c("#7B9DBB", "#EFB04B")
+col_pla_other = c("#8FB4DC", "#EFB04B")
+col_location = c("#ECD1D1", "#7B9DBB")
+col_season = c("#ABD7EC", "#FFDD8E")
+
+```
+
+# fig a. phyla abundance
+```{r}
+df <- read.csv("multi_kingdom_main_phyla_long.csv")
+
+df_bac   <- df %>% filter(Kingdom == "Bacteria")
+df_fungi <- df %>% filter(Kingdom == "Fungi")
+df_algae <- df %>% filter(Kingdom == "Algae")
+
+make_plot <- function(dat) {
+  dat$Sample <- factor(dat$Sample, levels = unique(dat$Sample))
+  
+  ggplot(dat, aes(x = Sample, y = Abundance, fill = Taxa)) +
+    
+    geom_col() +
+    
+    facet_grid(rows = NULL, cols  = vars(Habitat),  scales = "free_x", space  = "free_x") +
+    
+    scale_y_continuous(limits = c(0, 100), expand = c(0, 0)) +
+    
+    scale_fill_manual(values = col_pool) +
+
+    theme_bw() +
+    
+    theme(axis.text.x  = element_blank(), axis.ticks.x = element_blank(), legend.position = "bottom",
+      strip.background = element_rect(color = "black"), panel.grid.major.x = element_blank())
+}
+
+pa1   <- make_plot(df_bac)
+pa2 <- make_plot(df_fungi)
+pa3 <- make_plot(df_algae)
+
+pa1
+pa2
+pa3
+
+```
+
+# fig b. aPCoA
+```{r}
+abu<- read.csv("bac_otutab_paired.csv", row.names=1)
+
+abu<- t(abu)
+
+dim(abu)
+
+design <- read.csv("bac_metadata_paired.csv", row.names = 1)
+
+bray <- vegdist(abu, method = 'bray')
+
+opar<-par(mfrow=c(1,2),
+          mar=c(5, 5, 5, 5),
+          mgp=c(2, 0.5, 0),
+          oma=c(0, 0, 0, 2))
+
+result <- aPCoA(bray~Region,
+                design,
+                maincov=Habitat)
+
+par(opar)
+
+```
+
+```{r}
+
+otu.adonis=adonis(bray~Habitat,data = design,distance = "bray")
+
+aPCoA.score <-result$plotMatrix
+
+plotdata <- data.frame(aPCoA.score[,1:2], design$Habitat)
+
+colnames(plotdata)  <- c("aPCoA1","aPCoA2","Group")
+
+centroid <- aggregate(plotdata[,1:2],by=list(plotdata$Group), FUN = mean)
+centroid
+
+plotdata2 <- merge(plotdata, centroid, by.x = "Group", by.y ="Group.1", 
+                   all.x = T,suffixes = c("",".centroid"),)
+
+head(plotdata2)
+
+pb1 <- ggplot(data = plotdata2, aes(aPCoA1, aPCoA2, color = Group)) +
+  
+    stat_ellipse(data = plotdata2, geom = "polygon", level = 0.5,
+               linetype = 1, linewidth = 0.1, 
+               aes(fill = Group, x = aPCoA1, y = aPCoA2),
+               alpha = 0.2, show.legend = T) +
+  geom_point(size = 2) +
+  geom_segment(aes(xend= aPCoA1.centroid, yend= aPCoA2.centroid, color = Group),
+alpha=0.6,size = 0.5,show.legend = FALSE) +
+  
+  scale_color_manual(values = col_pla_env) +
+
+  scale_fill_manual(values = col_pla_env) + 
+  labs(title = "Bacteria",
+       x = "aPCoA1 13.68%", y = "aPCoA2 10.55%") + #解释率
+  theme_bw() + 
+  theme(panel.grid = element_blank())
+
+pb1
+
+
+```
+
+```{r}
+abu<- read.csv("t_otutab_fungi_paired.csv", row.names=1)
+
+dim(abu)
+
+design <- read.csv("fung_metadata_paired.csv", row.names = 1)
+
+bray <- vegdist(abu, method = 'bray')
+
+opar<-par(mfrow=c(1,2),
+          mar=c(5, 5, 5, 5),
+          mgp=c(2, 0.5, 0),
+          oma=c(0, 0, 0, 2))
+
+result <- aPCoA(bray~Site,
+                design,
+                maincov=Habitat)
+
+par(opar)
+
+```
+
+```{r}
+otu.adonis=adonis(bray~Habitat,data = design,distance = "bray")
+
+print(otu.adonis)
+
+aPCoA.score <-result$plotMatrix
+
+plotdata <- data.frame(aPCoA.score[,1:2], design$Habitat)
+
+colnames(plotdata)  <- c("aPCoA1","aPCoA2","Group")
+
+centroid <- aggregate(plotdata[,1:2],by=list(plotdata$Group), FUN = mean)
+centroid
+
+plotdata2 <- merge(plotdata, centroid,
+by.x = "Group",
+by.y ="Group.1",
+all.x = T,
+suffixes = c("",".centroid"),)
+
+head(plotdata2)
+
+pb2 <- ggplot(data = plotdata2, aes(aPCoA1, aPCoA2, color = Group)) +
+  
+    stat_ellipse(data = plotdata2, geom = "polygon", level = 0.5,
+               linetype = 1, linewidth = 0.1, 
+               aes(fill = Group, x = aPCoA1, y = aPCoA2),
+               alpha = 0.2, show.legend = T) +
+  
+  geom_point(size = 2) +
+  
+  geom_segment(aes(xend= aPCoA1.centroid, yend= aPCoA2.centroid, color = Group),
+alpha=0.6,size = 0.5,show.legend = FALSE) +
+  
+  scale_color_manual(values = col_pla_env) +
+
+  scale_fill_manual(values = col_pla_env) + 
+  labs(title = "Fungi",
+       x = "aPCoA1 11.32%", y = "aPCoA2 9.81%") + 
+  theme_bw() + 
+  theme(panel.grid = element_blank())
+
+pb2
+
+```
+
+```{r}
+abu<- read.csv("otutab_algae_paired.csv", row.names=1)
+
+abu <- t(abu)
+
+dim(abu)
+
+design <- read.csv("metadata_algae_paired.csv", row.names = 1)
+
+bray <- vegdist(abu, method = 'bray')
+
+opar<-par(mfrow=c(1,2),
+          mar=c(5, 5, 5, 5),
+          mgp=c(2, 0.5, 0),
+          oma=c(0, 0, 0, 2))
+
+result <- aPCoA(bray~Site,
+                design,
+                maincov=Habitat)
+
+par(opar)
+
+
+```
+
+```{r}
+otu.adonis=adonis(bray~Habitat,data = design,distance = "bray")
+
+otu.adonis
+
+aPCoA.score <-result$plotMatrix
+
+plotdata <- data.frame(aPCoA.score[,1:2], design$Habitat)
+
+colnames(plotdata)  <- c("aPCoA1","aPCoA2","Group")
+
+centroid <- aggregate(plotdata[,1:2],by=list(plotdata$Group), FUN = mean)
+centroid
+
+plotdata2 <- merge(plotdata, centroid,
+by.x = "Group",
+by.y ="Group.1",
+all.x = T,
+suffixes = c("",".centroid"),)
+
+head(plotdata2)
+
+pb3 <- ggplot(data = plotdata2, aes(aPCoA1, aPCoA2, color = Group)) +
+  
+    stat_ellipse(data = plotdata2, geom = "polygon", level = 0.5,
+               linetype = 1, linewidth = 0.1, 
+               aes(fill = Group, x = aPCoA1, y = aPCoA2),
+               alpha = 0.2, show.legend = T) +
+  
+  geom_point(size = 2) +
+  
+  geom_segment(aes(xend= aPCoA1.centroid, yend= aPCoA2.centroid, color = Group),
+alpha=0.6,size = 0.5,show.legend = FALSE) +
+  
+  scale_color_manual(values = col_pla_env) +
+
+  scale_fill_manual(values = col_pla_env) + 
+  labs(title = "Algae",
+       x = "aPCoA1 18.37%", y = "aPCoA2 12.04%") + 
+  theme_bw() + 
+  theme(panel.grid = element_blank())
+
+pb3
+
+```
+
+# fig c. qpcr result
+```{r}
+library(ggbeeswarm)
+
+qpcr <- read.csv("qPCR_data.csv")
+
+pc <- ggplot(qpcr, aes(x = Habitat, y = Number_of_cells_per_unit_mass)) +
+  
+  geom_violin(aes(fill = Habitat,color= Habitat), trim = F, alpha = 0.66)+ 
+  
+  scale_y_log10() +
+  
+  geom_quasirandom(aes(color = Habitat), size = 1.5, alpha = 0.66, shape = 19) +
+  
+  stat_summary(fun.data = mean_sdl, fun.args = list(mult = 1),color = "white",
+               geom = "pointrange", size = 0.4, position = position_dodge(width = 0.75)) +
+  
+  scale_color_manual(values = col_pla_env) + 
+  scale_fill_manual(values = col_pla_env) + 
+  
+  facet_wrap(~ Kingdom, scales = "free_y") +
+  
+  labs(x = "Habitat", y = "Number_of_cells_per_unit_mass") +
+  
+  stat_compare_means(method = "wilcox.test", paired = T,
+                     comparisons=list(c("Environment", "Plastisphere")), 
+                     aes(label = ..p.signif..), step.increase = 0) +
+  
+  theme_bw() +
+  
+  theme(legend.position = "none",
+        axis.text = element_text(colour = "black"), 
+        axis.text.y = element_text(size = 6),
+        axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1))
+
+pc
+
+```
+
+
+# fig d. taxa abundance Wilcoxon test
+```{r}
+df <- read.csv("scaled_taxonomic_abundance_diff_results.csv")
+
+head(df)
+
+order_list <- c("Alphaproteobacteria", "Betaproteobacteria", "Gammaproteobacteria",
+                "Deltaproteobacteria", "Actinobacteria", 
+                "Bacteroidetes", "Firmicutes", "Acidobacteria", "Ascomycota",
+                "Basidiomycota", "Chytridiomycota", "Rozellomycota", "Ochrophyta",
+                "Dinoflagellata", "Cryptomonadales", "Prymnesiophyceae", 
+                "Florideophycidae",	"Kathablepharidae", "Cercozoa")
+
+
+df <- df %>%
+  mutate(Taxa = factor(Taxa, levels = order_list))
+
+kingdom_colors <- c("Bacteria" = "#ECD1D1", "Fungi" = "#ABD7EC", "Algae" = "#FFDD8E")
+
+pd <- ggplot(df, aes(Taxa, -estimate)) +
+  geom_rect(data = df %>% distinct(Taxa, Kingdom) %>% group_by(Kingdom) %>% 
+              summarize(xmin = min(as.numeric(Taxa)) - 0.5, xmax = max(as.numeric(Taxa)) + 0.5),
+            aes(xmin = xmin, xmax = xmax, ymin = -Inf, ymax = Inf, fill = Kingdom), alpha = 0.2, inherit.aes = FALSE) +
+  geom_linerange(aes(ymax = -conf.low, ymin = -conf.high, color = level)) +
+  geom_point(aes(y = -estimate, color = level), size = 2) +
+  geom_text(aes(y = -conf.low, label = p.adj.signif, color = level), vjust = -0.5) +
+  scale_fill_manual(values = kingdom_colors) +
+  scale_color_manual(values = c("#EFB04B", "#B6BBBD", "#7B9DBB"),
+                     limits = c("enriched", "ns", "depleted")) +
+  geom_hline(yintercept = 0, size = 0.7, linetype = "dashed", colour = "grey") +
+  labs(y = "Effect Size", x = "Main taxa") +
+  
+  theme_bw() +
+  
+  theme(legend.position = "none",
+        axis.text = element_text(colour = "black"),
+        axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1))
+pd
+
+```
+
+
+# fig e. alpha diversity
+
+```{r}
+df3 <- read.csv("alpha_diversity_diff_results.csv")
+
+head(df3)
+
+order_list <- c("Bacteria_Richness", "Bacteria_Shannon", "Fungi_Richness", "Fungi_Shannon", "Algae_Richness", "Algae_Shannon")
+
+df3 <- df3 %>%
+  mutate(index = factor(index, levels = order_list))
+
+kingdom_colors <- c("Bacteria" = "#ECD1D1", "Fungi" = "#ABD7EC", "Algae" = "#FFDD8E")
+
+pe <- ggplot(df3, aes(index, -estimate)) +
+  
+  geom_rect(data = df3 %>% distinct(index, Kingdom) %>% group_by(Kingdom) %>% 
+              summarize(xmin = min(as.numeric(index)) - 0.5, xmax = max(as.numeric(index)) + 0.5),
+            aes(xmin = xmin, xmax = xmax, ymin = -Inf, ymax = Inf, fill = Kingdom), alpha = 0.2, inherit.aes = FALSE) +
+  geom_linerange(aes(ymax = -conf.low, ymin = -conf.high, color = level)) +
+  geom_point(aes(y = -estimate, color = level), size = 2) +
+  geom_text(aes(y = -conf.low, label = p.adj.signif, color = level), vjust = -0.5) +
+  scale_fill_manual(values = kingdom_colors) +
+  scale_color_manual(values = c("#EFB04B", "#B6BBBD", "#7B9DBB"),
+                     limits = c("enriched", "ns", "depleted")) +
+  geom_hline(yintercept = 0, size = 0.7, linetype = "dashed", colour = "grey") +
+  
+  labs(y = "Effect Size", x = "Index") +
+  
+  theme_bw() +
+  theme(legend.position = "none",
+        axis.text = element_text(colour = "black"),
+        axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1))
+pe
+
+```
+
+
+# fig f. phyla species richness
+
+```{r}
+df2 <- read.csv("scaled_taxonomic_richness_diff_results.csv")
+
+head(df2)
+
+order_list <- c("Alphaproteobacteria", "Betaproteobacteria", "Gammaproteobacteria",
+                "Deltaproteobacteria", "Actinobacteria", 
+                "Bacteroidetes", "Firmicutes", "Acidobacteria", "Ascomycota",
+                "Basidiomycota", "Chytridiomycota", "Rozellomycota", "Ochrophyta",
+                "Dinoflagellata", "Cryptomonadales", "Prymnesiophyceae", 
+                "Florideophycidae",	"Kathablepharidae", "Cercozoa")
+
+
+df2 <- df2 %>%
+  mutate(Taxa = factor(Taxa, levels = order_list))
+
+kingdom_colors <- c("Bacteria" = "#ECD1D1", "Fungi" = "#ABD7EC", "Algae" = "#FFDD8E")
+
+
+pf <- ggplot(df2, aes(Taxa, -estimate)) +
+
+  geom_rect(data = df2 %>% distinct(Taxa, Kingdom) %>% group_by(Kingdom) %>% 
+              summarize(xmin = min(as.numeric(Taxa)) - 0.5, xmax = max(as.numeric(Taxa)) + 0.5),
+            aes(xmin = xmin, xmax = xmax, ymin = -Inf, ymax = Inf, fill = Kingdom), alpha = 0.2, inherit.aes = FALSE) +
+
+  geom_linerange(aes(ymax = -conf.low, ymin = -conf.high, color = level)) +
+
+  geom_point(aes(y = -estimate, color = level), size = 2) +
+
+  geom_text(aes(y = -conf.low, label = p.adj.signif, color = level), vjust = -0.5) +
+
+  scale_fill_manual(values = kingdom_colors) +
+  scale_color_manual(values = c("#EFB04B", "#B6BBBD", "#7B9DBB"),
+                     limits = c("enriched", "ns", "depleted")) +
+
+  geom_hline(yintercept = 0, size = 0.7, linetype = "dashed", colour = "grey") +
+  labs(y = "Effect Size", x = "Main taxa") +
+  theme_bw() +
+  theme(legend.position = "none",
+        axis.text = element_text(colour = "black"),
+        axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1))
+
+pf
+```
+
+
+```{r}
+
+library(cowplot)
+
+
+figs1 <- plot_grid(plot_grid(pb1, pb2, pb3, nrow = 1, rel_widths = c(1,1,1)),  
+                   plot_grid(pa1, pa2, pa3, nrow = 1, rel_widths = c(1,1,1)),
+                   plot_grid(plot_grid(pc, pe, ncol = 1), plot_grid(pd, pf, ncol = 1), rel_widths = c(1, 1.6)),
+                   ncol = 1, rel_heights = c(1.3, 1, 2))
+
+figs1
+
+ggsave(plot = figs1, "Figure_s1_v1.pdf", width = 200, height = 226, units = c("mm"))
+
+```
+
+
+
+
+```{r}
+
+pa1 <- pa1 + theme(legend.position = "none")
+pa2 <- pa2 + theme(legend.position = "none")
+pa3 <- pa3 + theme(legend.position = "none")
+
+pb1 <- pb1 + theme(legend.position = "none")
+pb2 <- pb2 + theme(legend.position = "none")
+pb3 <- pb3 + theme(legend.position = "none")
+
+pc  <- pc  + theme(legend.position = "none")
+pd  <- pd  + theme(legend.position = "none")
+pe  <- pe  + theme(legend.position = "none")
+pf  <- pf  + theme(legend.position = "none")
+
+
+
+figs1 <- plot_grid(plot_grid(pb1, pb2, pb3, nrow = 1, rel_widths = c(1,1,1)),  
+                   plot_grid(pa1, pa2, pa3, nrow = 1, rel_widths = c(1,1,1)),
+                   plot_grid(plot_grid(pc, pe, ncol = 1), plot_grid(pd, pf, ncol = 1), rel_widths = c(1, 1.6)),
+                   ncol = 1, rel_heights = c(1.1, 1.2, 2.5))
+
+figs1
+
+ggsave(plot = figs1, "Figure_s1_v2.pdf", width = 220, height = 270, units = c("mm"))
+
+```
+
+

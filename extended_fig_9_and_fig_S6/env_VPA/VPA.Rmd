@@ -1,0 +1,355 @@
+
+
+# 1. nonrisk data
+```{r}
+library(vegan)
+library(tidyverse)
+
+env_asvs <- read.csv("env_nonrisk_bacteria_asvs.csv", row.names = 1)
+envdata <- read.csv("envdata.csv", row.names = 1)
+
+env_asvs <- env_asvs[, rownames(envdata)]
+
+head(env_asvs)
+
+env_asvs <- env_asvs[rowSums(env_asvs) > 0, ]
+
+env_asvs <- t(env_asvs)
+
+dist_matrix <- vegdist(env_asvs, method = "bray")
+
+pcoa_result <- cmdscale(dist_matrix, eig = TRUE, k = 10)
+
+pcoa_axes <- as.data.frame(pcoa_result$points)
+colnames(pcoa_axes) <- paste0("Axis", 1:ncol(pcoa_axes))
+
+explained_variance <- pcoa_result$eig[1:10] / sum(pcoa_result$eig) * 100
+explained_variance
+
+#write.csv(pcoa_axes, "env_nonrisk_bac_asvs_10PC.csv", row.names = T, quote = F)
+
+```
+
+
+```{r}
+
+env_asvs <- read.csv("env_nonrisk_fungi_asvs.csv", row.names = 1)
+envdata <- read.csv("envdata.csv", row.names = 1)
+
+env_asvs <- env_asvs[, rownames(envdata)]
+
+head(env_asvs)
+
+env_asvs <- env_asvs[rowSums(env_asvs) > 0, ]
+
+env_asvs <- t(env_asvs)
+
+dist_matrix <- vegdist(env_asvs, method = "bray")
+
+pcoa_result <- cmdscale(dist_matrix, eig = TRUE, k = 10)
+
+pcoa_axes <- as.data.frame(pcoa_result$points)
+colnames(pcoa_axes) <- paste0("Axis", 1:ncol(pcoa_axes))
+
+explained_variance <- pcoa_result$eig[1:10] / sum(pcoa_result$eig) * 100
+explained_variance
+
+#write.csv(pcoa_axes, "env_nonrisk_fung_asvs_10PC.csv", row.names = T, quote = F)
+
+```
+
+
+```{r}
+
+env_asvs <- read.csv("env_nonrisk_algae_asvs.csv", row.names = 1)
+envdata <- read.csv("envdata.csv", row.names = 1)
+
+env_asvs <- env_asvs[, rownames(envdata)]
+
+head(env_asvs)
+
+env_asvs <- env_asvs[rowSums(env_asvs) > 0, ]
+
+env_asvs <- t(env_asvs)
+
+dist_matrix <- vegdist(env_asvs, method = "bray")
+
+pcoa_result <- cmdscale(dist_matrix, eig = TRUE, k = 10)
+
+pcoa_axes <- as.data.frame(pcoa_result$points)
+colnames(pcoa_axes) <- paste0("Axis", 1:ncol(pcoa_axes))
+
+explained_variance <- pcoa_result$eig[1:10] / sum(pcoa_result$eig) * 100
+explained_variance
+
+#write.csv(pcoa_axes, "env_nonrisk_algae_asvs_10PC.csv", row.names = T, quote = F)
+
+```
+
+# 2. all data
+```{r}
+
+library(vegan)
+library(tidyverse)
+
+env_asvs <- read.csv("env_bacteria_asvs.csv", row.names = 1)
+envdata <- read.csv("envdata.csv", row.names = 1)
+
+env_asvs <- env_asvs[, rownames(envdata)]
+
+head(env_asvs)
+
+env_asvs <- env_asvs[rowSums(env_asvs) > 0, ]
+
+env_asvs <- t(env_asvs)
+
+dist_matrix <- vegdist(env_asvs, method = "bray")
+
+pcoa_result <- cmdscale(dist_matrix, eig = TRUE, k = 10)
+
+pcoa_axes <- as.data.frame(pcoa_result$points)
+colnames(pcoa_axes) <- paste0("Axis", 1:ncol(pcoa_axes))
+
+explained_variance <- pcoa_result$eig[1:10] / sum(pcoa_result$eig) * 100
+explained_variance
+
+#write.csv(pcoa_axes, "env_bac_asvs_10PC.csv", row.names = T, quote = F)
+
+```
+
+
+```{r}
+
+env_asvs <- read.csv("env_fung_asvs.csv", row.names = 1)
+envdata <- read.csv("envdata.csv", row.names = 1)
+
+env_asvs <- env_asvs[, rownames(envdata)]
+
+head(env_asvs)
+
+env_asvs <- env_asvs[rowSums(env_asvs) > 0, ]
+
+env_asvs <- t(env_asvs)
+
+dist_matrix <- vegdist(env_asvs, method = "bray")
+
+pcoa_result <- cmdscale(dist_matrix, eig = TRUE, k = 10)
+
+pcoa_axes <- as.data.frame(pcoa_result$points)
+colnames(pcoa_axes) <- paste0("Axis", 1:ncol(pcoa_axes))
+
+explained_variance <- pcoa_result$eig[1:10] / sum(pcoa_result$eig) * 100
+explained_variance
+
+#write.csv(pcoa_axes, "env_fung_asvs_10PC.csv", row.names = T, quote = F)
+
+```
+
+
+```{r}
+
+env_asvs <- read.csv("env_algae_asvs.csv", row.names = 1)
+envdata <- read.csv("envdata.csv", row.names = 1)
+
+env_asvs <- env_asvs[, rownames(envdata)]
+
+head(env_asvs)
+
+env_asvs <- env_asvs[rowSums(env_asvs) > 0, ]
+
+env_asvs <- t(env_asvs)
+
+dist_matrix <- vegdist(env_asvs, method = "bray")
+
+pcoa_result <- cmdscale(dist_matrix, eig = TRUE, k = 10)
+
+pcoa_axes <- as.data.frame(pcoa_result$points)
+colnames(pcoa_axes) <- paste0("Axis", 1:ncol(pcoa_axes))
+
+explained_variance <- pcoa_result$eig[1:10] / sum(pcoa_result$eig) * 100
+explained_variance
+
+#write.csv(pcoa_axes, "env_algae_asvs_10PC.csv", row.names = T, quote = F)
+
+```
+
+
+```{r}
+
+risk_asvs <- read.csv("env_ARG_subtypes.csv", row.names = 1)
+envdata <- read.csv("envdata.csv", row.names = 1)
+
+risk_asvs <- risk_asvs[, rownames(envdata)]
+
+risk_asvs <- risk_asvs[rowSums(risk_asvs) > 0, ]
+
+#write.csv(risk_asvs, "env_ARG_subtypes.csv", row.names = T, quote = F)
+
+```
+
+
+# 3. VPA
+```{r}
+# bacteria
+library(vegan)
+library(tidyverse)
+
+bacteria <- read.csv("env_nonrisk_bac_asvs_10PC.csv", row.names = 1)
+fungi <- read.csv("env_fung_asvs_10PC.csv", row.names = 1)
+algae <- read.csv("env_algae_asvs_10PC.csv", row.names = 1)
+envdata <- read.csv("envdata_10PC.csv", row.names = 1)
+risk_asvs <- read.csv("env_risk_bacteria_asvs.csv", row.names = 1)
+risk_asvs <- t(risk_asvs)
+
+bacteria <- bacteria[order(rownames(bacteria)), ]
+fungi <- fungi[order(rownames(fungi)), ]
+algae <- algae[order(rownames(algae)), ]
+envdata <- envdata[order(rownames(envdata)), ]
+risk_asvs <- risk_asvs[order(rownames(risk_asvs)), ]
+
+stopifnot(
+  all(rownames(bacteria) == rownames(fungi)),
+  all(rownames(fungi) == rownames(algae)),
+  all(rownames(algae) == rownames(envdata)),
+  all(rownames(envdata)  == rownames(risk_asvs))
+)
+
+bacteria <- as.data.frame(bacteria)
+fungi <- as.data.frame(fungi)
+algae <- as.data.frame(algae)
+envdata <- as.data.frame(envdata)
+
+dist_risk <- vegdist(risk_asvs, method = "bray")
+
+vpa <- varpart(dist_risk, bacteria, fungi, algae, envdata)
+
+vpa$adj.R.square[vpa$adj.R.square < 0] <- 0
+
+print(vpa)
+
+plot(vpa, bg = c("#ECD1D1", "#ABD7EC", "#FFDD8E", "#BCE7E0"))
+
+```
+
+
+```{r}
+
+# fungi
+bacteria <- read.csv("env_bac_asvs_10PC.csv", row.names = 1)
+fungi <- read.csv("env_nonrisk_fung_asvs_10PC.csv", row.names = 1)
+algae <- read.csv("env_algae_asvs_10PC.csv", row.names = 1)
+envdata <- read.csv("envdata_10PC.csv", row.names = 1)
+risk_asvs <- read.csv("env_risk_fung_asvs.csv", row.names = 1)
+risk_asvs <- t(risk_asvs)
+
+bacteria <- bacteria[order(rownames(bacteria)), ]
+fungi <- fungi[order(rownames(fungi)), ]
+algae <- algae[order(rownames(algae)), ]
+envdata <- envdata[order(rownames(envdata)), ]
+risk_asvs <- risk_asvs[order(rownames(risk_asvs)), ]
+
+stopifnot(
+  all(rownames(bacteria) == rownames(fungi)),
+  all(rownames(fungi) == rownames(algae)),
+  all(rownames(algae) == rownames(envdata)),
+  all(rownames(envdata)  == rownames(risk_asvs))
+)
+
+bacteria <- as.data.frame(bacteria)
+fungi <- as.data.frame(fungi)
+algae <- as.data.frame(algae)
+envdata <- as.data.frame(envdata)
+
+dist_risk <- vegdist(risk_asvs, method = "bray")
+
+vpa <- varpart(dist_risk, bacteria, fungi, algae, envdata)
+
+vpa$adj.R.square[vpa$adj.R.square < 0] <- 0
+
+print(vpa)
+
+plot(vpa, bg = c("#ECD1D1", "#ABD7EC", "#FFDD8E", "#BCE7E0"))
+
+
+```
+
+
+```{r}
+# algae
+bacteria <- read.csv("env_bac_asvs_10PC.csv", row.names = 1)
+fungi <- read.csv("env_fung_asvs_10PC.csv", row.names = 1)
+algae <- read.csv("env_nonrisk_algae_asvs_10PC.csv", row.names = 1)
+envdata <- read.csv("envdata_10PC.csv", row.names = 1)
+risk_asvs <- read.csv("env_risk_algae_asvs.csv", row.names = 1)
+risk_asvs <- t(risk_asvs)
+
+bacteria <- bacteria[order(rownames(bacteria)), ]
+fungi <- fungi[order(rownames(fungi)), ]
+algae <- algae[order(rownames(algae)), ]
+envdata <- envdata[order(rownames(envdata)), ]
+risk_asvs <- risk_asvs[order(rownames(risk_asvs)), ]
+
+stopifnot(
+  all(rownames(bacteria) == rownames(fungi)),
+  all(rownames(fungi) == rownames(algae)),
+  all(rownames(algae) == rownames(envdata)),
+  all(rownames(envdata)  == rownames(risk_asvs))
+)
+
+bacteria <- as.data.frame(bacteria)
+fungi <- as.data.frame(fungi)
+algae <- as.data.frame(algae)
+envdata <- as.data.frame(envdata)
+
+dist_risk <- vegdist(risk_asvs, method = "bray")
+
+vpa <- varpart(dist_risk, bacteria, fungi, algae, envdata)
+
+vpa$adj.R.square[vpa$adj.R.square < 0] <- 0
+
+print(vpa)
+
+plot(vpa, bg = c("#ECD1D1", "#ABD7EC", "#FFDD8E", "#BCE7E0"))
+
+```
+
+```{r}
+
+# ARG
+bacteria <- read.csv("env_bac_asvs_10PC.csv", row.names = 1)
+fungi <- read.csv("env_fung_asvs_10PC.csv", row.names = 1)
+algae <- read.csv("env_algae_asvs_10PC.csv", row.names = 1)
+envdata <- read.csv("envdata_10PC.csv", row.names = 1)
+risk_asvs <- read.csv("env_ARG_subtypes.csv", row.names = 1)
+risk_asvs <- t(risk_asvs)
+
+bacteria <- bacteria[order(rownames(bacteria)), ]
+fungi <- fungi[order(rownames(fungi)), ]
+algae <- algae[order(rownames(algae)), ]
+envdata <- envdata[order(rownames(envdata)), ]
+risk_asvs <- risk_asvs[order(rownames(risk_asvs)), ]
+
+stopifnot(
+  all(rownames(bacteria) == rownames(fungi)),
+  all(rownames(fungi) == rownames(algae)),
+  all(rownames(algae) == rownames(envdata)),
+  all(rownames(envdata)  == rownames(risk_asvs))
+)
+
+bacteria <- as.data.frame(bacteria)
+fungi <- as.data.frame(fungi)
+algae <- as.data.frame(algae)
+envdata <- as.data.frame(envdata)
+
+dist_risk <- vegdist(risk_asvs, method = "bray")
+
+vpa <- varpart(dist_risk, bacteria, fungi, algae, envdata)
+
+vpa$adj.R.square[vpa$adj.R.square < 0] <- 0
+
+print(vpa)
+
+plot(vpa, bg = c("#ECD1D1", "#ABD7EC", "#FFDD8E", "#BCE7E0"))
+
+```
+

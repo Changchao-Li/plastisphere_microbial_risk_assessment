@@ -1,0 +1,43 @@
+Species,pla_unique,PNP,Start,End,PNP_attribute
+Akashiwo sanguinea,0,-0.438927395,0,1,nonPNPM
+Alexandrium andersonii,0,-0.332798717,0,1,nonPNPM
+Alexandrium hiranoi,0,-0.684981685,0,1,nonPNPM
+Alexandrium leei,0,0.428571429,0,1,PNPM
+Alexandrium ostenfeldii,0,-0.467793646,0,1,nonPNPM
+Alexandrium tamarense,0,-0.597077244,0,1,nonPNPM
+Alexandrium tamarense species complex group I,1,1,0,1,PNPM
+Alexandrium tamarense species complex group III,0,-0.271143797,0,1,nonPNPM
+Amphidinium carterae,1,1,0,1,PNPM
+Amphidinium klebsii,0,0,0,1,nonPNPM
+Azadinium poporum,0,-0.350877193,0,1,nonPNPM
+Azadinium spinosum,0,-0.696969697,0,1,nonPNPM
+Chattonella subsalsa,0,-0.428571429,0,1,nonPNPM
+Chrysochromulina leadbeateri,0,-0.20754717,0,1,nonPNPM
+Cochlodinium fulvescens,0,-0.8,0,1,nonPNPM
+Cochlodinium polykrikoides,0,-0.220588235,0,1,nonPNPM
+Dinophysis acuminata,0,-0.599358974,0,1,nonPNPM
+Dinophysis fortii,0,-1,0,1,nonPNPM
+Dinophysis miles,0,-0.62962963,0,1,nonPNPM
+Fibrocapsa japonica,0,0.027264732,0,1,PNPM
+Gambierdiscus scabrosus,0,-0.777777778,0,1,nonPNPM
+Gonyaulax spinifera,0,-0.259259259,0,1,nonPNPM
+Gymnodinium catenatum,0,-0.260447036,0,1,nonPNPM
+Heterocapsa niei,0,-0.336018892,0,1,nonPNPM
+Heterosigma akashiwo,0,0.197407189,0,1,PNPM
+Karenia brevis,0,-0.75,0,1,nonPNPM
+Karenia mikimotoi,0,-0.342696629,0,1,nonPNPM
+Karenia papilionacea,0,-0.016216216,0,1,nonPNPM
+Karlodinium veneficum,0,-0.400593472,0,1,nonPNPM
+Pfiesteria piscicida,0,0.912698413,0,1,PNPM
+Prorocentrum emarginatum,0,-0.660633484,0,1,nonPNPM
+Prorocentrum rhathymum,0,-0.370790117,0,1,nonPNPM
+Protoceratium reticulatum,0,0.333333333,0,1,PNPM
+Protoperidinium crassipes,0,-0.228571429,0,1,nonPNPM
+Prymnesium calathiferum,0,-1,0,1,nonPNPM
+Prymnesium parvum,0,0.201690174,0,1,PNPM
+Prymnesium polylepis,0,-0.273972603,0,1,nonPNPM
+Pseudo-nitzschia australis,0,-0.286432161,0,1,nonPNPM
+Pseudo-nitzschia cuspidata,0,-0.295154575,0,1,nonPNPM
+Pseudo-nitzschia multiseries,0,0.659124032,0,1,PNPM
+Pseudo-nitzschia pungens,0,0.674554484,0,1,PNPM
+Pseudochattonella verruculosa,0,-0.469460772,0,1,nonPNPM

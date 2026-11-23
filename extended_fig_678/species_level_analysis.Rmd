@@ -1,0 +1,408 @@
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(ggpubr)
+library(rstatix)
+library(patchwork)
+library(tidyverse)
+library(circlize)
+library(stringr)
+library(dendextend)
+library(ComplexHeatmap)
+library(scales)
+library(ggsci)
+
+col_pool = c("#F59B7B", "#ED8828", "#A4DDD3", "#81B21F","#8D73BA","#EFB04B",
+              "#ABD7EC","#33ABC1", "#FCC41E", "#B6BBBD", "#8FB4DC", "#EB7E60")
+
+col_pla_env = c("#7B9DBB", "#EFB04B")
+
+col_pla_other = c("#8FB4DC", "#EFB04B")
+
+col_location = c("#ECD1D1")
+
+col_season = c("#ABD7EC", "#FFDD8E")
+
+```
+
+
+```{r}
+library(plyr)
+
+dat3 <- read.csv("fung_patho_species_abundance1.csv", row.names = 1)
+
+dat4 <- aggregate(dat3[,2:ncol(dat3)],list(dat3[,1]),sum)
+
+#write.csv(dat4, "fung_patho_species_abundance.csv", quote = F, row.names = F)
+
+dat5 <- read.csv("toxic_algae_species_abundance1.csv", row.names = 1)
+
+dat6 <- aggregate(dat5[,2:ncol(dat5)],list(dat5[,1]),sum)
+
+#write.csv(dat6, "toxic_algae_species_abundance.csv", quote = F, row.names = F)
+
+```
+
+
+
+```{r}
+library(tidyverse)
+
+asv_table <- read.csv("bac_patho_species_abundance.csv", row.names = 1, check.names = FALSE)
+meta <- read.csv("bac_metadata_paired.csv", row.names = 1)
+
+common_samples <- intersect(colnames(asv_table), rownames(meta))
+asv_table <- asv_table[, common_samples]
+meta <- meta[common_samples, ]
+
+# === pla_unique ===
+bulk_samples <- rownames(meta)[meta$Habitat == "environment"]
+pla_samples  <- rownames(meta)[meta$Habitat == "plastisphere"]
+
+pla_unique <- apply(asv_table, 1, function(x){
+  all(x[bulk_samples] == 0) & any(x[pla_samples] > 0)
+})
+
+pla_unique <- as.integer(pla_unique) 
+
+# === PNP ===
+asv_norm <- asv_table / rowSums(asv_table)
+
+weights <- ifelse(meta$Habitat == "plastisphere", 1, -1)
+names(weights) <- rownames(meta)
+
+PNP <- apply(asv_norm, 1, function(x){
+  sum(x * weights[colnames(asv_norm)])
+})
+
+
+result <- data.frame(
+  ASV_ID = rownames(asv_table),
+  pla_unique = pla_unique,
+  PNP = PNP
+)
+
+#write.csv(result, "bac_patho_attribute.csv", row.names = FALSE)
+
+```
+
+
+
+```{r}
+da <- read.csv("bac_patho_attribute2.csv") 
+
+da$group <- factor(da$Species, unique(da$Species))
+
+counts <- table(da$group)
+
+type_count <- as.data.frame(counts)
+
+type_count$min <- 0
+
+type_count <- type_count[, c("Var1", "min", "Freq")]
+
+
+pla_unique <- da[, c("group", "Start", "End", "pla_unique")]
+
+pla_unique <-list(pla_unique[pla_unique$pla_unique=="1",])
+
+
+PNP <- da[, c("group", "Start", "End", "PNP")]
+
+PNP <- list(PNP[PNP$PNP>=0, ], PNP[PNP$PNP<0, ])
+
+circos.clear()
+pdf(str_c('bac_patho_species_circoplot.pdf'), width = 8, height = 8)
+circle_size = unit(1, 'snpc')
+
+circos.par(track.height = 0, cell.padding = c(0,0,0,0), track.margin = c(0.015,0.015), gap.degree = 0, start.degree = 90)
+
+circos.genomicInitialize(type_count, plotType = NULL, major.by = 1) 
+
+circos.track(
+  ylim = c(0, 1),
+  track.height = 0.01,
+  bg.border = NA,
+  panel.fun = function(x, y) {
+    sector.index = get.cell.meta.data("sector.index")
+    xlim = get.cell.meta.data("xlim")
+    outer_radius = 0.98  
+    theta = circlize(xlim[2], 0.5) 
+    x_outer = outer_radius * cos(theta)
+    y_outer = outer_radius * sin(theta)
+    circos.text(
+      x = xlim[2],                
+      y = CELL_META$ycenter,      
+      labels = sector.index,     
+      cex = 0.8,                  
+      facing = "clockwise",       
+      adj = c(-0.2, 0.5),         
+      niceFacing = FALSE,         
+      col = "black",
+    )
+  }
+)
+
+
+circos.genomicTrackPlotRegion(pla_unique, track.height = 0.05,ylim = c(0,2), 
+                              bg.border = "#3D4F6A", 
+                              bg.col=NA,
+                              panel.fun = function(region, value, ...){
+                              
+                       circos.genomicRect(region, value, col = "#EB7E60", border =NA)
+                                })
+
+
+circos.genomicTrackPlotRegion(PNP, track.height = 0.3, bg.border = "#3D4F6A", bg.col = NA,
+                              ylim=c(-1, 1),
+                              panel.fun = function(region, value, ...){
+                               i=getI(...)
+                                if(i == 1){
+                                  circos.genomicRect(region, value, col =  "#EFB04B", border = NA, alpha = 1, ybottom = 0, ytop.column = 1)
+                                }else{
+                                  circos.genomicRect(region, value, col = "#7B9DBB", border = NA,alpha = 1, ybottom = 0, ytop.column = 1)
+                                }})
+
+dev.off()
+```
+
+```{r}
+asv_table <- read.csv("fung_patho_top_200_species_abundance.csv", row.names = 1, check.names = FALSE)
+
+meta <- read.csv("fung_metadata_paired.csv", row.names = 1)
+
+common_samples <- intersect(colnames(asv_table), rownames(meta))
+asv_table <- asv_table[, common_samples]
+meta <- meta[common_samples, ]
+
+# === pla_unique ===
+bulk_samples <- rownames(meta)[meta$Habitat == "environment"]
+pla_samples  <- rownames(meta)[meta$Habitat == "plastisphere"]
+
+pla_unique <- apply(asv_table, 1, function(x){
+  all(x[bulk_samples] == 0) & any(x[pla_samples] > 0)
+})
+
+pla_unique <- as.integer(pla_unique)  # 转换为 0/1
+
+# === PNP ===
+asv_norm <- asv_table / rowSums(asv_table)
+
+weights <- ifelse(meta$Habitat == "plastisphere", 1, -1)
+names(weights) <- rownames(meta)
+
+PNP <- apply(asv_norm, 1, function(x){
+  sum(x * weights[colnames(asv_norm)])
+})
+
+result <- data.frame(
+  ASV_ID = rownames(asv_table),
+  pla_unique = pla_unique,
+  PNP = PNP
+)
+
+#write.csv(result, "fung_patho_attribute.csv", row.names = FALSE)
+
+```
+
+
+
+```{r}
+da <- read.csv("fung_patho_attribute2.csv") 
+
+da$group <- factor(da$Species, unique(da$Species))
+
+counts <- table(da$group)
+
+type_count <- as.data.frame(counts)
+
+type_count$min <- 0
+
+type_count <- type_count[, c("Var1", "min", "Freq")]
+
+
+pla_unique <- da[, c("group", "Start", "End", "pla_unique")]
+
+pla_unique <-list(pla_unique[pla_unique$pla_unique=="1",])
+
+
+PNP <- da[, c("group", "Start", "End", "PNP")]
+
+PNP <- list(PNP[PNP$PNP>=0, ], PNP[PNP$PNP<0, ])
+
+
+circos.clear()
+pdf(str_c('fung_patho_species_circoplot.pdf'), width = 8, height = 8)
+circle_size = unit(1, 'snpc')
+
+circos.par(track.height = 0, cell.padding = c(0,0,0,0), track.margin = c(0.015,0.015), gap.degree = 0, start.degree = 90)
+
+circos.genomicInitialize(type_count, plotType = NULL, major.by = 1) 
+
+circos.track(
+  ylim = c(0, 1),
+  track.height = 0.01,
+  bg.border = NA,
+  panel.fun = function(x, y) {
+    sector.index = get.cell.meta.data("sector.index")
+    xlim = get.cell.meta.data("xlim")
+    outer_radius = 0.98  
+    theta = circlize(xlim[2], 0.5)  
+    x_outer = outer_radius * cos(theta)
+    y_outer = outer_radius * sin(theta)
+    circos.text(
+      x = xlim[2],               
+      y = CELL_META$ycenter,      
+      labels = sector.index,      
+      cex = 0.8,                  
+      facing = "clockwise",      
+      adj = c(-0.2, 0.5),         
+      niceFacing = FALSE,          
+      col = "black",
+    )
+  }
+)
+
+
+circos.genomicTrackPlotRegion(pla_unique, track.height = 0.05,ylim = c(0,2), 
+                              bg.border = "#3D4F6A", 
+                              bg.col=NA,
+                              panel.fun = function(region, value, ...){
+                              
+                       circos.genomicRect(region, value, col = "#EB7E60", border =NA)
+                                })
+
+
+
+circos.genomicTrackPlotRegion(PNP, track.height = 0.3, bg.border = "#3D4F6A", bg.col = NA,
+                              ylim=c(-1, 1),
+                              panel.fun = function(region, value, ...){
+                               i=getI(...)
+                                if(i == 1){
+                                  circos.genomicRect(region, value, col =  "#EFB04B", border = NA, alpha = 1, ybottom = 0, ytop.column = 1)
+                                }else{
+                                  circos.genomicRect(region, value, col = "#7B9DBB", border = NA,alpha = 1, ybottom = 0, ytop.column = 1)
+                                }})
+dev.off()
+
+```
+
+```{r}
+asv_table <- read.csv("toxic_algae_species_abundance.csv", row.names = 1, check.names = FALSE)
+
+meta <- read.csv("algae_metadata_paired.csv", row.names = 1)
+
+common_samples <- intersect(colnames(asv_table), rownames(meta))
+asv_table <- asv_table[, common_samples]
+meta <- meta[common_samples, ]
+
+# === pla_unique ===
+bulk_samples <- rownames(meta)[meta$Habitat == "environment"]
+pla_samples  <- rownames(meta)[meta$Habitat == "plastisphere"]
+
+pla_unique <- apply(asv_table, 1, function(x){
+  all(x[bulk_samples] == 0) & any(x[pla_samples] > 0)
+})
+
+pla_unique <- as.integer(pla_unique)  
+
+# === PNP ===
+asv_norm <- asv_table / rowSums(asv_table)
+
+weights <- ifelse(meta$Habitat == "plastisphere", 1, -1)
+names(weights) <- rownames(meta)
+
+PNP <- apply(asv_norm, 1, function(x){
+  sum(x * weights[colnames(asv_norm)])
+})
+
+result <- data.frame(
+  ASV_ID = rownames(asv_table),
+  pla_unique = pla_unique,
+  PNP = PNP
+)
+
+#write.csv(result, "toxic_algae_attribute.csv", row.names = FALSE)
+
+```
+
+
+```{r}
+da <- read.csv("toxic_algae_attribute2.csv") 
+
+da$group <- factor(da$Species, unique(da$Species))
+
+counts <- table(da$group)
+
+type_count <- as.data.frame(counts)
+
+type_count$min <- 0
+
+type_count <- type_count[, c("Var1", "min", "Freq")]
+
+pla_unique <- da[, c("group", "Start", "End", "pla_unique")]
+
+pla_unique <-list(pla_unique[pla_unique$pla_unique=="1",])
+
+
+PNP <- da[, c("group", "Start", "End", "PNP")]
+
+PNP <- list(PNP[PNP$PNP>=0, ], PNP[PNP$PNP<0, ])
+
+
+circos.clear()
+pdf(str_c('toxic_algae_species_circoplot.pdf'), width = 8, height = 8)
+circle_size = unit(1, 'snpc')
+
+circos.par(track.height = 0, cell.padding = c(0,0,0,0), track.margin = c(0.015,0.015), gap.degree = 0, start.degree = 90)
+
+circos.genomicInitialize(type_count, plotType = NULL, major.by = 1) 
+
+circos.track(
+  ylim = c(0, 1),
+  track.height = 0.01,
+  bg.border = NA,
+  panel.fun = function(x, y) {
+    sector.index = get.cell.meta.data("sector.index")
+    xlim = get.cell.meta.data("xlim")
+    outer_radius = 0.98  
+    theta = circlize(xlim[2], 0.5)  
+    x_outer = outer_radius * cos(theta)
+    y_outer = outer_radius * sin(theta)
+    circos.text(
+      x = xlim[2],               
+      y = CELL_META$ycenter,      
+      labels = sector.index,      
+      cex = 0.8,                  
+      facing = "clockwise",      
+      adj = c(-0.2, 0.5),         
+      niceFacing = FALSE,         
+      col = "black",
+    )
+  }
+)
+
+
+circos.genomicTrackPlotRegion(pla_unique, track.height = 0.05,ylim = c(0,2), 
+                              bg.border = "#3D4F6A", 
+                              bg.col=NA,
+                              panel.fun = function(region, value, ...){
+                              
+                       circos.genomicRect(region, value, col = "#EB7E60", border =NA)
+                                })
+
+
+circos.genomicTrackPlotRegion(PNP, track.height = 0.3, bg.border = "#3D4F6A", bg.col = NA,
+                              ylim=c(-1, 1),
+                              panel.fun = function(region, value, ...){
+                               i=getI(...)
+                                if(i == 1){
+                                  circos.genomicRect(region, value, col =  "#EFB04B", border = NA, alpha = 1, ybottom = 0, ytop.column = 1)
+                                }else{
+                                  circos.genomicRect(region, value, col = "#7B9DBB", border = NA,alpha = 1, ybottom = 0, ytop.column = 1)
+                                }})
+dev.off()
+
+```

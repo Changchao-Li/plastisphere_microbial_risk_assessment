@@ -1,0 +1,180 @@
+
+```{r}
+
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(readr)
+
+col_pla_env = c("#7B9DBB", "#EFB04B")
+col_4_risk_type = c("#ECD1D1", "#ABD7EC", "#FFDD8E", "#A8D3A0")
+
+```
+
+
+```{r}
+
+data <- read_csv("link_type_num.csv")
+
+data_long <- data %>%
+  pivot_longer(cols = c(neg, ns, pos), names_to = "association", values_to = "value") %>%
+  group_by(group, risk, habitat) %>%
+  mutate(relative_value = value / sum(value)) %>% 
+  ungroup()
+
+data_environment <- data_long %>% filter(habitat == "Environment")
+data_plastisphere <- data_long %>% filter(habitat == "Plastisphere")
+
+```
+
+
+```{r}
+#  bulk water
+p1 <- ggplot(data_environment, aes(x = 2, y = relative_value, fill = association)) +
+  geom_bar(stat = "identity", width = 1, color = "white") +
+  scale_fill_manual(values = c("#EB7E60", "#C6EAE3", "#8FB4DC"),
+                     limits = c("pos", "ns", "neg"))+
+  coord_polar(theta = "y") +
+  xlim(0.5, 2.5) +
+  theme_void() +
+  theme(legend.position = "right") +
+  labs(title = "Habitat: Environment", fill = "Association") +
+  facet_grid(group ~ risk) +
+  guides(fill = guide_legend(reverse = TRUE))
+
+p1
+
+```
+
+
+
+```{r}
+
+#  Plastisphere 
+p2 <- ggplot(data_plastisphere, aes(x = 2, y = relative_value, fill = association)) +
+  geom_bar(stat = "identity", width = 1, color = "white") +
+  scale_fill_manual(values = c("#EB7E60", "#C6EAE3", "#8FB4DC"),
+                     limits = c("pos", "ns", "neg"))+
+  coord_polar(theta = "y") +
+  xlim(0.5, 2.5) +
+  theme_void() +
+  theme(legend.position = "right") +
+  labs(title = "Habitat: Plastisphere", fill = "Association") +
+  facet_grid(group ~ risk) +
+  guides(fill = guide_legend(reverse = TRUE))
+
+
+p2
+
+```
+
+
+```{r}
+# fig b
+library(ggprism)
+library(reshape2)
+
+data <- read.csv("link_type_num.csv")
+data <- data %>%
+  mutate(num_of_negaitive_links = neg,
+         num_of_positive_links = pos)
+
+data2 <- melt(data, id.vars = c("group", "risk", "neg", "ns", "pos", "habitat"))
+order_list <- c("Pathogenic_bacteria", "Pathogenic_fungi","Toxic_algae", "ARGs")
+data2$risk <- factor(data2$risk, levels = order_list)
+
+p4b <- data2 %>% 
+  ggplot(aes(x = risk,y = ifelse(habitat=="Plastisphere",-value, value), fill = group)) + 
+  geom_bar(stat = "identity", width = 0.7, color = "white")+
+  scale_fill_manual(values = col_4_risk_type) +
+  scale_y_continuous(expand = c(0,0),limits=c(-300, 300))+
+  annotate("rect", ymin = 0, ymax = 300, xmin = -Inf, xmax = Inf, alpha = 0.2,fill="#7B9DBB")+ 
+  annotate("rect", ymin = -300, ymax = 0, xmin = -Inf, xmax = Inf, alpha = 0.2,fill="#EFB04B")+
+  geom_hline(yintercept = 0,linetype = 2) +
+  facet_wrap(~variable, nrow = 1) +
+  theme_bw() +
+  theme(legend.position = "right",
+        axis.text = element_text(colour = "black"),
+        axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1)) +
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank())
+
+p4b
+```
+
+
+```{r}
+# fig c
+library(ggprism)
+library(reshape2)
+
+data <- read.csv("link_type_num.csv")
+
+data2 <- data %>%
+  mutate(Proportion_of_negaitive_links = neg/(pos+ns+neg), 
+         Proportion_of_positive_links = pos/(pos+ns+neg))
+
+data2 <- melt(data2, id.vars = c("group", "risk", "neg", "pos", "ns", "habitat"))
+order_list <- c("Pathogenic_bacteria", "Pathogenic_fungi","Toxic_algae", "ARGs")
+data2$risk <- factor(data2$risk, levels = order_list)
+
+
+p4c <- data2 %>% 
+  ggplot(aes(x = risk,y = ifelse(habitat=="Plastisphere",-value, value), fill = group)) + 
+  geom_bar(stat = "identity", width = 0.7, color = "white")+
+  scale_fill_manual(values = col_4_risk_type) +
+  scale_y_continuous(expand = c(0,0),limits=c(-1.4, 1.4))+
+  annotate("rect", ymin = 0, ymax = 1.4, xmin = -Inf, xmax = Inf, alpha = 0.2,fill="#7B9DBB")+ 
+  annotate("rect", ymin = -1.4, ymax = 0, xmin = -Inf, xmax = Inf, alpha = 0.2,fill="#EFB04B")+
+  geom_hline(yintercept = 0,linetype = 2) +
+  facet_wrap(~variable, nrow = 1) +
+  theme_bw() +
+  theme(legend.position = "right",
+        axis.text = element_text(colour = "black"),
+        axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1)) +
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank())
+
+p4c
+
+```
+
+
+```{r}
+# fig d
+data <- read_csv("link_type_num.csv")
+
+data_summed <- data %>%
+  group_by(habitat, risk) %>%
+  summarise(pos_sum = sum(pos, na.rm = TRUE), neg_sum = sum(neg, na.rm = TRUE), .groups = "drop") 
+
+data_summed <- data_summed %>%
+  mutate(pos_neg_ratio = ifelse(neg_sum == 0, NA, pos_sum / neg_sum)) 
+
+risk_levels <- c("Pathogenic_bacteria", "Pathogenic_fungi", "Toxic_algae", "ARGs")
+data_summed$risk <- factor(data_summed$risk, levels = risk_levels)
+
+p4d <- ggplot(data_summed, aes(x = risk, y = pos_neg_ratio, fill = habitat)) +
+  geom_bar(stat = "identity", position = "dodge", width = 0.6) +
+  scale_fill_manual(values = col_pla_env) +
+  annotate("rect", xmin = 0.5, xmax = 1.5, ymin = -Inf, ymax = Inf, alpha = 0.2,fill="#ECD1D1")+ 
+  annotate("rect", xmin = 1.5, xmax = 2.5,  ymin = -Inf, ymax = Inf, alpha = 0.2,fill="#ABD7EC")+
+  annotate("rect", xmin = 2.5, xmax = 3.5, ymin = -Inf, ymax = Inf, alpha = 0.2,fill="#FFDD8E")+
+    annotate("rect", xmin = 3.5, xmax =4.5, ymin = -Inf, ymax = Inf, alpha = 0.2,fill="#A8D3A0")+
+  theme_bw() +
+  theme(legend.position = "right",
+        axis.text = element_text(colour = "black"),
+        axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1))
+p4d
+
+```
+
+
+```{r}
+library(cowplot)
+p4bcd <- plot_grid(p4b,p4c, p4d, nrow = 1, rel_widths = c(1,1,1))
+p4bcd
+
+ggsave(plot = p4bcd, "num&proportion_pos_neg_link.pdf", width = 240, height = 66, units = c("mm"))
+
+```

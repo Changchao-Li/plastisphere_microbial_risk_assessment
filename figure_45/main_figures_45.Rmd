@@ -1,0 +1,674 @@
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = TRUE,
+	message = FALSE,
+	warning = FALSE
+)
+```
+
+```{r libraries}
+library(tidyverse)
+library(ggpmisc)
+library(ggrepel)
+library(maps)
+library(patchwork)
+library(scales)
+library(countrycode)   
+```
+
+
+```{r}
+world <- map_data("world")
+
+LAND_FILL  <- "#FEF3D6"
+OCEAN_FILL <- "#AAC8E5"
+
+hazard_colors <- c(patho_bacteria = "#ECD1D1", patho_fungi = "#ABD7EC",
+                    toxic_algae = "#FFDD8E", ARGs = "#EB7E60")
+region_colors <- c(North = "#8D73BA", South = "#FCC41E")
+
+base_map_theme <- theme_bw(base_size = 11) +
+  theme(axis.title = element_blank(), panel.grid = element_blank(),
+        panel.background = element_rect(fill = OCEAN_FILL, color = NA))
+```
+
+
+## 1. data
+
+```{r load}
+df <- read_csv("global_coastal_biohazards_merged.csv")
+```
+
+## 2. Global North / South classification
+
+```{r}
+region_lookup <- tribble(
+  ~country.x,      ~region,
+  "China",         "South",
+  "France",        "North",
+  "Singapore",     "North",   
+  "USA",           "North",
+  "Italy",         "North",
+  "Germany",       "North",
+  "Japan",         "North",
+  "Australia",     "North",
+  "UK",            "North",
+  "Spain",         "North",
+  "Greece",        "North",
+  "Brazil",        "South",
+  "Belgium",       "North",
+  "Mauritius",     "South",
+  "Bermuda",       "North",
+  "Israel",        "North",   
+  "Netherlands",   "North",
+  "New Zealand",   "North",
+  "South Korea",   "North",  
+  "Morocco",       "South",
+  "Canada",        "North",
+  "Denmark",       "North",
+  "India",         "South",
+  "Cape Verde",    "South",
+  "South Africa",  "South",
+  "Portugal",      "North",
+  "Chile",         "South",   
+  "Tunisia",       "South",
+  "Cyprus",        "North",
+  "Croatia",       "North",
+  "Monaco",        "North",
+  "Grenada",       "South"
+)
+```
+
+
+```{r}
+home_continent <- df %>%
+  count(country.x, continent.x) %>%
+  group_by(country.x) %>%
+  slice_max(n, n = 1, with_ties = FALSE) %>%
+  ungroup() %>%
+  select(country.x, home_continent = continent.x)
+
+exclave_rows <- df %>%
+  distinct(country.x, continent.x) %>%
+  left_join(home_continent, by = "country.x") %>%
+  filter(continent.x != home_continent)
+
+exclave_rows  
+
+north_exceptions <- c("Israel", "Japan", "South Korea", "Republic of Korea", "Australia", "New Zealand")
+
+classify_by_continent <- function(country, continent) {
+  continent_l <- tolower(continent)
+  case_when(
+    country %in% north_exceptions ~ "North",
+    str_detect(continent_l, "europe") ~ "North",
+    str_detect(continent_l, "north america") ~ "North",
+    TRUE ~ "South"
+  )
+}
+
+df <- df %>%
+  left_join(region_lookup, by = "country.x") %>%
+  mutate(
+    is_exclave = paste(country.x, continent.x) %in% paste(exclave_rows$country.x, exclave_rows$continent.x),
+    region = if_else(is_exclave, classify_by_continent(country.x, continent.x), region),
+    country_id = if_else(is_exclave, paste0(country.x, " (", continent.x, ")"), country.x)
+  )
+
+df %>% distinct(country_id, country.x, continent.x, region, is_exclave) %>% arrange(desc(is_exclave), country_id)
+
+NO_REGION_COUNTRIES <- c("Antarctica")
+
+unmatched_countries <- df %>%
+  filter(is.na(region), !country.x %in% NO_REGION_COUNTRIES) %>%
+  distinct(country.x)
+if (nrow(unmatched_countries) > 0) {
+  warning("Countries missing from region_lookup -- add them before trusting any North/South result: ",
+          paste(unmatched_countries$country.x, collapse = ", "))
+}
+unmatched_countries
+
+```
+
+
+## 3. Plastisphere subset
+
+```{r prep-d}
+d <- df %>%
+  filter(carrier == "plastisphere") %>%
+  mutate(
+    type = factor(type, levels = c("patho_bacteria","patho_fungi","toxic_algae","ARGs")),
+    mass_gkm2 = `2020_mass_concentration_total` * 1e6,
+    log_hazard = log10(hazard_rel_abundance * 100 + 1),   
+    log_mass   = log10(mass_gkm2)                         
+  )
+```
+
+
+## fig4a
+
+```{r fig1-map-data}
+site_pts <- d %>%
+  filter(!is.na(log_hazard)) %>%
+  group_by(type, latitude, longitude) %>%
+  summarise(n_samples = n(), .groups = "drop")
+
+```
+
+```{r fig1-panel-a}
+p4a <- ggplot() +
+  geom_polygon(data = world, aes(x = long, y = lat, group = group),
+               fill = LAND_FILL, color = LAND_FILL, linewidth = 0.1) +
+  geom_point(data = site_pts, aes(x = longitude, y = latitude, size = n_samples, fill = type),
+             shape = 21, color = "black", alpha = 0.8, stroke = 0.2) +
+  scale_fill_manual(values = hazard_colors, name = "Hazard type") +
+  scale_size_continuous(range = c(2, 5), name = "n samples") +
+  coord_quickmap() +
+  base_map_theme
+
+p4a
+
+```
+
+
+## fig4b
+```{r fig1-panel-b, fig.width=11, fig.height=7}
+site_summary <- d %>%
+  filter(!is.na(log_mass), !is.na(log_hazard)) %>%
+  group_by(type, latitude, longitude) %>%
+  summarise(
+    n_samples = n(),
+    log_mass = mean(log_mass),
+    hazard_mean = mean(log_hazard),
+    hazard_sd = if (n() > 1) sd(log_hazard) else NA_real_,
+    .groups = "drop"
+  )
+
+p4b <- ggplot(site_summary, aes(x = log_mass, y = hazard_mean)) +
+  geom_pointrange(aes(ymin = hazard_mean - hazard_sd, ymax = hazard_mean + hazard_sd),
+                   size = 0.26, color = "#FFDD8E", alpha = 0.66) +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE, color = "#8FB4DC") +
+  stat_poly_eq(formula = y ~ x,
+               aes(label = paste(after_stat(rr.label), after_stat(p.value.label), sep = "~~~")),
+               parse = TRUE, size = 3.2, label.x = 0.03, label.y = 0.97) +
+  facet_wrap(~ type, scales = "free_x", nrow = 1) +
+  labs(x = "log10(2020 plastic mass conc., g/km2)",
+       y = "mean log10(hazard rel. abundance x100+1) per site (+/- SD)") +
+  theme_bw(base_size = 10)
+
+p4b
+
+```
+
+## fig4c
+
+```{r fig1-quadrant-data}
+site_mass_q <- d %>%
+  filter(!is.na(log_mass)) %>%
+  group_by(country_id, latitude, longitude) %>%
+  summarise(log_mass = mean(log_mass),
+            n_distinct_mass = n_distinct(log_mass, na.rm = TRUE), .groups = "drop")
+
+inconsistent_mass_sites_q <- site_mass_q %>% filter(n_distinct_mass > 1)
+if (nrow(inconsistent_mass_sites_q) > 0) {
+  warning(nrow(inconsistent_mass_sites_q),
+          " site(s) have inconsistent mass readings across rows in site_mass_q -- inspect: ",
+          paste(inconsistent_mass_sites_q$country_id, collapse = ", "))
+}
+
+site_hazard_q <- d %>%
+  filter(!is.na(log_hazard)) %>%
+  group_by(type, country_id, latitude, longitude) %>%
+  summarise(log_hazard = mean(log_hazard), .groups = "drop")
+
+country_mass_q <- site_mass_q %>%
+  group_by(country_id) %>%
+  summarise(n_sites_mass = n(), mass_mean = mean(log_mass),
+            mass_se = sd(log_mass) / sqrt(n()), .groups = "drop")
+
+country_hazard_q <- site_hazard_q %>%
+  group_by(type, country_id) %>%
+  summarise(n_sites_hazard = n(), hazard_mean = mean(log_hazard),
+            hazard_se = sd(log_hazard) / sqrt(n()), .groups = "drop")
+
+country_quad <- country_hazard_q %>%
+  inner_join(country_mass_q, by = "country_id")
+
+
+country_region_map <- df %>% distinct(country_id, region) %>% filter(!is.na(region))
+country_quad <- country_quad %>% inner_join(country_region_map, by = "country_id")
+
+rescale11 <- function(x) 2 * (x - min(x)) / (max(x) - min(x)) - 1
+
+country_quad <- country_quad %>%
+  group_by(type) %>%
+  mutate(mass_scaled = rescale11(mass_mean),
+         mass_se_scaled = mass_se * 2 / (max(mass_mean) - min(mass_mean)),
+         hazard_scaled = rescale11(hazard_mean),
+         hazard_se_scaled = hazard_se * 2 / (max(hazard_mean) - min(hazard_mean))) %>%
+  ungroup()
+
+```
+
+
+```{r fig1-country-codes}
+country_code_lookup <- country_quad %>%
+  distinct(country_id) %>%
+  mutate(
+    base_country = str_remove(country_id, " \\(.*\\)$"),
+    exclave_tag  = str_extract(country_id, "(?<=\\()[^)]+"),
+    iso3 = countrycode(base_country, origin = "country.name", destination = "iso3c"),
+    code = if_else(is.na(exclave_tag), iso3, paste0(iso3, ".", str_to_lower(str_sub(exclave_tag, 1, 3))))
+  )
+
+unmatched_codes <- country_code_lookup %>% filter(is.na(iso3))
+if (nrow(unmatched_codes) > 0) {
+  warning("countrycode could not match these country names -- fix manually: ",
+          paste(unmatched_codes$base_country, collapse = ", "))
+}
+
+
+country_code_lookup %>% select(code, country_id) %>% arrange(code)
+
+country_quad <- country_quad %>% left_join(country_code_lookup %>% select(country_id, code), by = "country_id")
+
+```
+
+
+```{r fig1-panel-c, fig.width=12, fig.height=9.5}
+country_code_lookup %>% select(code, country_id) %>% arrange(code)
+
+p4c <- ggplot(country_quad, aes(x = mass_scaled, y = hazard_scaled)) +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "grey50") +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "grey50") +
+  geom_segment(aes(x = mass_scaled - mass_se_scaled, xend = mass_scaled + mass_se_scaled,
+                    y = hazard_scaled, yend = hazard_scaled, color = region), linewidth = 0.4) +
+  geom_segment(aes(x = mass_scaled, xend = mass_scaled,
+                    y = hazard_scaled - hazard_se_scaled, yend = hazard_scaled + hazard_se_scaled,
+                    color = region), linewidth = 0.4) +
+  geom_point(aes(size = n_sites_hazard, color = region), alpha = 0.85) +
+  geom_text_repel(aes(label = code, color = region), size = 1.3, max.overlaps = 20, show.legend = FALSE) +
+  scale_size_continuous(range = c(1.2, 5), name = "n sites") +
+  scale_color_manual(values = region_colors, name = "Region") +
+  facet_wrap(~ type, nrow = 1) +
+  coord_cartesian(xlim = c(-1.15, 1.15), ylim = c(-1.15, 1.15)) +
+  labs(x = "Standardized plastic load (-1 to 1)", y = "Standardized hazard risk (-1 to 1)") +
+  theme_bw(base_size = 11)
+
+p4c
+```
+
+
+## fig4de
+```{r fig1-country-agg}
+site_mass_by_region <- d %>%
+  filter(!is.na(region), !is.na(log_mass)) %>%
+  group_by(country_id, region, latitude, longitude) %>%
+  summarise(log_mass = mean(log_mass),
+            n_distinct_mass = n_distinct(log_mass, na.rm = TRUE), .groups = "drop")
+
+inconsistent_mass_sites_de <- site_mass_by_region %>% filter(n_distinct_mass > 1)
+if (nrow(inconsistent_mass_sites_de) > 0) {
+  warning(nrow(inconsistent_mass_sites_de),
+          " site(s) have inconsistent mass readings across rows in fig1-country-agg -- inspect: ",
+          paste(inconsistent_mass_sites_de$country_id, collapse = ", "))
+}
+
+country_mass <- site_mass_by_region %>%
+  group_by(country_id, region) %>%
+  summarise(n_sites = n(), mass_mean = mean(log_mass),
+            mass_se = sd(log_mass) / sqrt(n()), .groups = "drop")
+
+country_hazard <- d %>%
+  filter(!is.na(region), !is.na(log_hazard)) %>%
+  group_by(type, country_id, region, latitude, longitude) %>%
+  summarise(log_hazard = mean(log_hazard), .groups = "drop") %>%
+  group_by(type, country_id, region) %>%
+  summarise(n_sites = n(), hazard_mean = mean(log_hazard),
+            hazard_se = sd(log_hazard) / sqrt(n()), .groups = "drop")
+
+region_levels <- c("North", "South")
+region_x <- setNames(seq_along(region_levels), region_levels)
+
+set.seed(1)
+country_mass <- country_mass %>%
+  mutate(region = factor(region, levels = region_levels),
+         x_pos = region_x[as.character(region)] + runif(n(), -0.15, 0.15))
+
+set.seed(1)
+country_hazard <- country_hazard %>%
+  mutate(region = factor(region, levels = region_levels),
+         x_pos = region_x[as.character(region)] + runif(n(), -0.15, 0.15))
+
+```
+
+```{r fig1-northsouth-tests}
+
+library(metafor)
+
+run_meta <- function(data, yi_col, se_col) {
+  complete <- data %>% filter(!is.na(.data[[se_col]]))
+  excluded <- nrow(data) - nrow(complete)
+  se_floor <- min(complete[[se_col]][complete[[se_col]] > 0], na.rm = TRUE)
+  complete <- complete %>%
+    mutate(se_used = if_else(.data[[se_col]] <= 0, se_floor, .data[[se_col]]))
+  n_floored <- sum(complete[[se_col]] <= 0)
+
+  fit <- rma(yi = complete[[yi_col]], sei = complete$se_used,
+             mods = ~ region, data = complete, method = "REML")
+  pred_North <- predict(fit, newmods = 0)
+  pred_South <- predict(fit, newmods = 1)
+  tibble(
+    n_countries_used = nrow(complete), n_excluded_no_se = excluded,
+    n_se_floored = n_floored, se_floor_value = se_floor,
+    tau2 = fit$tau2, estimate_South_minus_North = fit$beta["regionSouth", 1],
+    se = fit$se[2], statistic = fit$zval[2], p = fit$pval[2],
+    mean_North = pred_North$pred, ci_lb_North = pred_North$ci.lb, ci_ub_North = pred_North$ci.ub,
+    mean_South = pred_South$pred, ci_lb_South = pred_South$ci.lb, ci_ub_South = pred_South$ci.ub
+  )
+}
+
+mass_meta <- run_meta(country_mass, "mass_mean", "mass_se")
+mass_meta %>% mutate(pair = "mass", .before = 1)
+
+hazard_meta <- map_dfr(levels(country_hazard$type), function(h) {
+  sub <- filter(country_hazard, type == h) %>% mutate(region = droplevels(region))
+  res <- run_meta(sub, "hazard_mean", "hazard_se")
+  tibble(type = h, n_North = sum(sub$region == "North"), n_South = sum(sub$region == "South")) %>%
+    bind_cols(res)
+})
+hazard_meta
+
+```
+
+
+```{r fig1-panel-de, fig.width=12, fig.height=5.5}
+
+mass_weighted <- tibble(
+  region = factor(region_levels, levels = region_levels),
+  x_pos = region_x[region_levels],
+  weighted_mean = c(mass_meta$mean_North, mass_meta$mean_South),
+  ci_lb = c(mass_meta$ci_lb_North, mass_meta$ci_lb_South),
+  ci_ub = c(mass_meta$ci_ub_North, mass_meta$ci_ub_South)
+)
+
+hazard_weighted <- hazard_meta %>%
+  select(type, mean_North, mean_South, ci_lb_North, ci_ub_North, ci_lb_South, ci_ub_South) %>%
+  pivot_longer(-type, names_to = c(".value", "region"), names_pattern = "(.*)_(North|South)") %>%
+  rename(weighted_mean = mean) %>%
+  mutate(region = factor(region, levels = region_levels),
+         x_pos = region_x[as.character(region)],
+         type = factor(type, levels = levels(country_hazard$type)))
+
+p4d <- ggplot(country_mass, aes(x = x_pos, y = mass_mean)) +
+  geom_errorbar(aes(ymin = mass_mean - mass_se, ymax = mass_mean + mass_se, color = region),
+                width = 0, alpha = 0.4, linewidth = 0.3) +
+  geom_point(aes(size = n_sites, color = region), alpha = 0.5) +
+  geom_pointrange(data = mass_weighted,
+                   aes(x = x_pos, y = weighted_mean, ymin = ci_lb, ymax = ci_ub, color = region),
+                   size = 0.9, linewidth = 0.9, fatten = 2.2, inherit.aes = FALSE) +
+  scale_fill_manual(values = region_colors) + scale_color_manual(values = region_colors) +
+  scale_size_continuous(range = c(1, 3), name = "n sites") +
+  scale_x_continuous(breaks = region_x, labels = names(region_x)) +
+  coord_cartesian(xlim = c(0.5, 2.5)) +
+  guides(fill = "none", color = "none") +
+  labs(x = NULL, y = "Country mean log10(mass, g/km2)", title = "Plastic load",
+       caption = "faint points = individual countries (size = n sites)\nbold point + bar = weighted meta-analytic mean, 95% CI (matches reported p-value)") +
+  theme_bw(base_size = 11) + theme(plot.caption = element_text(size = 6.5, hjust = 0))
+
+p4d
+```
+
+```{r}
+p4e <- ggplot(country_hazard, aes(x = x_pos, y = hazard_mean)) +
+  geom_errorbar(aes(ymin = hazard_mean - hazard_se, ymax = hazard_mean + hazard_se, color = region),
+                width = 0, alpha = 0.4, linewidth = 0.3) +
+  geom_point(aes(size = n_sites, color = region), alpha = 0.5) +
+  geom_pointrange(data = hazard_weighted,
+                   aes(x = x_pos, y = weighted_mean, ymin = ci_lb, ymax = ci_ub, color = region),
+                   size = 0.9, linewidth = 0.9, fatten = 2.2, inherit.aes = FALSE) +
+  scale_fill_manual(values = region_colors) + scale_color_manual(values = region_colors) +
+  scale_size_continuous(range = c(1, 3), name = "n sites") +
+  scale_x_continuous(breaks = region_x, labels = names(region_x)) +
+  coord_cartesian(xlim = c(0.5, 2.5)) +
+  guides(fill = "none", color = "none") +
+  facet_wrap(~ type, ncol = 4) +
+  labs(x = NULL, y = "Country mean log10(hazard x100+1)", title = "Plastisphere risk",
+       caption = "faint points = individual countries (size = n sites)\nbold point + bar = weighted meta-analytic mean, 95% CI (matches reported p-value)") +
+  theme_bw(base_size = 11) + theme(plot.caption = element_text(size = 6.5, hjust = 0))
+p4e
+
+```
+
+
+```{r}
+p4de <- (p4d | p4e) + plot_layout(widths = c(1, 3.6))
+p4de
+
+#ggsave(plot = p4de, "Figure4_de.pdf", width = 200, height = 60, units = c("mm"))
+```
+
+
+## fig4
+```{r figure1-assemble}
+library(cowplot)
+
+p4 <- plot_grid(p4a, p4b, p4c, p4de, ncol = 1, rel_heights = c(1, 1, 1, 1))
+
+p4
+
+ggsave(plot = p4, "Figure4_v1.pdf", width = 240, height = 300, units = c("mm"))
+
+
+p4.1 <- plot_grid(
+  p4a + theme(legend.position = "none"),
+  p4b + theme(legend.position = "none"),
+  p4c + theme(legend.position = "none"),
+  p4de & theme(legend.position = "none"),  
+  ncol = 1, rel_heights = c(1, 0.88, 1, 0.88)
+)
+
+p4.1
+
+ggsave(plot = p4.1, "Figure4_v2.pdf", width = 220, height = 240, units = c("mm"))
+
+```
+
+
+## fig5
+
+```{r fig2-cp-er-hs-data}
+NA_THRESHOLD <- 0.5
+rescale01 <- function(x) (x - min(x, na.rm = TRUE)) / (max(x, na.rm = TRUE) - min(x, na.rm = TRUE))
+
+value_indicators <- c("Marine ecosystems occurrence","Proportion of marine protected areas",
+                       "Biodiversity intactness index","Proportion of forests","Coastal vegetation NDVI")
+human_indicators <- c("Coastal tourism density","Gridded GDP per capita based on PPP in 2015")
+cp_indicators <- c("Nutrient pollution","Organic pollution")
+
+build_composite <- function(df, indicators, out_name, na_threshold = NA_THRESHOLD) {
+  na_pct <- df %>% select(all_of(indicators)) %>% summarise(across(everything(), ~ mean(is.na(.x))))
+  kept <- names(na_pct)[as.numeric(na_pct[1, ]) <= na_threshold]
+  df %>% mutate(row_id = row_number()) %>%
+    mutate(across(all_of(kept), rescale01)) %>%
+    rowwise() %>% mutate("{out_name}" := mean(c_across(all_of(kept)), na.rm = TRUE)) %>%
+    ungroup() %>% select(row_id, all_of(out_name))
+}
+
+d_all <- df %>%
+  mutate(row_id = row_number()) %>%
+  left_join(build_composite(df, value_indicators, "eco_value"), by = "row_id") %>%
+  left_join(build_composite(df, human_indicators, "human_value"), by = "row_id") %>%
+  left_join(build_composite(df, cp_indicators, "cp_score"), by = "row_id")
+
+
+site_static <- d_all %>%
+  filter(!is.na(region)) %>%
+  group_by(country_id, region, latitude, longitude) %>%
+  summarise(
+    mass_conc          = first(`2020_mass_concentration_total`),
+    eco_value          = first(eco_value),
+    human_value        = first(human_value),
+    cp_score           = first(cp_score),
+    n_distinct_mass    = n_distinct(`2020_mass_concentration_total`, na.rm = TRUE),
+    n_distinct_eco     = n_distinct(eco_value, na.rm = TRUE),
+    n_distinct_human   = n_distinct(human_value, na.rm = TRUE),
+    n_distinct_cp      = n_distinct(cp_score, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  mutate(mass_log = log10(mass_conc * 1e6))
+
+inconsistent_sites <- site_static %>%
+  filter(n_distinct_mass > 1 | n_distinct_eco > 1 | n_distinct_human > 1 | n_distinct_cp > 1)
+if (nrow(inconsistent_sites) > 0) {
+  warning(nrow(inconsistent_sites),
+          " site(s) have inconsistent mass/eco/human/cp values across rows -- inspect before trusting site_static: ",
+          paste(inconsistent_sites$country_id, collapse = ", "))
+}
+inconsistent_sites
+
+site_hazard_summary <- d_all %>%
+  filter(carrier == "plastisphere", !is.na(hazard_rel_abundance), !is.na(region)) %>%
+  mutate(type = factor(type, levels = c("patho_bacteria","patho_fungi","toxic_algae","ARGs")),
+         log_hazard = log10(hazard_rel_abundance * 100 + 1)) %>%
+  group_by(type, country_id, region, latitude, longitude) %>%
+  summarise(hazard_log = mean(log_hazard), n_samples = n(), .groups = "drop")
+
+n_before_join <- nrow(site_hazard_summary)
+
+site_all <- site_hazard_summary %>%
+  inner_join(site_static, by = c("country_id","region","latitude","longitude")) %>%
+  group_by(type) %>%
+  mutate(mass_scaled = rescale01(mass_log), hazard_scaled = rescale01(hazard_log),
+         exposure = (mass_scaled + hazard_scaled) / 2,
+         eco_scaled = rescale01(eco_value), human_scaled = rescale01(human_value),
+         cp_scaled = rescale01(cp_score)) %>%
+  ungroup()
+
+if (nrow(site_all) != n_before_join) {
+  warning("Row count changed after joining site_static (", n_before_join, " -> ", nrow(site_all),
+          ") -- site_static is duplicating rows for at least one site; inspect inconsistent_sites above.")
+}
+
+classify2x2 <- function(pred, exposure) {
+  ph <- pred >= median(pred, na.rm = TRUE)
+  eh <- exposure >= median(exposure, na.rm = TRUE)
+  case_when(
+    is.na(ph) | is.na(eh) ~ NA_character_,
+    ph & eh   ~ "high_high",
+    !ph & eh  ~ "low_high",
+    ph & !eh  ~ "high_low",
+    TRUE      ~ "low_low"
+  )
+}
+
+site_cat <- site_all %>%
+  group_by(type) %>%
+  mutate(cp_cat = classify2x2(cp_scaled, exposure),
+         eco_cat = classify2x2(eco_scaled, exposure),
+         human_cat = classify2x2(human_scaled, exposure)) %>%
+  ungroup()
+
+site_cat %>%
+  group_by(type) %>%
+  summarise(n_total = n(),
+            n_na_cp = sum(is.na(cp_cat)), n_na_eco = sum(is.na(eco_cat)),
+            n_na_human = sum(is.na(human_cat)), .groups = "drop")
+
+site_cat_long <- site_cat %>%
+  select(type, latitude, longitude, cp_cat, eco_cat, human_cat) %>%
+  pivot_longer(cols = c(cp_cat, eco_cat, human_cat), names_to = "dimension", values_to = "cat") %>%
+  mutate(dimension = recode(dimension, cp_cat = "CP", eco_cat = "ER", human_cat = "HS"),
+         dimension = factor(dimension, levels = c("CP","ER","HS")))
+
+```
+
+```{r fig2-panel-a, fig.width=13, fig.height=8}
+
+cat_colors <- c(high_high = "#B2182B", low_high = "grey80", high_low = "grey80", low_low = "grey80")
+
+p5a <- ggplot() +
+  geom_polygon(data = world, aes(x = long, y = lat, group = group),
+               fill = LAND_FILL, color = LAND_FILL, linewidth = 0.1) +
+  geom_point(data = filter(site_cat_long, !is.na(cat)),
+             aes(x = longitude, y = latitude, fill = cat),
+             shape = 21, color = "black", size = 1.4, alpha = 0.85, stroke = 0.2) +
+  scale_fill_manual(values = cat_colors, name = NULL,
+                     labels = c(high_high = "high & high exposure", low_high = "other",
+                                high_low = "other", low_low = "other")) +
+  coord_quickmap() +
+  facet_grid(type ~ dimension) +
+  base_map_theme +
+  theme(legend.position = "bottom")
+
+p5a
+
+```
+
+
+```{r fig2-panel-b, fig.width=9, fig.height=4}
+build_proportions <- function(data, cat_col) {
+  data %>%
+    filter(!is.na(.data[[cat_col]])) %>%
+    group_by(type, region) %>%
+    summarise(n_total = n(), n_high_high = sum(.data[[cat_col]] == "high_high"),
+              pct_high_high = n_high_high / n_total, .groups = "drop")
+}
+
+cp_proportions    <- build_proportions(site_cat, "cp_cat")
+eco_proportions   <- build_proportions(site_cat, "eco_cat")
+human_proportions <- build_proportions(site_cat, "human_cat")
+
+proportion_test <- function(data, count_col) {
+  map_dfr(levels(data$type), function(h) {
+    sub <- filter(data, type == h)
+    n_grp <- sub$n_total
+    x_grp <- sub[[count_col]]
+    if (nrow(sub) < 2 || any(n_grp == 0)) return(tibble(type = h, p = NA_real_))
+    test <- prop.test(x_grp, n_grp)
+    tibble(type = h, pct_North = x_grp[sub$region == "North"] / n_grp[sub$region == "North"],
+           pct_South = x_grp[sub$region == "South"] / n_grp[sub$region == "South"], p = test$p.value)
+  })
+}
+
+all_proportion_tests <- bind_rows(
+  proportion_test(cp_proportions, "n_high_high")    %>% mutate(dimension = "CP"),
+  proportion_test(eco_proportions, "n_high_high")   %>% mutate(dimension = "ER"),
+  proportion_test(human_proportions, "n_high_high") %>% mutate(dimension = "HS")
+) %>% relocate(dimension, .before = type)
+
+all_proportion_tests
+
+p5b <- bind_rows(
+  cp_proportions    %>% mutate(dimension = "CP"),
+  eco_proportions   %>% mutate(dimension = "ER"),
+  human_proportions %>% mutate(dimension = "HS")
+) %>%
+  ggplot(aes(x = region, y = pct_high_high, fill = region)) +
+  geom_col(width = 0.6) +
+  geom_text(aes(label = percent(pct_high_high, accuracy = 0.1)), vjust = -0.3, size = 3) +
+  scale_fill_manual(values = region_colors) +
+  facet_grid(type ~ dimension) +
+  scale_y_continuous(labels = percent) +
+  labs(x = NULL, y = "% of sites: high dimension & high exposure") +
+  theme_bw(base_size = 10) + theme(legend.position = "none")
+
+p5b
+
+```
+
+
+```{r figure2-assemble}
+
+figure5 <- p5a / p5b +
+  plot_layout(heights = c(1, 1)) +
+  plot_annotation(tag_levels = "A")
+
+figure5
+
+ggsave("figure5_v1.pdf", figure5, width = 12, height = 16)
+
+
+```
+

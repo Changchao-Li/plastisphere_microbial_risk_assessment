@@ -1,0 +1,229 @@
+Species,pla_unique,PNP,Start,End,PNP_attribute
+Acetobacter aceti,1,1,0,1,PNPM
+Acidaminococcus intestini,0,0.529036666,0,1,PNPM
+Acidovorax avenae,0,0.644859813,0,1,PNPM
+Acinetobacter baumannii,0,0.587301587,0,1,PNPM
+Acinetobacter bereziniae LMG 1003 = CIP 70.12,0,0.813953488,0,1,PNPM
+Acinetobacter bouvetii,0,0.771428571,0,1,PNPM
+Acinetobacter calcoaceticus,0,0.769230769,0,1,PNPM
+Acinetobacter haemolyticus,0,0.950617284,0,1,PNPM
+Acinetobacter indicus,0,0.12,0,1,PNPM
+Acinetobacter johnsonii CIP 64.6,0,0.883419689,0,1,PNPM
+Acinetobacter lwoffii ATCC 9957 = CIP 70.31,0,0.637931034,0,1,PNPM
+Acinetobacter schindleri,0,-0.764705882,0,1,nonPNPM
+Acinetobacter soli,0,0.285714286,0,1,PNPM
+Acinetobacter ursingii,0,0.863636364,0,1,PNPM
+Acinetobacter venetianus,0,0.417892157,0,1,PNPM
+Actinomadura madurae,0,-0.591836735,0,1,nonPNPM
+Aeromonas veronii,0,0.845,0,1,PNPM
+Afipia broomeae,0,-0.079768786,0,1,nonPNPM
+Agrobacterium radiobacter,0,0.555555556,0,1,PNPM
+Aliivibrio salmonicida LFI1238,0,0.483870968,0,1,PNPM
+Alteromonas macleodii,0,0.506388082,0,1,PNPM
+Anaerostipes caccae DSM 14662,0,-0.390092879,0,1,nonPNPM
+Arcobacter butzleri,0,0.623188406,0,1,PNPM
+Arcobacter cryaerophilus,0,-0.354639175,0,1,nonPNPM
+Arcobacter skirrowii CCUG 10374,0,-0.926910299,0,1,nonPNPM
+Aureimonas altamirensis,0,0.976588629,0,1,PNPM
+Azospirillum brasilense,0,0.609984399,0,1,PNPM
+Bacillus licheniformis,0,0.17270195,0,1,PNPM
+Bacillus pumilus,0,0.871205152,0,1,PNPM
+Bacillus subtilis,0,0.923371648,0,1,PNPM
+Bacillus thuringiensis,0,-0.133333333,0,1,nonPNPM
+Bacteroides caccae,0,1.13E-17,0,1,PNPM
+Bacteroides eggerthii,0,-0.111111111,0,1,nonPNPM
+Bacteroides fragilis,0,-0.234567901,0,1,nonPNPM
+Bacteroides ovatus,0,0.601731602,0,1,PNPM
+Bacteroides salyersiae,0,0.428571429,0,1,PNPM
+Bacteroides uniformis,0,0.004160888,0,1,PNPM
+Bacteroides vulgatus,0,0.368719038,0,1,PNPM
+Bifidobacterium adolescentis,0,-0.389496718,0,1,nonPNPM
+Bifidobacterium bifidum,0,-0.085714286,0,1,nonPNPM
+Bifidobacterium catenulatum subsp. kashiwanohense,0,-0.265381084,0,1,nonPNPM
+Bifidobacterium dentium,0,-0.476190476,0,1,nonPNPM
+Bifidobacterium thermophilum,0,-0.111111111,0,1,nonPNPM
+Brevibacterium casei,0,0.87755102,0,1,PNPM
+Brevundimonas diminuta,0,0.66,0,1,PNPM
+Brevundimonas vesicularis,0,0.701375246,0,1,PNPM
+Burkholderiales bacterium,1,1,0,1,PNPM
+Campylobacter showae,0,-0.68,0,1,nonPNPM
+Candidatus Nitrospira inopinata,0,0.748670213,0,1,PNPM
+Candidatus Pelagibacter sp. HIMB1321,0,-0.981891348,0,1,nonPNPM
+Candidatus Pelagibacter sp. IMCC9063,0,-0.981308411,0,1,nonPNPM
+Candidatus Pelagibacter sp. RS40,0,-0.956521739,0,1,nonPNPM
+Candidatus Saccharibacteria bacterium RAAC3_TM7_1,1,1,0,1,PNPM
+Candidatus Saccharibacteria bacterium UB2523,0,-0.333333333,0,1,nonPNPM
+Candidatus Thioglobus singularis PS1,0,-0.957368614,0,1,nonPNPM
+Candidatus Thioglobus sp. REDSEA-S12_B1,0,-1,0,1,nonPNPM
+Chromobacterium violaceum,0,0.818181818,0,1,PNPM
+Chryseobacterium indologenes,0,0.817923186,0,1,PNPM
+Clostridium baratii,0,0.974591652,0,1,PNPM
+Clostridium beijerinckii,0,-0.318181818,0,1,nonPNPM
+Clostridium butyricum,0,0.6,0,1,PNPM
+Clostridium perfringens CPE str. F4969,0,0.960591133,0,1,PNPM
+Clostridium sporogenes,0,-0.39380531,0,1,nonPNPM
+Comamonas kerstersii,0,0.881188119,0,1,PNPM
+Comamonas terrigena,0,0.903846154,0,1,PNPM
+Comamonas testosteroni,0,0.47826087,0,1,PNPM
+Corynebacterium accolens,1,1,0,1,PNPM
+Corynebacterium freneyi,0,0.888888889,0,1,PNPM
+Corynebacterium lipophiloflavum,0,0.982905983,0,1,PNPM
+Coxiella endosymbiont of Ornithodoros marocanus,0,0.678769621,0,1,PNPM
+Curtobacterium flaccumfaciens,0,0.573770492,0,1,PNPM
+Cystobacter fuscus,0,0.549407115,0,1,PNPM
+Delftia acidovorans,0,0.6,0,1,PNPM
+Desulfomicrobium orale,0,0.530805687,0,1,PNPM
+Dysgonomonas mossii,0,0.333333333,0,1,PNPM
+Eggerthella lenta,0,0.476923077,0,1,PNPM
+Empedobacter falsenii genomovar 2,0,0.884297521,0,1,PNPM
+Enterobacter asburiae,0,0.422222222,0,1,PNPM
+Enterococcus cecorum,0,0.043478261,0,1,PNPM
+Enterococcus faecalis,0,0.963534362,0,1,PNPM
+Escherichia coli,0,0.244444444,0,1,PNPM
+Filifactor alocis,0,-0.568627451,0,1,nonPNPM
+Flavobacterium psychrophilum,0,-0.679767252,0,1,nonPNPM
+Fusobacterium mortiferum,0,0.343065693,0,1,PNPM
+Fusobacterium nucleatum,0,-0.661971831,0,1,nonPNPM
+Granulicatella adiacens,0,-0.623188406,0,1,nonPNPM
+Granulicatella elegans,0,-0.6,0,1,nonPNPM
+Grimontia hollisae CIP 101886,0,0.363636364,0,1,PNPM
+Haemophilus influenzae,0,-0.365853659,0,1,nonPNPM
+Haemophilus parainfluenzae,0,-0.592592593,0,1,nonPNPM
+Helicobacter pylori,0,-0.810810811,0,1,nonPNPM
+Herbaspirillum rubrisubalbicans,0,-0.105882353,0,1,nonPNPM
+Hyaloperonospora arabidopsidis,0,0.944968553,0,1,PNPM
+Janibacter melonis,0,0.426294821,0,1,PNPM
+Janthinobacterium agaricidamnosum,0,0.879470199,0,1,PNPM
+Kingella oralis,0,-0.428571429,0,1,nonPNPM
+Klebsiella pneumoniae,0,0.650943396,0,1,PNPM
+Kocuria rhizophila,0,0.853658537,0,1,PNPM
+Lactobacillus fermentum,0,-0.213483146,0,1,nonPNPM
+Lactobacillus ginsenosidimutans,0,0.996710526,0,1,PNPM
+Lactobacillus johnsonii,0,-0.066666667,0,1,nonPNPM
+Lactobacillus parabuchneri,1,1,0,1,PNPM
+Lactobacillus paracasei,0,0.6,0,1,PNPM
+Lactobacillus plantarum,0,0.84,0,1,PNPM
+Lactobacillus reuteri,0,0.423076923,0,1,PNPM
+Lactobacillus ruminis,0,-0.764705882,0,1,nonPNPM
+Lactobacillus sakei,0,0.363636364,0,1,PNPM
+Lactobacillus salivarius,0,-0.5,0,1,nonPNPM
+Lactococcus garvieae,0,0.272727273,0,1,PNPM
+Lactococcus lactis,0,0.307692308,0,1,PNPM
+Laribacter hongkongensis,0,0.530546624,0,1,PNPM
+Leptotrichia goodfellowii,0,-0.166666667,0,1,nonPNPM
+Leptotrichia shahii,0,-0.441860465,0,1,nonPNPM
+Leptotrichia wadei,0,-0.580246914,0,1,nonPNPM
+Leuconostoc lactis,0,0.8,0,1,PNPM
+Leuconostoc mesenteroides,0,0.959183673,0,1,PNPM
+Listeria monocytogenes,0,-0.157894737,0,1,nonPNPM
+Listonella anguillarum,0,-0.461538462,0,1,nonPNPM
+Lysinibacillus sphaericus,0,0.056603774,0,1,PNPM
+Megasphaera micronuciformis,0,-0.513513514,0,1,nonPNPM
+metagenome,0,0.542857143,0,1,PNPM
+Mitsuokella multacida,0,0.590493601,0,1,PNPM
+Moraxella osloensis,0,0.645112782,0,1,PNPM
+Mycobacterium fortuitum,0,0.347826087,0,1,PNPM
+Neisseria elongata,0,0.964125561,0,1,PNPM
+Nocardia nova,0,0.066666667,0,1,PNPM
+Nocardiopsis dassonvillei,0,0.894736842,0,1,PNPM
+Ochrobactrum anthropi,0,0.769230769,0,1,PNPM
+Odoribacter splanchnicus,0,-0.8125,0,1,nonPNPM
+Oerskovia turbata,1,1,0,1,PNPM
+Oribacterium sinus,0,-0.411764706,0,1,nonPNPM
+Oscillibacter ruminantium GH1,0,0.118985127,0,1,PNPM
+Pannonibacter phragmitetus,0,0.417879418,0,1,PNPM
+Parabacteroides distasonis,0,0.092857143,0,1,PNPM
+Parabacteroides goldsteinii,0,-0.348837209,0,1,nonPNPM
+Parabacteroides johnsonii,0,-0.230769231,0,1,nonPNPM
+Parabacteroides merdae,0,-0.157894737,0,1,nonPNPM
+Paraclostridium bifermentans,0,0.416666667,0,1,PNPM
+Paracoccus sanguinis,0,0.765598238,0,1,PNPM
+Paracoccus yeei,0,0.698278378,0,1,PNPM
+Paraprevotella xylaniphila,0,-0.375,0,1,nonPNPM
+Parvimonas micra ATCC 33270,0,-0.345454545,0,1,nonPNPM
+Peptostreptococcus stomatis DSM 17678,0,-0.324324324,0,1,nonPNPM
+Photobacterium damselae subsp. piscicida (causative agent of fish,0,-0.514285714,0,1,nonPNPM
+Plesiomonas shigelloides,0,0.955223881,0,1,PNPM
+Porphyromonas gingivicanis,0,-0.353658537,0,1,nonPNPM
+Prevotella buccae ATCC 33574,0,0.448275862,0,1,PNPM
+Prevotella copri,0,-0.63943662,0,1,nonPNPM
+Prevotella copri DSM 18205,0,-0.533274179,0,1,nonPNPM
+Prevotella histicola,0,-0.70212766,0,1,nonPNPM
+Prevotella intermedia,0,-0.577142857,0,1,nonPNPM
+Prevotella melaninogenica ATCC 25845,0,-0.730769231,0,1,nonPNPM
+Prevotella nanceiensis,0,-0.607142857,0,1,nonPNPM
+Prevotella nigrescens,0,-0.698630137,0,1,nonPNPM
+Prevotella pallens,0,-0.75,0,1,nonPNPM
+Prevotella paludivivens,0,0.169167804,0,1,PNPM
+Prevotella salivae,0,-0.65,0,1,nonPNPM
+Prevotella stercorea,0,-0.338983051,0,1,nonPNPM
+Pseudoalteromonas atlantica,0,-0.031449239,0,1,nonPNPM
+Pseudoalteromonas atlantica T6c,0,0.895699909,0,1,PNPM
+Pseudomonas aeruginosa,0,0.259259259,0,1,PNPM
+Pseudomonas balearica,0,-0.020408163,0,1,nonPNPM
+Pseudomonas pohangensis,0,0.190184049,0,1,PNPM
+Pseudomonas putida,0,0.936170213,0,1,PNPM
+Pseudomonas sabulinigri,0,0.79663731,0,1,PNPM
+Pseudomonas salegens,0,0.826164875,0,1,PNPM
+Pseudomonas stutzeri,0,0.772972973,0,1,PNPM
+Pseudonocardia autotrophica,0,-0.094339623,0,1,nonPNPM
+Psychrobacter cryohalolentis K5,0,0.917141378,0,1,PNPM
+Psychrobacter phenylpyruvicus,0,0.95524885,0,1,PNPM
+Raoultella ornithinolytica,0,0.846153846,0,1,PNPM
+Rhizobium rhizogenes,0,-0.231292517,0,1,nonPNPM
+Rhodococcus erythropolis,0,0.365079365,0,1,PNPM
+Rhodococcus fascians,0,0.746031746,0,1,PNPM
+Rhodococcus pyridinivorans,0,-0.166666667,0,1,nonPNPM
+Rhodopseudomonas palustris,0,0.4,0,1,PNPM
+Robinsoniella peoriensis,0,-0.197085439,0,1,nonPNPM
+Rodentibacter pneumotropicus,0,-0.253731343,0,1,nonPNPM
+Roseobacter denitrificans,0,0.426775683,0,1,PNPM
+Roseomonas cervicalis ATCC 49957,0,0.939393939,0,1,PNPM
+Roseomonas gilardii,0,0.906633907,0,1,PNPM
+Rothia aeria,0,-0.357142857,0,1,nonPNPM
+Rothia mucilaginosa,0,-0.483870968,0,1,nonPNPM
+Schaalia odontolytica,0,-0.476635514,0,1,nonPNPM
+Serratia marcescens,0,0.941176471,0,1,PNPM
+Shewanella algae,0,0.904761905,0,1,PNPM
+Shewanella baltica,0,0.690140845,0,1,PNPM
+Shewanella bicestrii,0,0.780821918,0,1,PNPM
+Shewanella denitrificans,0,0.259259259,0,1,PNPM
+Shewanella frigidimarina,0,-0.242881072,0,1,nonPNPM
+Shewanella japonica,0,-0.385542169,0,1,nonPNPM
+Shewanella loihica PV-4,0,-0.974499089,0,1,nonPNPM
+Shewanella marisflavi,0,0.058823529,0,1,PNPM
+Shewanella putrefaciens,0,0.636363636,0,1,PNPM
+Sphingobacterium spiritivorum,0,0.879699248,0,1,PNPM
+Sphingomonas daechungensis,0,0.5,0,1,PNPM
+Sphingomonas ginsengisoli An et al. 2013,0,0.822222222,0,1,PNPM
+Sphingomonas koreensis,0,0.890183028,0,1,PNPM
+Sphingomonas lutea,0,-0.40784604,0,1,nonPNPM
+Sphingomonas paucimobilis,0,0.765726681,0,1,PNPM
+Sphingomonas rhizophila,0,0.571428571,0,1,PNPM
+Stenotrophomonas maltophilia,0,0.289256198,0,1,PNPM
+Streptococcus anginosus,0,-0.306122449,0,1,nonPNPM
+Streptococcus equinus,0,0.266078184,0,1,PNPM
+Streptococcus mutans,0,-0.8,0,1,nonPNPM
+Streptococcus oralis subsp. dentisani,0,-0.413214653,0,1,nonPNPM
+Streptococcus parasanguinis,0,-0.387096774,0,1,nonPNPM
+Streptococcus parasuis,0,0.480620155,0,1,PNPM
+Sutterella wadsworthensis,0,-0.625,0,1,nonPNPM
+Tenacibaculum dicentrarchi,0,-0.007991358,0,1,nonPNPM
+Treponema succinifaciens DSM 2489,0,-0.217391304,0,1,nonPNPM
+uncultured bacterium,0,-0.499100278,0,1,nonPNPM
+uncultured Burkholderiales bacterium,0,-0.089920535,0,1,nonPNPM
+uncultured Candidatus Pelagibacter sp.,0,-0.991256831,0,1,nonPNPM
+uncultured Candidatus Saccharibacteria bacterium,0,0.731579965,0,1,PNPM
+uncultured Chlamydia sp.,0,0.974683544,0,1,PNPM
+uncultured Rickettsiales bacterium,0,-0.072959947,0,1,nonPNPM
+uncultured Verrucomicrobia bacterium,0,-0.072463768,0,1,nonPNPM
+Veillonella dispar,0,-0.635427394,0,1,nonPNPM
+Veillonella seminalis,0,0.16,0,1,PNPM
+Vibrio alginolyticus,0,-0.074626866,0,1,nonPNPM
+Vibrio furnissii,0,0.968,0,1,PNPM
+Vibrio splendidus,0,-0.182670623,0,1,nonPNPM
+Vibrio tritonius,0,0.944444444,0,1,PNPM
+Waddlia chondrophila WSU 86-1044,0,0.981818182,0,1,PNPM
+Weissella confusa,0,0.058823529,0,1,PNPM
+Xanthomonas axonopodis,0,0.538461538,0,1,PNPM
+Xanthomonas cucurbitae,0,0.97979798,0,1,PNPM

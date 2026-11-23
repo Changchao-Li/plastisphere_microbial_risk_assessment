@@ -1,0 +1,1776 @@
+ASV_ID,pla_unique,PNP,group,Start,End,PNP_attribute
+animal_patho_ASV_218,0,0.286713287,Animal pathogen,0,1,PNPM
+animal_patho_ASV_959,0,0.627118644,Animal pathogen,1,2,PNPM
+animal_patho_ASV_3533,1,1,Animal pathogen,2,3,PNPM
+animal_patho_ASV_4661,0,-1,Animal pathogen,3,4,non_PNPM
+animal_patho_ASV_8124,1,1,Animal pathogen,4,5,PNPM
+animal_patho_ASV_1,0,0.146220263,Animal pathogen,5,6,PNPM
+animal_patho_ASV_13,0,0.623816642,Animal pathogen,6,7,PNPM
+animal_patho_ASV_14,0,0.079980211,Animal pathogen,7,8,PNPM
+animal_patho_ASV_21,0,-0.33065442,Animal pathogen,8,9,non_PNPM
+animal_patho_ASV_23,0,0.715542522,Animal pathogen,9,10,PNPM
+animal_patho_ASV_34,0,0.40890091,Animal pathogen,10,11,PNPM
+animal_patho_ASV_58,0,-0.03173836,Animal pathogen,11,12,non_PNPM
+animal_patho_ASV_46,0,0.598441558,Animal pathogen,12,13,PNPM
+animal_patho_ASV_52,0,-0.095079396,Animal pathogen,13,14,non_PNPM
+animal_patho_ASV_88,0,0.214731215,Animal pathogen,14,15,PNPM
+animal_patho_ASV_85,0,0.469987229,Animal pathogen,15,16,PNPM
+animal_patho_ASV_95,0,0.50931677,Animal pathogen,16,17,PNPM
+animal_patho_ASV_94,0,-0.137957911,Animal pathogen,17,18,non_PNPM
+animal_patho_ASV_126,0,0.182282794,Animal pathogen,18,19,PNPM
+animal_patho_ASV_136,0,-0.011647255,Animal pathogen,19,20,non_PNPM
+animal_patho_ASV_173,0,-0.28219697,Animal pathogen,20,21,non_PNPM
+animal_patho_ASV_213,0,0.489698891,Animal pathogen,21,22,PNPM
+animal_patho_ASV_211,0,-0.644781145,Animal pathogen,22,23,non_PNPM
+animal_patho_ASV_201,0,0.903508772,Animal pathogen,23,24,PNPM
+animal_patho_ASV_246,0,-0.186483104,Animal pathogen,24,25,non_PNPM
+animal_patho_ASV_279,0,0.431192661,Animal pathogen,25,26,PNPM
+animal_patho_ASV_355,0,-0.63969975,Animal pathogen,26,27,non_PNPM
+animal_patho_ASV_327,0,0.910994764,Animal pathogen,27,28,PNPM
+animal_patho_ASV_345,0,0.991266376,Animal pathogen,28,29,PNPM
+animal_patho_ASV_577,0,-0.746130031,Animal pathogen,29,30,non_PNPM
+animal_patho_ASV_437,0,0.430051813,Animal pathogen,30,31,PNPM
+animal_patho_ASV_457,0,-0.995604396,Animal pathogen,31,32,non_PNPM
+animal_patho_ASV_871,0,0.077720207,Animal pathogen,32,33,PNPM
+animal_patho_ASV_551,0,0.276595745,Animal pathogen,33,34,PNPM
+animal_patho_ASV_1017,0,-0.532374101,Animal pathogen,34,35,non_PNPM
+animal_patho_ASV_578,0,0.715877437,Animal pathogen,35,36,PNPM
+animal_patho_ASV_522,0,0.986666667,Animal pathogen,36,37,PNPM
+animal_patho_ASV_567,0,-0.023255814,Animal pathogen,37,38,non_PNPM
+animal_patho_ASV_585,0,0.562130178,Animal pathogen,38,39,PNPM
+animal_patho_ASV_647,0,0.657142857,Animal pathogen,39,40,PNPM
+animal_patho_ASV_613,0,-0.720430108,Animal pathogen,40,41,non_PNPM
+animal_patho_ASV_715,0,0.978021978,Animal pathogen,41,42,PNPM
+animal_patho_ASV_10764,0,-0.281437126,Animal pathogen,42,43,non_PNPM
+animal_patho_ASV_828,0,-0.060728745,Animal pathogen,43,44,non_PNPM
+animal_patho_ASV_805,0,-0.368852459,Animal pathogen,44,45,non_PNPM
+animal_patho_ASV_902,0,0.92,Animal pathogen,45,46,PNPM
+animal_patho_ASV_913,0,-0.261146497,Animal pathogen,46,47,non_PNPM
+animal_patho_ASV_932,0,0.786163522,Animal pathogen,47,48,PNPM
+animal_patho_ASV_929,0,-1,Animal pathogen,48,49,non_PNPM
+animal_patho_ASV_1076,0,-0.894736842,Animal pathogen,49,50,non_PNPM
+animal_patho_ASV_1002,0,0.52,Animal pathogen,50,51,PNPM
+animal_patho_ASV_1013,0,0.952380952,Animal pathogen,51,52,PNPM
+animal_patho_ASV_1070,0,-0.972789116,Animal pathogen,52,53,non_PNPM
+animal_patho_ASV_1116,0,-0.960784314,Animal pathogen,53,54,non_PNPM
+animal_patho_ASV_1171,1,1,Animal pathogen,54,55,PNPM
+animal_patho_ASV_1152,0,-1,Animal pathogen,55,56,non_PNPM
+animal_patho_ASV_1971,0,-0.092307692,Animal pathogen,56,57,non_PNPM
+animal_patho_ASV_1500,0,0.407407407,Animal pathogen,57,58,PNPM
+animal_patho_ASV_1281,0,0.238095238,Animal pathogen,58,59,PNPM
+animal_patho_ASV_1334,0,-0.43315508,Animal pathogen,59,60,non_PNPM
+animal_patho_ASV_1298,0,-1,Animal pathogen,60,61,non_PNPM
+animal_patho_ASV_8312,0,0.545454545,Animal pathogen,61,62,PNPM
+animal_patho_ASV_1465,0,-0.714285714,Animal pathogen,62,63,non_PNPM
+animal_patho_ASV_1392,0,0.977777778,Animal pathogen,63,64,PNPM
+animal_patho_ASV_1513,0,0.333333333,Animal pathogen,64,65,PNPM
+animal_patho_ASV_8309,0,-0.15625,Animal pathogen,65,66,non_PNPM
+animal_patho_ASV_1870,0,-0.903846154,Animal pathogen,66,67,non_PNPM
+animal_patho_ASV_1974,0,-0.565217391,Animal pathogen,67,68,non_PNPM
+animal_patho_ASV_1686,0,-0.352941176,Animal pathogen,68,69,non_PNPM
+animal_patho_ASV_1808,0,0.5,Animal pathogen,69,70,PNPM
+animal_patho_ASV_1880,0,-0.181818182,Animal pathogen,70,71,non_PNPM
+animal_patho_ASV_1839,0,0.916666667,Animal pathogen,71,72,PNPM
+animal_patho_ASV_2538,0,-0.794871795,Animal pathogen,72,73,non_PNPM
+animal_patho_ASV_1993,0,0.52,Animal pathogen,73,74,PNPM
+animal_patho_ASV_1948,0,-1,Animal pathogen,74,75,non_PNPM
+animal_patho_ASV_2097,0,-0.818181818,Animal pathogen,75,76,non_PNPM
+animal_patho_ASV_2985,0,0.170731707,Animal pathogen,76,77,PNPM
+animal_patho_ASV_2594,0,0.792207792,Animal pathogen,77,78,PNPM
+animal_patho_ASV_1920,0,-0.488372093,Animal pathogen,78,79,non_PNPM
+animal_patho_ASV_6612,0,0.146341463,Animal pathogen,79,80,PNPM
+animal_patho_ASV_2625,0,-0.605633803,Animal pathogen,80,81,non_PNPM
+animal_patho_ASV_2251,0,-0.540229885,Animal pathogen,81,82,non_PNPM
+animal_patho_ASV_2087,0,-0.923076923,Animal pathogen,82,83,non_PNPM
+animal_patho_ASV_2287,1,1,Animal pathogen,83,84,PNPM
+animal_patho_ASV_2250,0,-0.384615385,Animal pathogen,84,85,non_PNPM
+animal_patho_ASV_2015,1,1,Animal pathogen,85,86,PNPM
+animal_patho_ASV_2090,0,-1,Animal pathogen,86,87,non_PNPM
+animal_patho_ASV_2135,0,-0.837837838,Animal pathogen,87,88,non_PNPM
+animal_patho_ASV_2215,0,0.466666667,Animal pathogen,88,89,PNPM
+animal_patho_ASV_2301,1,1,Animal pathogen,89,90,PNPM
+animal_patho_ASV_2543,0,-0.11627907,Animal pathogen,90,91,non_PNPM
+animal_patho_ASV_2828,1,1,Animal pathogen,91,92,PNPM
+animal_patho_ASV_2378,0,-0.942857143,Animal pathogen,92,93,non_PNPM
+animal_patho_ASV_2322,0,-0.64516129,Animal pathogen,93,94,non_PNPM
+animal_patho_ASV_2473,0,0.24137931,Animal pathogen,94,95,PNPM
+animal_patho_ASV_2500,0,0.333333333,Animal pathogen,95,96,PNPM
+animal_patho_ASV_2503,0,-0.952380952,Animal pathogen,96,97,non_PNPM
+animal_patho_ASV_2410,0,-1,Animal pathogen,97,98,non_PNPM
+animal_patho_ASV_2466,1,1,Animal pathogen,98,99,PNPM
+animal_patho_ASV_2506,0,-0.459459459,Animal pathogen,99,100,non_PNPM
+animal_patho_ASV_2735,0,-0.5,Animal pathogen,100,101,non_PNPM
+animal_patho_ASV_2860,0,-0.461538462,Animal pathogen,101,102,non_PNPM
+animal_patho_ASV_2478,0,0.9,Animal pathogen,102,103,PNPM
+animal_patho_ASV_2505,0,-1,Animal pathogen,103,104,non_PNPM
+animal_patho_ASV_2609,1,1,Animal pathogen,104,105,PNPM
+animal_patho_ASV_3094,0,0.222222222,Animal pathogen,105,106,PNPM
+animal_patho_ASV_3047,1,1,Animal pathogen,106,107,PNPM
+animal_patho_ASV_3219,0,-0.151515152,Animal pathogen,107,108,non_PNPM
+animal_patho_ASV_3211,1,1,Animal pathogen,108,109,PNPM
+animal_patho_ASV_2842,0,-1,Animal pathogen,109,110,non_PNPM
+animal_patho_ASV_3242,0,-0.282051282,Animal pathogen,110,111,non_PNPM
+animal_patho_ASV_2901,1,1,Animal pathogen,111,112,PNPM
+animal_patho_ASV_3337,0,0.111111111,Animal pathogen,112,113,PNPM
+animal_patho_ASV_2983,1,1,Animal pathogen,113,114,PNPM
+animal_patho_ASV_3106,0,-0.913043478,Animal pathogen,114,115,non_PNPM
+animal_patho_ASV_3166,1,1,Animal pathogen,115,116,PNPM
+animal_patho_ASV_3232,0,0.176470588,Animal pathogen,116,117,PNPM
+animal_patho_ASV_3111,0,-1,Animal pathogen,117,118,non_PNPM
+animal_patho_ASV_3424,0,0.666666667,Animal pathogen,118,119,PNPM
+animal_patho_ASV_4223,0,0.636363636,Animal pathogen,119,120,PNPM
+animal_patho_ASV_3529,0,0.888888889,Animal pathogen,120,121,PNPM
+animal_patho_ASV_3405,0,0.2,Animal pathogen,121,122,PNPM
+animal_patho_ASV_3638,0,-0.777777778,Animal pathogen,122,123,non_PNPM
+animal_patho_ASV_3513,0,-1,Animal pathogen,123,124,non_PNPM
+animal_patho_ASV_3879,0,-0.368421053,Animal pathogen,124,125,non_PNPM
+animal_patho_ASV_3440,0,0.857142857,Animal pathogen,125,126,PNPM
+animal_patho_ASV_4074,0,0.818181818,Animal pathogen,126,127,PNPM
+animal_patho_ASV_3652,0,-0.583333333,Animal pathogen,127,128,non_PNPM
+animal_patho_ASV_4081,0,0.5,Animal pathogen,128,129,PNPM
+animal_patho_ASV_3683,0,-1,Animal pathogen,129,130,non_PNPM
+animal_patho_ASV_3761,1,1,Animal pathogen,130,131,PNPM
+animal_patho_ASV_8596,0,-1,Animal pathogen,131,132,non_PNPM
+animal_patho_ASV_4193,0,-0.833333333,Animal pathogen,132,133,non_PNPM
+animal_patho_ASV_4013,1,1,Animal pathogen,133,134,PNPM
+animal_patho_ASV_4402,0,-0.333333333,Animal pathogen,134,135,non_PNPM
+animal_patho_ASV_3961,0,-1,Animal pathogen,135,136,non_PNPM
+animal_patho_ASV_4590,0,0.384615385,Animal pathogen,136,137,PNPM
+animal_patho_ASV_3966,1,1,Animal pathogen,137,138,PNPM
+animal_patho_ASV_6015,0,-0.066666667,Animal pathogen,138,139,non_PNPM
+animal_patho_ASV_5413,0,0.333333333,Animal pathogen,139,140,PNPM
+animal_patho_ASV_4255,1,1,Animal pathogen,140,141,PNPM
+animal_patho_ASV_4660,1,1,Animal pathogen,141,142,PNPM
+animal_patho_ASV_5446,0,-0.5,Animal pathogen,142,143,non_PNPM
+animal_patho_ASV_4269,0,-1,Animal pathogen,143,144,non_PNPM
+animal_patho_ASV_4433,0,-0.066666667,Animal pathogen,144,145,non_PNPM
+animal_patho_ASV_4608,0,-0.25,Animal pathogen,145,146,non_PNPM
+animal_patho_ASV_4472,0,-0.333333333,Animal pathogen,146,147,non_PNPM
+animal_patho_ASV_4393,0,-0.268292683,Animal pathogen,147,148,non_PNPM
+animal_patho_ASV_4536,1,1,Animal pathogen,148,149,PNPM
+animal_patho_ASV_4476,0,-1,Animal pathogen,149,150,non_PNPM
+animal_patho_ASV_4584,1,1,Animal pathogen,150,151,PNPM
+animal_patho_ASV_4621,0,-1,Animal pathogen,151,152,non_PNPM
+animal_patho_ASV_4769,0,-1,Animal pathogen,152,153,non_PNPM
+animal_patho_ASV_6698,0,-0.714285714,Animal pathogen,153,154,non_PNPM
+animal_patho_ASV_5649,0,-0.777777778,Animal pathogen,154,155,non_PNPM
+animal_patho_ASV_5020,0,-1,Animal pathogen,155,156,non_PNPM
+animal_patho_ASV_5093,1,1,Animal pathogen,156,157,PNPM
+animal_patho_ASV_8721,0,2.78E-17,Animal pathogen,157,158,PNPM
+animal_patho_ASV_5391,1,1,Animal pathogen,158,159,PNPM
+animal_patho_ASV_5510,1,1,Animal pathogen,159,160,PNPM
+animal_patho_ASV_5915,0,0.076923077,Animal pathogen,160,161,PNPM
+animal_patho_ASV_5563,1,1,Animal pathogen,161,162,PNPM
+animal_patho_ASV_5264,0,-1,Animal pathogen,162,163,non_PNPM
+animal_patho_ASV_5493,1,1,Animal pathogen,163,164,PNPM
+animal_patho_ASV_5804,1,1,Animal pathogen,164,165,PNPM
+animal_patho_ASV_6493,0,-1,Animal pathogen,165,166,non_PNPM
+animal_patho_ASV_6719,0,-0.333333333,Animal pathogen,166,167,non_PNPM
+animal_patho_ASV_5597,1,1,Animal pathogen,167,168,PNPM
+animal_patho_ASV_5870,0,-0.75,Animal pathogen,168,169,non_PNPM
+animal_patho_ASV_6669,0,-1,Animal pathogen,169,170,non_PNPM
+animal_patho_ASV_5806,1,1,Animal pathogen,170,171,PNPM
+animal_patho_ASV_6148,0,0.4,Animal pathogen,171,172,PNPM
+animal_patho_ASV_6204,1,1,Animal pathogen,172,173,PNPM
+animal_patho_ASV_6220,1,1,Animal pathogen,173,174,PNPM
+animal_patho_ASV_6448,1,1,Animal pathogen,174,175,PNPM
+animal_patho_ASV_6262,0,-1,Animal pathogen,175,176,non_PNPM
+animal_patho_ASV_6186,0,-1,Animal pathogen,176,177,non_PNPM
+animal_patho_ASV_6355,1,1,Animal pathogen,177,178,PNPM
+animal_patho_ASV_7207,0,-0.25,Animal pathogen,178,179,non_PNPM
+animal_patho_ASV_6205,1,1,Animal pathogen,179,180,PNPM
+animal_patho_ASV_6332,1,1,Animal pathogen,180,181,PNPM
+animal_patho_ASV_6953,0,-0.333333333,Animal pathogen,181,182,non_PNPM
+animal_patho_ASV_7942,1,1,Animal pathogen,182,183,PNPM
+animal_patho_ASV_6505,0,0.6,Animal pathogen,183,184,PNPM
+animal_patho_ASV_6534,0,-0.714285714,Animal pathogen,184,185,non_PNPM
+animal_patho_ASV_6563,1,1,Animal pathogen,185,186,PNPM
+animal_patho_ASV_6711,0,-1,Animal pathogen,186,187,non_PNPM
+animal_patho_ASV_6981,0,-1,Animal pathogen,187,188,non_PNPM
+animal_patho_ASV_7136,1,1,Animal pathogen,188,189,PNPM
+animal_patho_ASV_6657,0,-1,Animal pathogen,189,190,non_PNPM
+animal_patho_ASV_6812,1,1,Animal pathogen,190,191,PNPM
+animal_patho_ASV_7252,0,0,Animal pathogen,191,192,non_PNPM
+animal_patho_ASV_10666,1,1,Animal pathogen,192,193,PNPM
+animal_patho_ASV_6886,1,1,Animal pathogen,193,194,PNPM
+animal_patho_ASV_6979,0,-1,Animal pathogen,194,195,non_PNPM
+animal_patho_ASV_7335,1,1,Animal pathogen,195,196,PNPM
+animal_patho_ASV_7135,0,-1,Animal pathogen,196,197,non_PNPM
+animal_patho_ASV_7659,0,0.5,Animal pathogen,197,198,PNPM
+animal_patho_ASV_7957,0,-1,Animal pathogen,198,199,non_PNPM
+animal_patho_ASV_7133,0,-1,Animal pathogen,199,200,non_PNPM
+animal_patho_ASV_7474,1,1,Animal pathogen,200,201,PNPM
+animal_patho_ASV_8786,1,1,Animal pathogen,201,202,PNPM
+animal_patho_ASV_8957,1,1,Animal pathogen,202,203,PNPM
+animal_patho_ASV_7795,0,0.5,Animal pathogen,203,204,PNPM
+animal_patho_ASV_8991,0,0,Animal pathogen,204,205,non_PNPM
+animal_patho_ASV_7720,1,1,Animal pathogen,205,206,PNPM
+animal_patho_ASV_7866,0,-1,Animal pathogen,206,207,non_PNPM
+animal_patho_ASV_9043,0,0.333333333,Animal pathogen,207,208,PNPM
+animal_patho_ASV_9500,1,1,Animal pathogen,208,209,PNPM
+animal_patho_ASV_9817,0,-0.2,Animal pathogen,209,210,non_PNPM
+animal_patho_ASV_8357,1,1,Animal pathogen,210,211,PNPM
+animal_patho_ASV_10317,0,-1,Animal pathogen,211,212,non_PNPM
+animal_patho_ASV_8266,0,-0.2,Animal pathogen,212,213,non_PNPM
+animal_patho_ASV_8296,0,-1,Animal pathogen,213,214,non_PNPM
+animal_patho_ASV_9011,1,1,Animal pathogen,214,215,PNPM
+animal_patho_ASV_8374,1,1,Animal pathogen,215,216,PNPM
+animal_patho_ASV_9513,0,-1,Animal pathogen,216,217,non_PNPM
+animal_patho_ASV_9829,0,0.5,Animal pathogen,217,218,PNPM
+animal_patho_ASV_8442,1,1,Animal pathogen,218,219,PNPM
+animal_patho_ASV_8567,0,-1,Animal pathogen,219,220,non_PNPM
+animal_patho_ASV_9347,1,1,Animal pathogen,220,221,PNPM
+animal_patho_ASV_9378,1,1,Animal pathogen,221,222,PNPM
+animal_patho_ASV_10178,1,1,Animal pathogen,222,223,PNPM
+animal_patho_ASV_9399,0,-1,Animal pathogen,223,224,non_PNPM
+animal_patho_ASV_9631,0,-1,Animal pathogen,224,225,non_PNPM
+animal_patho_ASV_9770,1,1,Animal pathogen,225,226,PNPM
+animal_patho_ASV_9811,0,-1,Animal pathogen,226,227,non_PNPM
+animal_patho_ASV_10766,1,1,Animal pathogen,227,228,PNPM
+animal_patho_ASV_10113,1,1,Animal pathogen,228,229,PNPM
+animal_patho_ASV_9910,0,0,Animal pathogen,229,230,non_PNPM
+animal_patho_ASV_10682,1,1,Animal pathogen,230,231,PNPM
+animal_patho_ASV_10756,1,1,Animal pathogen,231,232,PNPM
+animal_patho_ASV_25,0,-0.527925532,Animal pathogen,232,233,non_PNPM
+animal_patho_ASV_36,0,0.946953782,Animal pathogen,233,234,PNPM
+animal_patho_ASV_114,0,0.474539206,Animal pathogen,234,235,PNPM
+animal_patho_ASV_232,0,-0.652289317,Animal pathogen,235,236,non_PNPM
+animal_patho_ASV_174,0,0.133991537,Animal pathogen,236,237,PNPM
+animal_patho_ASV_167,0,0.486238532,Animal pathogen,237,238,PNPM
+animal_patho_ASV_194,0,0.400318979,Animal pathogen,238,239,PNPM
+animal_patho_ASV_214,0,0.969465649,Animal pathogen,239,240,PNPM
+animal_patho_ASV_222,0,0.040414508,Animal pathogen,240,241,PNPM
+animal_patho_ASV_233,0,0.845261122,Animal pathogen,241,242,PNPM
+animal_patho_ASV_251,0,-0.194547708,Animal pathogen,242,243,non_PNPM
+animal_patho_ASV_274,0,-0.170684667,Animal pathogen,243,244,non_PNPM
+animal_patho_ASV_289,0,-0.296296296,Animal pathogen,244,245,non_PNPM
+animal_patho_ASV_324,0,0.460377358,Animal pathogen,245,246,PNPM
+animal_patho_ASV_357,0,-0.208080808,Animal pathogen,246,247,non_PNPM
+animal_patho_ASV_286,0,0.90625,Animal pathogen,247,248,PNPM
+animal_patho_ASV_318,0,0.257270694,Animal pathogen,248,249,PNPM
+animal_patho_ASV_341,0,0.875338753,Animal pathogen,249,250,PNPM
+animal_patho_ASV_412,1,1,Animal pathogen,250,251,PNPM
+animal_patho_ASV_468,0,0.197889182,Animal pathogen,251,252,PNPM
+animal_patho_ASV_510,0,0.10373444,Animal pathogen,252,253,PNPM
+animal_patho_ASV_594,0,0.586206897,Animal pathogen,253,254,PNPM
+animal_patho_ASV_616,0,-0.387096774,Animal pathogen,254,255,non_PNPM
+animal_patho_ASV_1083,0,-0.194915254,Animal pathogen,255,256,non_PNPM
+animal_patho_ASV_755,0,0.777777778,Animal pathogen,256,257,PNPM
+animal_patho_ASV_731,0,-0.980769231,Animal pathogen,257,258,non_PNPM
+animal_patho_ASV_771,0,-0.965616046,Animal pathogen,258,259,non_PNPM
+animal_patho_ASV_789,0,-0.462365591,Animal pathogen,259,260,non_PNPM
+animal_patho_ASV_975,0,-0.43902439,Animal pathogen,260,261,non_PNPM
+animal_patho_ASV_801,0,0.669291339,Animal pathogen,261,262,PNPM
+animal_patho_ASV_878,0,-0.612903226,Animal pathogen,262,263,non_PNPM
+animal_patho_ASV_1453,0,0.078787879,Animal pathogen,263,264,PNPM
+animal_patho_ASV_1031,0,-0.455882353,Animal pathogen,264,265,non_PNPM
+animal_patho_ASV_1018,0,-0.551282051,Animal pathogen,265,266,non_PNPM
+animal_patho_ASV_1107,0,0.032258065,Animal pathogen,266,267,PNPM
+animal_patho_ASV_1153,0,-0.402298851,Animal pathogen,267,268,non_PNPM
+animal_patho_ASV_2159,0,-0.779661017,Animal pathogen,268,269,non_PNPM
+animal_patho_ASV_1135,1,1,Animal pathogen,269,270,PNPM
+animal_patho_ASV_1198,0,-0.520833333,Animal pathogen,270,271,non_PNPM
+animal_patho_ASV_1494,0,-0.673913043,Animal pathogen,271,272,non_PNPM
+animal_patho_ASV_1374,1,1,Animal pathogen,272,273,PNPM
+animal_patho_ASV_1346,1,1,Animal pathogen,273,274,PNPM
+animal_patho_ASV_1441,0,0.536842105,Animal pathogen,274,275,PNPM
+animal_patho_ASV_1324,0,-0.225,Animal pathogen,275,276,non_PNPM
+animal_patho_ASV_1565,0,-0.846153846,Animal pathogen,276,277,non_PNPM
+animal_patho_ASV_1380,0,-0.866666667,Animal pathogen,277,278,non_PNPM
+animal_patho_ASV_1381,0,-0.986666667,Animal pathogen,278,279,non_PNPM
+animal_patho_ASV_1428,1,1,Animal pathogen,279,280,PNPM
+animal_patho_ASV_1506,0,-0.056603774,Animal pathogen,280,281,non_PNPM
+animal_patho_ASV_1489,0,-0.777777778,Animal pathogen,281,282,non_PNPM
+animal_patho_ASV_1722,1,1,Animal pathogen,282,283,PNPM
+animal_patho_ASV_1538,1,1,Animal pathogen,283,284,PNPM
+animal_patho_ASV_1659,0,-0.974137931,Animal pathogen,284,285,non_PNPM
+animal_patho_ASV_1505,0,-1,Animal pathogen,285,286,non_PNPM
+animal_patho_ASV_1690,0,-0.449275362,Animal pathogen,286,287,non_PNPM
+animal_patho_ASV_1607,0,0.666666667,Animal pathogen,287,288,PNPM
+animal_patho_ASV_1725,0,0.590909091,Animal pathogen,288,289,PNPM
+animal_patho_ASV_1813,0,-0.212121212,Animal pathogen,289,290,non_PNPM
+animal_patho_ASV_1797,1,1,Animal pathogen,290,291,PNPM
+animal_patho_ASV_1878,0,0.846153846,Animal pathogen,291,292,PNPM
+animal_patho_ASV_1924,1,1,Animal pathogen,292,293,PNPM
+animal_patho_ASV_2370,0,-0.8,Animal pathogen,293,294,non_PNPM
+animal_patho_ASV_1960,0,0.358490566,Animal pathogen,294,295,PNPM
+animal_patho_ASV_2063,0,0.7,Animal pathogen,295,296,PNPM
+animal_patho_ASV_1954,0,-0.642857143,Animal pathogen,296,297,non_PNPM
+animal_patho_ASV_2312,0,-0.694444444,Animal pathogen,297,298,non_PNPM
+animal_patho_ASV_2028,0,-1,Animal pathogen,298,299,non_PNPM
+animal_patho_ASV_2098,1,1,Animal pathogen,299,300,PNPM
+animal_patho_ASV_2083,0,-0.923076923,Animal pathogen,300,301,non_PNPM
+animal_patho_ASV_2187,0,-0.793103448,Animal pathogen,301,302,non_PNPM
+animal_patho_ASV_2141,1,1,Animal pathogen,302,303,PNPM
+animal_patho_ASV_2439,0,-0.576923077,Animal pathogen,303,304,non_PNPM
+animal_patho_ASV_2165,1,1,Animal pathogen,304,305,PNPM
+animal_patho_ASV_2227,0,0.636363636,Animal pathogen,305,306,PNPM
+animal_patho_ASV_2188,0,-0.531914894,Animal pathogen,306,307,non_PNPM
+animal_patho_ASV_2335,0,-0.951219512,Animal pathogen,307,308,non_PNPM
+animal_patho_ASV_2629,0,0.62962963,Animal pathogen,308,309,PNPM
+animal_patho_ASV_2643,0,-0.290322581,Animal pathogen,309,310,non_PNPM
+animal_patho_ASV_2501,0,-0.863636364,Animal pathogen,310,311,non_PNPM
+animal_patho_ASV_2520,0,0.55,Animal pathogen,311,312,PNPM
+animal_patho_ASV_2431,0,-0.947368421,Animal pathogen,312,313,non_PNPM
+animal_patho_ASV_2556,0,-0.869565217,Animal pathogen,313,314,non_PNPM
+animal_patho_ASV_2493,1,1,Animal pathogen,314,315,PNPM
+animal_patho_ASV_2560,0,0.894736842,Animal pathogen,315,316,PNPM
+animal_patho_ASV_2541,0,-0.620689655,Animal pathogen,316,317,non_PNPM
+animal_patho_ASV_2657,1,1,Animal pathogen,317,318,PNPM
+animal_patho_ASV_2769,0,-0.411764706,Animal pathogen,318,319,non_PNPM
+animal_patho_ASV_9998,0,-1,Animal pathogen,319,320,non_PNPM
+animal_patho_ASV_3092,0,-0.5,Animal pathogen,320,321,non_PNPM
+animal_patho_ASV_2886,0,-1,Animal pathogen,321,322,non_PNPM
+animal_patho_ASV_2866,1,1,Animal pathogen,322,323,PNPM
+animal_patho_ASV_3044,0,-0.764705882,Animal pathogen,323,324,non_PNPM
+animal_patho_ASV_3234,0,0.368421053,Animal pathogen,324,325,PNPM
+animal_patho_ASV_3017,1,1,Animal pathogen,325,326,PNPM
+animal_patho_ASV_2992,1,1,Animal pathogen,326,327,PNPM
+animal_patho_ASV_3230,0,-1,Animal pathogen,327,328,non_PNPM
+animal_patho_ASV_3287,1,1,Animal pathogen,328,329,PNPM
+animal_patho_ASV_3200,0,0.8,Animal pathogen,329,330,PNPM
+animal_patho_ASV_3449,0,0.888888889,Animal pathogen,330,331,PNPM
+animal_patho_ASV_3384,0,0.666666667,Animal pathogen,331,332,PNPM
+animal_patho_ASV_7032,0,0.2,Animal pathogen,332,333,PNPM
+animal_patho_ASV_3305,0,-0.555555556,Animal pathogen,333,334,non_PNPM
+animal_patho_ASV_3456,0,-0.703703704,Animal pathogen,334,335,non_PNPM
+animal_patho_ASV_3422,0,-1,Animal pathogen,335,336,non_PNPM
+animal_patho_ASV_3418,0,-0.5,Animal pathogen,336,337,non_PNPM
+animal_patho_ASV_3478,0,-1,Animal pathogen,337,338,non_PNPM
+animal_patho_ASV_3689,0,0.428571429,Animal pathogen,338,339,PNPM
+animal_patho_ASV_4075,0,0.818181818,Animal pathogen,339,340,PNPM
+animal_patho_ASV_4266,0,0.777777778,Animal pathogen,340,341,PNPM
+animal_patho_ASV_3535,0,0.5,Animal pathogen,341,342,PNPM
+animal_patho_ASV_3837,0,-0.818181818,Animal pathogen,342,343,non_PNPM
+animal_patho_ASV_4652,0,-0.826086957,Animal pathogen,343,344,non_PNPM
+animal_patho_ASV_3995,0,-0.222222222,Animal pathogen,344,345,non_PNPM
+animal_patho_ASV_3833,0,0.272727273,Animal pathogen,345,346,PNPM
+animal_patho_ASV_4117,0,-0.333333333,Animal pathogen,346,347,non_PNPM
+animal_patho_ASV_3969,1,1,Animal pathogen,347,348,PNPM
+animal_patho_ASV_3843,0,-1,Animal pathogen,348,349,non_PNPM
+animal_patho_ASV_4003,0,-0.8,Animal pathogen,349,350,non_PNPM
+animal_patho_ASV_4049,1,1,Animal pathogen,350,351,PNPM
+animal_patho_ASV_4863,1,1,Animal pathogen,351,352,PNPM
+animal_patho_ASV_4459,0,-1,Animal pathogen,352,353,non_PNPM
+animal_patho_ASV_5065,0,0.666666667,Animal pathogen,353,354,PNPM
+animal_patho_ASV_4296,0,0.777777778,Animal pathogen,354,355,PNPM
+animal_patho_ASV_4008,1,1,Animal pathogen,355,356,PNPM
+animal_patho_ASV_4206,1,1,Animal pathogen,356,357,PNPM
+animal_patho_ASV_4060,0,-1,Animal pathogen,357,358,non_PNPM
+animal_patho_ASV_4113,0,0.111111111,Animal pathogen,358,359,PNPM
+animal_patho_ASV_4256,1,1,Animal pathogen,359,360,PNPM
+animal_patho_ASV_4339,1,1,Animal pathogen,360,361,PNPM
+animal_patho_ASV_4439,0,-1,Animal pathogen,361,362,non_PNPM
+animal_patho_ASV_4537,1,1,Animal pathogen,362,363,PNPM
+animal_patho_ASV_5059,0,-1,Animal pathogen,363,364,non_PNPM
+animal_patho_ASV_4506,0,-1,Animal pathogen,364,365,non_PNPM
+animal_patho_ASV_4333,0,-0.636363636,Animal pathogen,365,366,non_PNPM
+animal_patho_ASV_4467,0,-1,Animal pathogen,366,367,non_PNPM
+animal_patho_ASV_4716,0,0.666666667,Animal pathogen,367,368,PNPM
+animal_patho_ASV_5350,0,-1,Animal pathogen,368,369,non_PNPM
+animal_patho_ASV_4782,0,0.2,Animal pathogen,369,370,PNPM
+animal_patho_ASV_4911,0,-0.428571429,Animal pathogen,370,371,non_PNPM
+animal_patho_ASV_5658,0,-0.142857143,Animal pathogen,371,372,non_PNPM
+animal_patho_ASV_4803,1,1,Animal pathogen,372,373,PNPM
+animal_patho_ASV_5002,0,-0.866666667,Animal pathogen,373,374,non_PNPM
+animal_patho_ASV_5009,0,0.25,Animal pathogen,374,375,PNPM
+animal_patho_ASV_5067,0,0.555555556,Animal pathogen,375,376,PNPM
+animal_patho_ASV_6033,0,-1,Animal pathogen,376,377,non_PNPM
+animal_patho_ASV_4710,0,0.714285714,Animal pathogen,377,378,PNPM
+animal_patho_ASV_4922,1,1,Animal pathogen,378,379,PNPM
+animal_patho_ASV_4986,0,0.2,Animal pathogen,379,380,PNPM
+animal_patho_ASV_4832,0,-0.777777778,Animal pathogen,380,381,non_PNPM
+animal_patho_ASV_5987,1,1,Animal pathogen,381,382,PNPM
+animal_patho_ASV_7438,0,-1,Animal pathogen,382,383,non_PNPM
+animal_patho_ASV_4949,0,-1,Animal pathogen,383,384,non_PNPM
+animal_patho_ASV_5266,0,-1,Animal pathogen,384,385,non_PNPM
+animal_patho_ASV_5454,0,-0.333333333,Animal pathogen,385,386,non_PNPM
+animal_patho_ASV_5351,0,-0.882352941,Animal pathogen,386,387,non_PNPM
+animal_patho_ASV_5851,0,-1,Animal pathogen,387,388,non_PNPM
+animal_patho_ASV_6490,0,0.555555556,Animal pathogen,388,389,PNPM
+animal_patho_ASV_5495,1,1,Animal pathogen,389,390,PNPM
+animal_patho_ASV_5165,1,1,Animal pathogen,390,391,PNPM
+animal_patho_ASV_5429,0,-0.916666667,Animal pathogen,391,392,non_PNPM
+animal_patho_ASV_5518,1,1,Animal pathogen,392,393,PNPM
+animal_patho_ASV_5583,1,1,Animal pathogen,393,394,PNPM
+animal_patho_ASV_6283,1,1,Animal pathogen,394,395,PNPM
+animal_patho_ASV_6303,1,1,Animal pathogen,395,396,PNPM
+animal_patho_ASV_8593,0,-1,Animal pathogen,396,397,non_PNPM
+animal_patho_ASV_6157,0,-1,Animal pathogen,397,398,non_PNPM
+animal_patho_ASV_5775,0,-1,Animal pathogen,398,399,non_PNPM
+animal_patho_ASV_6044,0,0.25,Animal pathogen,399,400,PNPM
+animal_patho_ASV_5657,0,0.714285714,Animal pathogen,400,401,PNPM
+animal_patho_ASV_6270,0,-1,Animal pathogen,401,402,non_PNPM
+animal_patho_ASV_6094,1,1,Animal pathogen,402,403,PNPM
+animal_patho_ASV_8539,0,0.5,Animal pathogen,403,404,PNPM
+animal_patho_ASV_6703,0,-1,Animal pathogen,404,405,non_PNPM
+animal_patho_ASV_6867,0,-0.333333333,Animal pathogen,405,406,non_PNPM
+animal_patho_ASV_6212,1,1,Animal pathogen,406,407,PNPM
+animal_patho_ASV_7045,0,-1,Animal pathogen,407,408,non_PNPM
+animal_patho_ASV_7040,0,-0.6,Animal pathogen,408,409,non_PNPM
+animal_patho_ASV_7696,1,1,Animal pathogen,409,410,PNPM
+animal_patho_ASV_6889,1,1,Animal pathogen,410,411,PNPM
+animal_patho_ASV_7339,1,1,Animal pathogen,411,412,PNPM
+animal_patho_ASV_6466,1,1,Animal pathogen,412,413,PNPM
+animal_patho_ASV_6701,1,1,Animal pathogen,413,414,PNPM
+animal_patho_ASV_6718,0,-1,Animal pathogen,414,415,non_PNPM
+animal_patho_ASV_6895,0,0.333333333,Animal pathogen,415,416,PNPM
+animal_patho_ASV_6921,0,0,Animal pathogen,416,417,non_PNPM
+animal_patho_ASV_7482,1,1,Animal pathogen,417,418,PNPM
+animal_patho_ASV_7813,0,-1,Animal pathogen,418,419,non_PNPM
+animal_patho_ASV_6688,0,-1,Animal pathogen,419,420,non_PNPM
+animal_patho_ASV_7011,1,1,Animal pathogen,420,421,PNPM
+animal_patho_ASV_7018,1,1,Animal pathogen,421,422,PNPM
+animal_patho_ASV_7513,1,1,Animal pathogen,422,423,PNPM
+animal_patho_ASV_7729,0,0,Animal pathogen,423,424,non_PNPM
+animal_patho_ASV_7806,0,-1,Animal pathogen,424,425,non_PNPM
+animal_patho_ASV_8067,0,-0.142857143,Animal pathogen,425,426,non_PNPM
+animal_patho_ASV_6885,1,1,Animal pathogen,426,427,PNPM
+animal_patho_ASV_7510,1,1,Animal pathogen,427,428,PNPM
+animal_patho_ASV_9230,0,-0.333333333,Animal pathogen,428,429,non_PNPM
+animal_patho_ASV_7256,0,-0.8,Animal pathogen,429,430,non_PNPM
+animal_patho_ASV_7418,0,-0.5,Animal pathogen,430,431,non_PNPM
+animal_patho_ASV_7542,0,-0.333333333,Animal pathogen,431,432,non_PNPM
+animal_patho_ASV_7913,1,1,Animal pathogen,432,433,PNPM
+animal_patho_ASV_9773,1,1,Animal pathogen,433,434,PNPM
+animal_patho_ASV_7331,1,1,Animal pathogen,434,435,PNPM
+animal_patho_ASV_9506,1,1,Animal pathogen,435,436,PNPM
+animal_patho_ASV_10728,1,1,Animal pathogen,436,437,PNPM
+animal_patho_ASV_7819,0,-0.333333333,Animal pathogen,437,438,non_PNPM
+animal_patho_ASV_7870,0,-1,Animal pathogen,438,439,non_PNPM
+animal_patho_ASV_8706,1,1,Animal pathogen,439,440,PNPM
+animal_patho_ASV_7770,0,-1,Animal pathogen,440,441,non_PNPM
+animal_patho_ASV_8574,0,0,Animal pathogen,441,442,non_PNPM
+animal_patho_ASV_7673,1,1,Animal pathogen,442,443,PNPM
+animal_patho_ASV_7933,1,1,Animal pathogen,443,444,PNPM
+animal_patho_ASV_9267,0,0,Animal pathogen,444,445,non_PNPM
+animal_patho_ASV_8127,1,1,Animal pathogen,445,446,PNPM
+animal_patho_ASV_8523,0,0.5,Animal pathogen,446,447,PNPM
+animal_patho_ASV_8594,0,-1,Animal pathogen,447,448,non_PNPM
+animal_patho_ASV_9515,0,-0.666666667,Animal pathogen,448,449,non_PNPM
+animal_patho_ASV_8511,0,-0.6,Animal pathogen,449,450,non_PNPM
+animal_patho_ASV_8634,1,1,Animal pathogen,450,451,PNPM
+animal_patho_ASV_8982,1,1,Animal pathogen,451,452,PNPM
+animal_patho_ASV_9144,1,1,Animal pathogen,452,453,PNPM
+animal_patho_ASV_9333,1,1,Animal pathogen,453,454,PNPM
+animal_patho_ASV_9750,0,0.333333333,Animal pathogen,454,455,PNPM
+animal_patho_ASV_8269,0,-1,Animal pathogen,455,456,non_PNPM
+animal_patho_ASV_8471,0,-1,Animal pathogen,456,457,non_PNPM
+animal_patho_ASV_9314,1,1,Animal pathogen,457,458,PNPM
+animal_patho_ASV_9455,0,-1,Animal pathogen,458,459,non_PNPM
+animal_patho_ASV_9860,0,0,Animal pathogen,459,460,non_PNPM
+animal_patho_ASV_9933,0,0.5,Animal pathogen,460,461,PNPM
+animal_patho_ASV_10280,0,0,Animal pathogen,461,462,non_PNPM
+animal_patho_ASV_9255,0,-1,Animal pathogen,462,463,non_PNPM
+animal_patho_ASV_9729,1,1,Animal pathogen,463,464,PNPM
+animal_patho_ASV_9830,0,-1,Animal pathogen,464,465,non_PNPM
+animal_patho_ASV_10640,1,1,Animal pathogen,465,466,PNPM
+animal_patho_ASV_9124,0,-1,Animal pathogen,466,467,non_PNPM
+animal_patho_ASV_9768,1,1,Animal pathogen,467,468,PNPM
+animal_patho_ASV_10130,1,1,Animal pathogen,468,469,PNPM
+animal_patho_ASV_10655,1,1,Animal pathogen,469,470,PNPM
+animal_patho_ASV_9657,1,1,Animal pathogen,470,471,PNPM
+animal_patho_ASV_9793,0,-1,Animal pathogen,471,472,non_PNPM
+animal_patho_ASV_10081,0,-1,Animal pathogen,472,473,non_PNPM
+animal_patho_ASV_10154,1,1,Animal pathogen,473,474,PNPM
+animal_patho_ASV_9907,0,-1,Animal pathogen,474,475,non_PNPM
+animal_patho_ASV_10478,0,-1,Animal pathogen,475,476,non_PNPM
+animal_patho_ASV_10707,1,1,Animal pathogen,476,477,PNPM
+animal_patho_ASV_10710,1,1,Animal pathogen,477,478,PNPM
+animal_patho_ASV_4214,0,-0.027027027,Animal pathogen,478,479,non_PNPM
+parasite_ASV_130,0,-0.829391892,Parasite,0,1,non_PNPM
+parasite_ASV_462,0,-0.929770992,Parasite,1,2,non_PNPM
+parasite_ASV_1195,0,-0.672955975,Parasite,2,3,non_PNPM
+parasite_ASV_6450,1,1,Parasite,3,4,PNPM
+parasite_ASV_685,0,-0.310173697,Parasite,4,5,non_PNPM
+parasite_ASV_1223,0,0.45631068,Parasite,5,6,PNPM
+parasite_ASV_1296,0,-0.678832117,Parasite,6,7,non_PNPM
+parasite_ASV_1304,0,0.862068966,Parasite,7,8,PNPM
+parasite_ASV_1825,0,-0.333333333,Parasite,8,9,non_PNPM
+parasite_ASV_1515,0,-0.566037736,Parasite,9,10,non_PNPM
+parasite_ASV_1886,0,-0.834586466,Parasite,10,11,non_PNPM
+parasite_ASV_2372,0,0.625,Parasite,11,12,PNPM
+parasite_ASV_3016,0,0.272727273,Parasite,12,13,PNPM
+parasite_ASV_2732,1,1,Parasite,13,14,PNPM
+parasite_ASV_2847,0,-0.166666667,Parasite,14,15,non_PNPM
+parasite_ASV_3073,0,-0.111111111,Parasite,15,16,non_PNPM
+parasite_ASV_3151,0,0.84,Parasite,16,17,PNPM
+parasite_ASV_3381,0,0.428571429,Parasite,17,18,PNPM
+parasite_ASV_3509,0,-1,Parasite,18,19,non_PNPM
+parasite_ASV_4615,1,1,Parasite,19,20,PNPM
+parasite_ASV_3864,0,-1,Parasite,20,21,non_PNPM
+parasite_ASV_5135,0,0.75,Parasite,21,22,PNPM
+parasite_ASV_5460,0,-1,Parasite,22,23,non_PNPM
+parasite_ASV_6310,0,0.5,Parasite,23,24,PNPM
+parasite_ASV_7183,1,1,Parasite,24,25,PNPM
+parasite_ASV_7892,1,1,Parasite,25,26,PNPM
+parasite_ASV_7134,0,-1,Parasite,26,27,non_PNPM
+parasite_ASV_7591,0,-1,Parasite,27,28,non_PNPM
+parasite_ASV_8722,1,1,Parasite,28,29,PNPM
+parasite_ASV_9002,1,1,Parasite,29,30,PNPM
+parasite_ASV_10049,0,-1,Parasite,30,31,non_PNPM
+parasite_ASV_34,0,0.40890091,Parasite,31,32,PNPM
+parasite_ASV_85,0,0.469987229,Parasite,32,33,PNPM
+parasite_ASV_94,0,-0.137957911,Parasite,33,34,non_PNPM
+parasite_ASV_126,0,0.182282794,Parasite,34,35,PNPM
+parasite_ASV_136,0,-0.011647255,Parasite,35,36,non_PNPM
+parasite_ASV_246,0,-0.186483104,Parasite,36,37,non_PNPM
+parasite_ASV_871,0,0.077720207,Parasite,37,38,PNPM
+parasite_ASV_1017,0,-0.532374101,Parasite,38,39,non_PNPM
+parasite_ASV_578,0,0.715877437,Parasite,39,40,PNPM
+parasite_ASV_522,0,0.986666667,Parasite,40,41,PNPM
+parasite_ASV_567,0,-0.023255814,Parasite,41,42,non_PNPM
+parasite_ASV_647,0,0.657142857,Parasite,42,43,PNPM
+parasite_ASV_805,0,-0.368852459,Parasite,43,44,non_PNPM
+parasite_ASV_913,0,-0.261146497,Parasite,44,45,non_PNPM
+parasite_ASV_932,0,0.786163522,Parasite,45,46,PNPM
+parasite_ASV_1002,0,0.52,Parasite,46,47,PNPM
+parasite_ASV_1070,0,-0.972789116,Parasite,47,48,non_PNPM
+parasite_ASV_1116,0,-0.960784314,Parasite,48,49,non_PNPM
+parasite_ASV_1261,0,0.050847458,Parasite,49,50,PNPM
+parasite_ASV_1971,0,-0.092307692,Parasite,50,51,non_PNPM
+parasite_ASV_1281,0,0.238095238,Parasite,51,52,PNPM
+parasite_ASV_1334,0,-0.43315508,Parasite,52,53,non_PNPM
+parasite_ASV_8309,0,-0.15625,Parasite,53,54,non_PNPM
+parasite_ASV_3391,0,-0.5,Parasite,54,55,non_PNPM
+parasite_ASV_1714,0,-0.5,Parasite,55,56,non_PNPM
+parasite_ASV_1870,0,-0.903846154,Parasite,56,57,non_PNPM
+parasite_ASV_1686,0,-0.352941176,Parasite,57,58,non_PNPM
+parasite_ASV_1823,1,1,Parasite,58,59,PNPM
+parasite_ASV_1880,0,-0.181818182,Parasite,59,60,non_PNPM
+parasite_ASV_1948,0,-1,Parasite,60,61,non_PNPM
+parasite_ASV_2097,0,-0.818181818,Parasite,61,62,non_PNPM
+parasite_ASV_6612,0,0.146341463,Parasite,62,63,PNPM
+parasite_ASV_2172,0,-0.92,Parasite,63,64,non_PNPM
+parasite_ASV_2251,0,-0.540229885,Parasite,64,65,non_PNPM
+parasite_ASV_2087,0,-0.923076923,Parasite,65,66,non_PNPM
+parasite_ASV_2250,0,-0.384615385,Parasite,66,67,non_PNPM
+parasite_ASV_2135,0,-0.837837838,Parasite,67,68,non_PNPM
+parasite_ASV_2176,0,-0.753846154,Parasite,68,69,non_PNPM
+parasite_ASV_2215,0,0.466666667,Parasite,69,70,PNPM
+parasite_ASV_2301,1,1,Parasite,70,71,PNPM
+parasite_ASV_2543,0,-0.11627907,Parasite,71,72,non_PNPM
+parasite_ASV_2378,0,-0.942857143,Parasite,72,73,non_PNPM
+parasite_ASV_2322,0,-0.64516129,Parasite,73,74,non_PNPM
+parasite_ASV_2500,0,0.333333333,Parasite,74,75,PNPM
+parasite_ASV_2503,0,-0.952380952,Parasite,75,76,non_PNPM
+parasite_ASV_2410,0,-1,Parasite,76,77,non_PNPM
+parasite_ASV_2506,0,-0.459459459,Parasite,77,78,non_PNPM
+parasite_ASV_2612,0,-0.666666667,Parasite,78,79,non_PNPM
+parasite_ASV_2478,0,0.9,Parasite,79,80,PNPM
+parasite_ASV_2609,1,1,Parasite,80,81,PNPM
+parasite_ASV_3047,1,1,Parasite,81,82,PNPM
+parasite_ASV_3219,0,-0.151515152,Parasite,82,83,non_PNPM
+parasite_ASV_3211,1,1,Parasite,83,84,PNPM
+parasite_ASV_3483,0,-0.5,Parasite,84,85,non_PNPM
+parasite_ASV_2901,1,1,Parasite,85,86,PNPM
+parasite_ASV_3106,0,-0.913043478,Parasite,86,87,non_PNPM
+parasite_ASV_3232,0,0.176470588,Parasite,87,88,PNPM
+parasite_ASV_3227,0,0.714285714,Parasite,88,89,PNPM
+parasite_ASV_3111,0,-1,Parasite,89,90,non_PNPM
+parasite_ASV_3455,0,-0.444444444,Parasite,90,91,non_PNPM
+parasite_ASV_3529,0,0.888888889,Parasite,91,92,PNPM
+parasite_ASV_3386,1,1,Parasite,92,93,PNPM
+parasite_ASV_3405,0,0.2,Parasite,93,94,PNPM
+parasite_ASV_3638,0,-0.777777778,Parasite,94,95,non_PNPM
+parasite_ASV_3513,0,-1,Parasite,95,96,non_PNPM
+parasite_ASV_3862,1,1,Parasite,96,97,PNPM
+parasite_ASV_3879,0,-0.368421053,Parasite,97,98,non_PNPM
+parasite_ASV_4153,0,-0.4,Parasite,98,99,non_PNPM
+parasite_ASV_3652,0,-0.583333333,Parasite,99,100,non_PNPM
+parasite_ASV_4018,1,1,Parasite,100,101,PNPM
+parasite_ASV_3683,0,-1,Parasite,101,102,non_PNPM
+parasite_ASV_3761,1,1,Parasite,102,103,PNPM
+parasite_ASV_8596,0,-1,Parasite,103,104,non_PNPM
+parasite_ASV_4989,0,-0.523809524,Parasite,104,105,non_PNPM
+parasite_ASV_4013,1,1,Parasite,105,106,PNPM
+parasite_ASV_3961,0,-1,Parasite,106,107,non_PNPM
+parasite_ASV_4590,0,0.384615385,Parasite,107,108,PNPM
+parasite_ASV_3966,1,1,Parasite,108,109,PNPM
+parasite_ASV_5413,0,0.333333333,Parasite,109,110,PNPM
+parasite_ASV_4660,1,1,Parasite,110,111,PNPM
+parasite_ASV_5446,0,-0.5,Parasite,111,112,non_PNPM
+parasite_ASV_4269,0,-1,Parasite,112,113,non_PNPM
+parasite_ASV_4433,0,-0.066666667,Parasite,113,114,non_PNPM
+parasite_ASV_4472,0,-0.333333333,Parasite,114,115,non_PNPM
+parasite_ASV_4868,0,0.916666667,Parasite,115,116,PNPM
+parasite_ASV_4476,0,-1,Parasite,116,117,non_PNPM
+parasite_ASV_4654,0,-0.647058824,Parasite,117,118,non_PNPM
+parasite_ASV_5052,0,-0.44,Parasite,118,119,non_PNPM
+parasite_ASV_4584,1,1,Parasite,119,120,PNPM
+parasite_ASV_4712,0,0.333333333,Parasite,120,121,PNPM
+parasite_ASV_4621,0,-1,Parasite,121,122,non_PNPM
+parasite_ASV_6698,0,-0.714285714,Parasite,122,123,non_PNPM
+parasite_ASV_5649,0,-0.777777778,Parasite,123,124,non_PNPM
+parasite_ASV_5093,1,1,Parasite,124,125,PNPM
+parasite_ASV_5391,1,1,Parasite,125,126,PNPM
+parasite_ASV_5510,1,1,Parasite,126,127,PNPM
+parasite_ASV_5915,0,0.076923077,Parasite,127,128,PNPM
+parasite_ASV_5563,1,1,Parasite,128,129,PNPM
+parasite_ASV_7259,0,-1,Parasite,129,130,non_PNPM
+parasite_ASV_5669,1,1,Parasite,130,131,PNPM
+parasite_ASV_5804,1,1,Parasite,131,132,PNPM
+parasite_ASV_7093,0,0.2,Parasite,132,133,PNPM
+parasite_ASV_6719,0,-0.333333333,Parasite,133,134,non_PNPM
+parasite_ASV_5597,1,1,Parasite,134,135,PNPM
+parasite_ASV_5806,1,1,Parasite,135,136,PNPM
+parasite_ASV_6220,1,1,Parasite,136,137,PNPM
+parasite_ASV_6448,1,1,Parasite,137,138,PNPM
+parasite_ASV_6262,0,-1,Parasite,138,139,non_PNPM
+parasite_ASV_6721,1,1,Parasite,139,140,PNPM
+parasite_ASV_6355,1,1,Parasite,140,141,PNPM
+parasite_ASV_6332,1,1,Parasite,141,142,PNPM
+parasite_ASV_6811,0,-0.714285714,Parasite,142,143,non_PNPM
+parasite_ASV_7942,1,1,Parasite,143,144,PNPM
+parasite_ASV_6534,0,-0.714285714,Parasite,144,145,non_PNPM
+parasite_ASV_6543,0,-1,Parasite,145,146,non_PNPM
+parasite_ASV_6563,1,1,Parasite,146,147,PNPM
+parasite_ASV_10715,1,1,Parasite,147,148,PNPM
+parasite_ASV_6711,0,-1,Parasite,148,149,non_PNPM
+parasite_ASV_7136,1,1,Parasite,149,150,PNPM
+parasite_ASV_6812,1,1,Parasite,150,151,PNPM
+parasite_ASV_10666,1,1,Parasite,151,152,PNPM
+parasite_ASV_6886,1,1,Parasite,152,153,PNPM
+parasite_ASV_6979,0,-1,Parasite,153,154,non_PNPM
+parasite_ASV_7664,1,1,Parasite,154,155,PNPM
+parasite_ASV_7135,0,-1,Parasite,155,156,non_PNPM
+parasite_ASV_8957,1,1,Parasite,156,157,PNPM
+parasite_ASV_7701,1,1,Parasite,157,158,PNPM
+parasite_ASV_7795,0,0.5,Parasite,158,159,PNPM
+parasite_ASV_7866,0,-1,Parasite,159,160,non_PNPM
+parasite_ASV_9043,0,0.333333333,Parasite,160,161,PNPM
+parasite_ASV_9500,1,1,Parasite,161,162,PNPM
+parasite_ASV_9817,0,-0.2,Parasite,162,163,non_PNPM
+parasite_ASV_8357,1,1,Parasite,163,164,PNPM
+parasite_ASV_8296,0,-1,Parasite,164,165,non_PNPM
+parasite_ASV_9663,1,1,Parasite,165,166,PNPM
+parasite_ASV_8233,0,-1,Parasite,166,167,non_PNPM
+parasite_ASV_9044,0,-1,Parasite,167,168,non_PNPM
+parasite_ASV_9140,0,-0.75,Parasite,168,169,non_PNPM
+parasite_ASV_9401,0,-0.666666667,Parasite,169,170,non_PNPM
+parasite_ASV_9513,0,-1,Parasite,170,171,non_PNPM
+parasite_ASV_9829,0,0.5,Parasite,171,172,PNPM
+parasite_ASV_9939,0,0,Parasite,172,173,non_PNPM
+parasite_ASV_8442,1,1,Parasite,173,174,PNPM
+parasite_ASV_8567,0,-1,Parasite,174,175,non_PNPM
+parasite_ASV_9018,1,1,Parasite,175,176,PNPM
+parasite_ASV_9669,1,1,Parasite,176,177,PNPM
+parasite_ASV_10284,0,0,Parasite,177,178,non_PNPM
+parasite_ASV_9399,0,-1,Parasite,178,179,non_PNPM
+parasite_ASV_9631,0,-1,Parasite,179,180,non_PNPM
+parasite_ASV_9679,1,1,Parasite,180,181,PNPM
+parasite_ASV_10113,1,1,Parasite,181,182,PNPM
+parasite_ASV_10121,1,1,Parasite,182,183,PNPM
+parasite_ASV_10617,1,1,Parasite,183,184,PNPM
+parasite_ASV_10634,1,1,Parasite,184,185,PNPM
+parasite_ASV_10635,1,1,Parasite,185,186,PNPM
+parasite_ASV_10756,1,1,Parasite,186,187,PNPM
+parasite_ASV_214,0,0.969465649,Parasite,187,188,PNPM
+parasite_ASV_233,0,0.845261122,Parasite,188,189,PNPM
+parasite_ASV_330,0,0.308441558,Parasite,189,190,PNPM
+parasite_ASV_326,0,0.171052632,Parasite,190,191,PNPM
+parasite_ASV_358,0,0.563758389,Parasite,191,192,PNPM
+parasite_ASV_369,0,-0.514986376,Parasite,192,193,non_PNPM
+parasite_ASV_412,1,1,Parasite,193,194,PNPM
+parasite_ASV_564,0,-0.634028892,Parasite,194,195,non_PNPM
+parasite_ASV_459,0,0.875776398,Parasite,195,196,PNPM
+parasite_ASV_495,0,0.022421525,Parasite,196,197,PNPM
+parasite_ASV_586,0,-0.618729097,Parasite,197,198,non_PNPM
+parasite_ASV_598,1,1,Parasite,198,199,PNPM
+parasite_ASV_614,0,0.208053691,Parasite,199,200,PNPM
+parasite_ASV_703,0,-0.26746167,Parasite,200,201,non_PNPM
+parasite_ASV_733,0,0.980582524,Parasite,201,202,PNPM
+parasite_ASV_905,0,-0.231884058,Parasite,202,203,non_PNPM
+parasite_ASV_755,0,0.777777778,Parasite,203,204,PNPM
+parasite_ASV_731,0,-0.980769231,Parasite,204,205,non_PNPM
+parasite_ASV_4210,0,0.311320755,Parasite,205,206,PNPM
+parasite_ASV_975,0,-0.43902439,Parasite,206,207,non_PNPM
+parasite_ASV_1008,0,0.043478261,Parasite,207,208,PNPM
+parasite_ASV_832,1,1,Parasite,208,209,PNPM
+parasite_ASV_1025,0,0.76744186,Parasite,209,210,PNPM
+parasite_ASV_918,0,0.969230769,Parasite,210,211,PNPM
+parasite_ASV_950,0,-0.285714286,Parasite,211,212,non_PNPM
+parasite_ASV_1598,0,0.011764706,Parasite,212,213,PNPM
+parasite_ASV_986,0,0.808219178,Parasite,213,214,PNPM
+parasite_ASV_1130,1,1,Parasite,214,215,PNPM
+parasite_ASV_946,1,1,Parasite,215,216,PNPM
+parasite_ASV_977,0,0.265625,Parasite,216,217,PNPM
+parasite_ASV_1453,0,0.078787879,Parasite,217,218,PNPM
+parasite_ASV_1406,0,-0.582608696,Parasite,218,219,non_PNPM
+parasite_ASV_1154,0,-0.830188679,Parasite,219,220,non_PNPM
+parasite_ASV_1135,1,1,Parasite,220,221,PNPM
+parasite_ASV_1198,0,-0.520833333,Parasite,221,222,non_PNPM
+parasite_ASV_1157,1,1,Parasite,222,223,PNPM
+parasite_ASV_1232,0,0.95862069,Parasite,223,224,PNPM
+parasite_ASV_1196,0,-0.064220183,Parasite,224,225,non_PNPM
+parasite_ASV_1272,0,0.989528796,Parasite,225,226,PNPM
+parasite_ASV_1364,0,-0.234567901,Parasite,226,227,non_PNPM
+parasite_ASV_1354,0,0.355932203,Parasite,227,228,PNPM
+parasite_ASV_1496,0,0.888888889,Parasite,228,229,PNPM
+parasite_ASV_1473,0,-1,Parasite,229,230,non_PNPM
+parasite_ASV_1750,0,0.70212766,Parasite,230,231,PNPM
+parasite_ASV_1472,0,0.976744186,Parasite,231,232,PNPM
+parasite_ASV_1505,0,-1,Parasite,232,233,non_PNPM
+parasite_ASV_1675,0,-0.411764706,Parasite,233,234,non_PNPM
+parasite_ASV_1703,1,1,Parasite,234,235,PNPM
+parasite_ASV_2462,0,-0.565217391,Parasite,235,236,non_PNPM
+parasite_ASV_1932,0,-0.14893617,Parasite,236,237,non_PNPM
+parasite_ASV_1829,0,0.746031746,Parasite,237,238,PNPM
+parasite_ASV_1797,1,1,Parasite,238,239,PNPM
+parasite_ASV_1878,0,0.846153846,Parasite,239,240,PNPM
+parasite_ASV_1917,0,0.956521739,Parasite,240,241,PNPM
+parasite_ASV_1862,0,-1,Parasite,241,242,non_PNPM
+parasite_ASV_1924,1,1,Parasite,242,243,PNPM
+parasite_ASV_1954,0,-0.642857143,Parasite,243,244,non_PNPM
+parasite_ASV_2312,0,-0.694444444,Parasite,244,245,non_PNPM
+parasite_ASV_2027,0,-0.555555556,Parasite,245,246,non_PNPM
+parasite_ASV_2909,0,-0.5,Parasite,246,247,non_PNPM
+parasite_ASV_2083,0,-0.923076923,Parasite,247,248,non_PNPM
+parasite_ASV_2207,0,0,Parasite,248,249,non_PNPM
+parasite_ASV_2165,1,1,Parasite,249,250,PNPM
+parasite_ASV_2131,1,1,Parasite,250,251,PNPM
+parasite_ASV_2222,0,0.466666667,Parasite,251,252,PNPM
+parasite_ASV_2345,0,-0.802469136,Parasite,252,253,non_PNPM
+parasite_ASV_2494,0,0.944444444,Parasite,253,254,PNPM
+parasite_ASV_2629,0,0.62962963,Parasite,254,255,PNPM
+parasite_ASV_2728,0,-1,Parasite,255,256,non_PNPM
+parasite_ASV_2797,0,-1,Parasite,256,257,non_PNPM
+parasite_ASV_2493,1,1,Parasite,257,258,PNPM
+parasite_ASV_2533,0,-0.448275862,Parasite,258,259,non_PNPM
+parasite_ASV_2498,0,-0.714285714,Parasite,259,260,non_PNPM
+parasite_ASV_2535,0,0.8125,Parasite,260,261,PNPM
+parasite_ASV_2759,0,0.75,Parasite,261,262,PNPM
+parasite_ASV_2657,1,1,Parasite,262,263,PNPM
+parasite_ASV_2849,0,0.555555556,Parasite,263,264,PNPM
+parasite_ASV_3295,0,-0.866666667,Parasite,264,265,non_PNPM
+parasite_ASV_3678,0,0.2,Parasite,265,266,PNPM
+parasite_ASV_3068,0,-0.875,Parasite,266,267,non_PNPM
+parasite_ASV_3178,0,0.538461538,Parasite,267,268,PNPM
+parasite_ASV_3306,1,1,Parasite,268,269,PNPM
+parasite_ASV_3409,0,0.272727273,Parasite,269,270,PNPM
+parasite_ASV_3456,0,-0.703703704,Parasite,270,271,non_PNPM
+parasite_ASV_3411,0,0.846153846,Parasite,271,272,PNPM
+parasite_ASV_3376,0,-0.571428571,Parasite,272,273,non_PNPM
+parasite_ASV_3407,1,1,Parasite,273,274,PNPM
+parasite_ASV_3547,0,-1,Parasite,274,275,non_PNPM
+parasite_ASV_4075,0,0.818181818,Parasite,275,276,PNPM
+parasite_ASV_3837,0,-0.818181818,Parasite,276,277,non_PNPM
+parasite_ASV_4131,1,1,Parasite,277,278,PNPM
+parasite_ASV_3853,0,-0.888888889,Parasite,278,279,non_PNPM
+parasite_ASV_4117,0,-0.333333333,Parasite,279,280,non_PNPM
+parasite_ASV_3999,0,-0.4,Parasite,280,281,non_PNPM
+parasite_ASV_3821,0,0.875,Parasite,281,282,PNPM
+parasite_ASV_3969,1,1,Parasite,282,283,PNPM
+parasite_ASV_4083,0,-0.714285714,Parasite,283,284,non_PNPM
+parasite_ASV_3721,0,-1,Parasite,284,285,non_PNPM
+parasite_ASV_3843,0,-1,Parasite,285,286,non_PNPM
+parasite_ASV_4411,0,-0.846153846,Parasite,286,287,non_PNPM
+parasite_ASV_3823,1,1,Parasite,287,288,PNPM
+parasite_ASV_4049,1,1,Parasite,288,289,PNPM
+parasite_ASV_4863,1,1,Parasite,289,290,PNPM
+parasite_ASV_4020,1,1,Parasite,290,291,PNPM
+parasite_ASV_3967,1,1,Parasite,291,292,PNPM
+parasite_ASV_5059,0,-1,Parasite,292,293,non_PNPM
+parasite_ASV_4427,1,1,Parasite,293,294,PNPM
+parasite_ASV_4543,0,-1,Parasite,294,295,non_PNPM
+parasite_ASV_4679,1,1,Parasite,295,296,PNPM
+parasite_ASV_4685,1,1,Parasite,296,297,PNPM
+parasite_ASV_4952,0,-1,Parasite,297,298,non_PNPM
+parasite_ASV_5213,0,0.8,Parasite,298,299,PNPM
+parasite_ASV_4857,0,-1,Parasite,299,300,non_PNPM
+parasite_ASV_4979,1,1,Parasite,300,301,PNPM
+parasite_ASV_7257,1,1,Parasite,301,302,PNPM
+parasite_ASV_4922,1,1,Parasite,302,303,PNPM
+parasite_ASV_5085,0,-0.2,Parasite,303,304,non_PNPM
+parasite_ASV_5987,1,1,Parasite,304,305,PNPM
+parasite_ASV_5407,1,1,Parasite,305,306,PNPM
+parasite_ASV_6663,0,-0.555555556,Parasite,306,307,non_PNPM
+parasite_ASV_6284,1,1,Parasite,307,308,PNPM
+parasite_ASV_5401,1,1,Parasite,308,309,PNPM
+parasite_ASV_5808,1,1,Parasite,309,310,PNPM
+parasite_ASV_5966,0,-0.454545455,Parasite,310,311,non_PNPM
+parasite_ASV_5325,1,1,Parasite,311,312,PNPM
+parasite_ASV_5533,0,-1,Parasite,312,313,non_PNPM
+parasite_ASV_5981,1,1,Parasite,313,314,PNPM
+parasite_ASV_5606,1,1,Parasite,314,315,PNPM
+parasite_ASV_5668,1,1,Parasite,315,316,PNPM
+parasite_ASV_5794,1,1,Parasite,316,317,PNPM
+parasite_ASV_6610,1,1,Parasite,317,318,PNPM
+parasite_ASV_10297,0,-1,Parasite,318,319,non_PNPM
+parasite_ASV_6194,1,1,Parasite,319,320,PNPM
+parasite_ASV_9493,0,-0.333333333,Parasite,320,321,non_PNPM
+parasite_ASV_6420,0,-1,Parasite,321,322,non_PNPM
+parasite_ASV_6835,0,-1,Parasite,322,323,non_PNPM
+parasite_ASV_7040,0,-0.6,Parasite,323,324,non_PNPM
+parasite_ASV_7175,1,1,Parasite,324,325,PNPM
+parasite_ASV_6351,1,1,Parasite,325,326,PNPM
+parasite_ASV_6429,0,-1,Parasite,326,327,non_PNPM
+parasite_ASV_6432,0,-1,Parasite,327,328,non_PNPM
+parasite_ASV_6616,1,1,Parasite,328,329,PNPM
+parasite_ASV_8455,0,-0.571428571,Parasite,329,330,non_PNPM
+parasite_ASV_7231,0,-0.454545455,Parasite,330,331,non_PNPM
+parasite_ASV_7813,0,-1,Parasite,331,332,non_PNPM
+parasite_ASV_6850,0,-1,Parasite,332,333,non_PNPM
+parasite_ASV_6907,0,-1,Parasite,333,334,non_PNPM
+parasite_ASV_7165,1,1,Parasite,334,335,PNPM
+parasite_ASV_10198,1,1,Parasite,335,336,PNPM
+parasite_ASV_7011,1,1,Parasite,336,337,PNPM
+parasite_ASV_7729,0,0,Parasite,337,338,non_PNPM
+parasite_ASV_7602,0,-0.6,Parasite,338,339,non_PNPM
+parasite_ASV_7875,0,-1,Parasite,339,340,non_PNPM
+parasite_ASV_7913,1,1,Parasite,340,341,PNPM
+parasite_ASV_7549,0,-0.5,Parasite,341,342,non_PNPM
+parasite_ASV_8524,0,-1,Parasite,342,343,non_PNPM
+parasite_ASV_7477,0,-1,Parasite,343,344,non_PNPM
+parasite_ASV_7804,0,0.333333333,Parasite,344,345,PNPM
+parasite_ASV_8202,0,-1,Parasite,345,346,non_PNPM
+parasite_ASV_9381,1,1,Parasite,346,347,PNPM
+parasite_ASV_7975,0,0.6,Parasite,347,348,PNPM
+parasite_ASV_8053,0,-1,Parasite,348,349,non_PNPM
+parasite_ASV_7737,0,-1,Parasite,349,350,non_PNPM
+parasite_ASV_9267,0,0,Parasite,350,351,non_PNPM
+parasite_ASV_8099,0,-1,Parasite,351,352,non_PNPM
+parasite_ASV_8523,0,0.5,Parasite,352,353,PNPM
+parasite_ASV_9193,0,-1,Parasite,353,354,non_PNPM
+parasite_ASV_10418,0,-1,Parasite,354,355,non_PNPM
+parasite_ASV_8778,0,-1,Parasite,355,356,non_PNPM
+parasite_ASV_9314,1,1,Parasite,356,357,PNPM
+parasite_ASV_9455,0,-1,Parasite,357,358,non_PNPM
+parasite_ASV_9860,0,0,Parasite,358,359,non_PNPM
+parasite_ASV_10280,0,0,Parasite,359,360,non_PNPM
+parasite_ASV_8611,0,-1,Parasite,360,361,non_PNPM
+parasite_ASV_8631,0,-1,Parasite,361,362,non_PNPM
+parasite_ASV_9345,1,1,Parasite,362,363,PNPM
+parasite_ASV_10669,1,1,Parasite,363,364,PNPM
+parasite_ASV_9255,0,-1,Parasite,364,365,non_PNPM
+parasite_ASV_9265,0,-1,Parasite,365,366,non_PNPM
+parasite_ASV_9503,0,0,Parasite,366,367,non_PNPM
+parasite_ASV_9563,0,-1,Parasite,367,368,non_PNPM
+parasite_ASV_9830,0,-1,Parasite,368,369,non_PNPM
+parasite_ASV_10640,1,1,Parasite,369,370,PNPM
+parasite_ASV_10657,1,1,Parasite,370,371,PNPM
+parasite_ASV_10497,0,-1,Parasite,371,372,non_PNPM
+parasite_ASV_9793,0,-1,Parasite,372,373,non_PNPM
+parasite_ASV_9993,0,-1,Parasite,373,374,non_PNPM
+plant_patho_ASV_284,0,-0.140954495,Plant pathogen,0,1,non_PNPM
+plant_patho_ASV_1020,0,0.499207607,Plant pathogen,1,2,PNPM
+plant_patho_ASV_366,0,0.142156863,Plant pathogen,2,3,PNPM
+plant_patho_ASV_483,0,-0.165109034,Plant pathogen,3,4,non_PNPM
+plant_patho_ASV_1055,0,0.873684211,Plant pathogen,4,5,PNPM
+plant_patho_ASV_4557,0,-0.75,Plant pathogen,5,6,non_PNPM
+plant_patho_ASV_6154,0,-0.666666667,Plant pathogen,6,7,non_PNPM
+plant_patho_ASV_4974,1,1,Plant pathogen,7,8,PNPM
+plant_patho_ASV_6417,0,-1,Plant pathogen,8,9,non_PNPM
+plant_patho_ASV_8012,0,0,Plant pathogen,9,10,non_PNPM
+plant_patho_ASV_8021,0,-0.5,Plant pathogen,10,11,non_PNPM
+plant_patho_ASV_8827,1,1,Plant pathogen,11,12,PNPM
+plant_patho_ASV_8963,1,1,Plant pathogen,12,13,PNPM
+plant_patho_ASV_9294,0,0.333333333,Plant pathogen,13,14,PNPM
+plant_patho_ASV_9780,1,1,Plant pathogen,14,15,PNPM
+plant_patho_ASV_10088,0,-1,Plant pathogen,15,16,non_PNPM
+plant_patho_ASV_1,0,0.146220263,Plant pathogen,16,17,PNPM
+plant_patho_ASV_5,0,0.262038463,Plant pathogen,17,18,PNPM
+plant_patho_ASV_13,0,0.623816642,Plant pathogen,18,19,PNPM
+plant_patho_ASV_14,0,0.079980211,Plant pathogen,19,20,PNPM
+plant_patho_ASV_21,0,-0.33065442,Plant pathogen,20,21,non_PNPM
+plant_patho_ASV_23,0,0.715542522,Plant pathogen,21,22,PNPM
+plant_patho_ASV_34,0,0.40890091,Plant pathogen,22,23,PNPM
+plant_patho_ASV_41,0,0.523419922,Plant pathogen,23,24,PNPM
+plant_patho_ASV_58,0,-0.03173836,Plant pathogen,24,25,non_PNPM
+plant_patho_ASV_46,0,0.598441558,Plant pathogen,25,26,PNPM
+plant_patho_ASV_88,0,0.214731215,Plant pathogen,26,27,PNPM
+plant_patho_ASV_85,0,0.469987229,Plant pathogen,27,28,PNPM
+plant_patho_ASV_95,0,0.50931677,Plant pathogen,28,29,PNPM
+plant_patho_ASV_94,0,-0.137957911,Plant pathogen,29,30,non_PNPM
+plant_patho_ASV_126,0,0.182282794,Plant pathogen,30,31,PNPM
+plant_patho_ASV_136,0,-0.011647255,Plant pathogen,31,32,non_PNPM
+plant_patho_ASV_173,0,-0.28219697,Plant pathogen,32,33,non_PNPM
+plant_patho_ASV_213,0,0.489698891,Plant pathogen,33,34,PNPM
+plant_patho_ASV_199,0,0.143153527,Plant pathogen,34,35,PNPM
+plant_patho_ASV_211,0,-0.644781145,Plant pathogen,35,36,non_PNPM
+plant_patho_ASV_201,0,0.903508772,Plant pathogen,36,37,PNPM
+plant_patho_ASV_246,0,-0.186483104,Plant pathogen,37,38,non_PNPM
+plant_patho_ASV_282,0,0.089974293,Plant pathogen,38,39,PNPM
+plant_patho_ASV_279,0,0.431192661,Plant pathogen,39,40,PNPM
+plant_patho_ASV_355,0,-0.63969975,Plant pathogen,40,41,non_PNPM
+plant_patho_ASV_327,0,0.910994764,Plant pathogen,41,42,PNPM
+plant_patho_ASV_345,0,0.991266376,Plant pathogen,42,43,PNPM
+plant_patho_ASV_400,0,0.246943765,Plant pathogen,43,44,PNPM
+plant_patho_ASV_577,0,-0.746130031,Plant pathogen,44,45,non_PNPM
+plant_patho_ASV_437,0,0.430051813,Plant pathogen,45,46,PNPM
+plant_patho_ASV_457,0,-0.995604396,Plant pathogen,46,47,non_PNPM
+plant_patho_ASV_871,0,0.077720207,Plant pathogen,47,48,PNPM
+plant_patho_ASV_496,0,0.927419355,Plant pathogen,48,49,PNPM
+plant_patho_ASV_551,0,0.276595745,Plant pathogen,49,50,PNPM
+plant_patho_ASV_1017,0,-0.532374101,Plant pathogen,50,51,non_PNPM
+plant_patho_ASV_578,0,0.715877437,Plant pathogen,51,52,PNPM
+plant_patho_ASV_522,0,0.986666667,Plant pathogen,52,53,PNPM
+plant_patho_ASV_4356,0,0.908163265,Plant pathogen,53,54,PNPM
+plant_patho_ASV_567,0,-0.023255814,Plant pathogen,54,55,non_PNPM
+plant_patho_ASV_585,0,0.562130178,Plant pathogen,55,56,PNPM
+plant_patho_ASV_647,0,0.657142857,Plant pathogen,56,57,PNPM
+plant_patho_ASV_613,0,-0.720430108,Plant pathogen,57,58,non_PNPM
+plant_patho_ASV_715,0,0.978021978,Plant pathogen,58,59,PNPM
+plant_patho_ASV_10764,0,-0.281437126,Plant pathogen,59,60,non_PNPM
+plant_patho_ASV_697,0,-0.906542056,Plant pathogen,60,61,non_PNPM
+plant_patho_ASV_722,1,1,Plant pathogen,61,62,PNPM
+plant_patho_ASV_754,0,0.994832041,Plant pathogen,62,63,PNPM
+plant_patho_ASV_828,0,-0.060728745,Plant pathogen,63,64,non_PNPM
+plant_patho_ASV_805,0,-0.368852459,Plant pathogen,64,65,non_PNPM
+plant_patho_ASV_902,0,0.92,Plant pathogen,65,66,PNPM
+plant_patho_ASV_913,0,-0.261146497,Plant pathogen,66,67,non_PNPM
+plant_patho_ASV_940,0,0.908045977,Plant pathogen,67,68,PNPM
+plant_patho_ASV_932,0,0.786163522,Plant pathogen,68,69,PNPM
+plant_patho_ASV_948,0,0.027027027,Plant pathogen,69,70,PNPM
+plant_patho_ASV_929,0,-1,Plant pathogen,70,71,non_PNPM
+plant_patho_ASV_1076,0,-0.894736842,Plant pathogen,71,72,non_PNPM
+plant_patho_ASV_1064,0,0.333333333,Plant pathogen,72,73,PNPM
+plant_patho_ASV_1002,0,0.52,Plant pathogen,73,74,PNPM
+plant_patho_ASV_1013,0,0.952380952,Plant pathogen,74,75,PNPM
+plant_patho_ASV_1070,0,-0.972789116,Plant pathogen,75,76,non_PNPM
+plant_patho_ASV_1149,0,-0.085714286,Plant pathogen,76,77,non_PNPM
+plant_patho_ASV_1116,0,-0.960784314,Plant pathogen,77,78,non_PNPM
+plant_patho_ASV_1171,1,1,Plant pathogen,78,79,PNPM
+plant_patho_ASV_1351,0,-0.466666667,Plant pathogen,79,80,non_PNPM
+plant_patho_ASV_1152,0,-1,Plant pathogen,80,81,non_PNPM
+plant_patho_ASV_1264,0,0.235294118,Plant pathogen,81,82,PNPM
+plant_patho_ASV_1971,0,-0.092307692,Plant pathogen,82,83,non_PNPM
+plant_patho_ASV_1500,0,0.407407407,Plant pathogen,83,84,PNPM
+plant_patho_ASV_1281,0,0.238095238,Plant pathogen,84,85,PNPM
+plant_patho_ASV_1334,0,-0.43315508,Plant pathogen,85,86,non_PNPM
+plant_patho_ASV_1371,0,0.936507937,Plant pathogen,86,87,PNPM
+plant_patho_ASV_8312,0,0.545454545,Plant pathogen,87,88,PNPM
+plant_patho_ASV_1465,0,-0.714285714,Plant pathogen,88,89,non_PNPM
+plant_patho_ASV_1392,0,0.977777778,Plant pathogen,89,90,PNPM
+plant_patho_ASV_1513,0,0.333333333,Plant pathogen,90,91,PNPM
+plant_patho_ASV_8309,0,-0.15625,Plant pathogen,91,92,non_PNPM
+plant_patho_ASV_1643,0,0.846153846,Plant pathogen,92,93,PNPM
+plant_patho_ASV_1498,1,1,Plant pathogen,93,94,PNPM
+plant_patho_ASV_1663,0,-0.047619048,Plant pathogen,94,95,non_PNPM
+plant_patho_ASV_1534,1,1,Plant pathogen,95,96,PNPM
+plant_patho_ASV_1870,0,-0.903846154,Plant pathogen,96,97,non_PNPM
+plant_patho_ASV_1974,0,-0.565217391,Plant pathogen,97,98,non_PNPM
+plant_patho_ASV_1686,0,-0.352941176,Plant pathogen,98,99,non_PNPM
+plant_patho_ASV_1808,0,0.5,Plant pathogen,99,100,PNPM
+plant_patho_ASV_1880,0,-0.181818182,Plant pathogen,100,101,non_PNPM
+plant_patho_ASV_1839,0,0.916666667,Plant pathogen,101,102,PNPM
+plant_patho_ASV_1976,0,-0.176470588,Plant pathogen,102,103,non_PNPM
+plant_patho_ASV_2538,0,-0.794871795,Plant pathogen,103,104,non_PNPM
+plant_patho_ASV_1993,0,0.52,Plant pathogen,104,105,PNPM
+plant_patho_ASV_1948,0,-1,Plant pathogen,105,106,non_PNPM
+plant_patho_ASV_2097,0,-0.818181818,Plant pathogen,106,107,non_PNPM
+plant_patho_ASV_2985,0,0.170731707,Plant pathogen,107,108,PNPM
+plant_patho_ASV_2594,0,0.792207792,Plant pathogen,108,109,PNPM
+plant_patho_ASV_1920,0,-0.488372093,Plant pathogen,109,110,non_PNPM
+plant_patho_ASV_6612,0,0.146341463,Plant pathogen,110,111,PNPM
+plant_patho_ASV_2625,0,-0.605633803,Plant pathogen,111,112,non_PNPM
+plant_patho_ASV_2251,0,-0.540229885,Plant pathogen,112,113,non_PNPM
+plant_patho_ASV_2087,0,-0.923076923,Plant pathogen,113,114,non_PNPM
+plant_patho_ASV_2287,1,1,Plant pathogen,114,115,PNPM
+plant_patho_ASV_2153,1,1,Plant pathogen,115,116,PNPM
+plant_patho_ASV_2250,0,-0.384615385,Plant pathogen,116,117,non_PNPM
+plant_patho_ASV_2015,1,1,Plant pathogen,117,118,PNPM
+plant_patho_ASV_2090,0,-1,Plant pathogen,118,119,non_PNPM
+plant_patho_ASV_2135,0,-0.837837838,Plant pathogen,119,120,non_PNPM
+plant_patho_ASV_2215,0,0.466666667,Plant pathogen,120,121,PNPM
+plant_patho_ASV_2301,1,1,Plant pathogen,121,122,PNPM
+plant_patho_ASV_2416,0,0.463414634,Plant pathogen,122,123,PNPM
+plant_patho_ASV_2543,0,-0.11627907,Plant pathogen,123,124,non_PNPM
+plant_patho_ASV_2828,1,1,Plant pathogen,124,125,PNPM
+plant_patho_ASV_2378,0,-0.942857143,Plant pathogen,125,126,non_PNPM
+plant_patho_ASV_2322,0,-0.64516129,Plant pathogen,126,127,non_PNPM
+plant_patho_ASV_2473,0,0.24137931,Plant pathogen,127,128,PNPM
+plant_patho_ASV_2474,0,0.961538462,Plant pathogen,128,129,PNPM
+plant_patho_ASV_2500,0,0.333333333,Plant pathogen,129,130,PNPM
+plant_patho_ASV_2503,0,-0.952380952,Plant pathogen,130,131,non_PNPM
+plant_patho_ASV_2410,0,-1,Plant pathogen,131,132,non_PNPM
+plant_patho_ASV_2466,1,1,Plant pathogen,132,133,PNPM
+plant_patho_ASV_2506,0,-0.459459459,Plant pathogen,133,134,non_PNPM
+plant_patho_ASV_5979,1,1,Plant pathogen,134,135,PNPM
+plant_patho_ASV_2492,1,1,Plant pathogen,135,136,PNPM
+plant_patho_ASV_2860,0,-0.461538462,Plant pathogen,136,137,non_PNPM
+plant_patho_ASV_2478,0,0.9,Plant pathogen,137,138,PNPM
+plant_patho_ASV_2580,0,-0.84,Plant pathogen,138,139,non_PNPM
+plant_patho_ASV_2505,0,-1,Plant pathogen,139,140,non_PNPM
+plant_patho_ASV_2609,1,1,Plant pathogen,140,141,PNPM
+plant_patho_ASV_3094,0,0.222222222,Plant pathogen,141,142,PNPM
+plant_patho_ASV_3047,1,1,Plant pathogen,142,143,PNPM
+plant_patho_ASV_2820,1,1,Plant pathogen,143,144,PNPM
+plant_patho_ASV_3089,0,-0.225806452,Plant pathogen,144,145,non_PNPM
+plant_patho_ASV_3219,0,-0.151515152,Plant pathogen,145,146,non_PNPM
+plant_patho_ASV_3211,1,1,Plant pathogen,146,147,PNPM
+plant_patho_ASV_2786,1,1,Plant pathogen,147,148,PNPM
+plant_patho_ASV_3242,0,-0.282051282,Plant pathogen,148,149,non_PNPM
+plant_patho_ASV_2901,1,1,Plant pathogen,149,150,PNPM
+plant_patho_ASV_3049,0,-1,Plant pathogen,150,151,non_PNPM
+plant_patho_ASV_3337,0,0.111111111,Plant pathogen,151,152,PNPM
+plant_patho_ASV_2983,1,1,Plant pathogen,152,153,PNPM
+plant_patho_ASV_3140,0,0.6,Plant pathogen,153,154,PNPM
+plant_patho_ASV_3106,0,-0.913043478,Plant pathogen,154,155,non_PNPM
+plant_patho_ASV_3166,1,1,Plant pathogen,155,156,PNPM
+plant_patho_ASV_3232,0,0.176470588,Plant pathogen,156,157,PNPM
+plant_patho_ASV_3111,0,-1,Plant pathogen,157,158,non_PNPM
+plant_patho_ASV_4223,0,0.636363636,Plant pathogen,158,159,PNPM
+plant_patho_ASV_3529,0,0.888888889,Plant pathogen,159,160,PNPM
+plant_patho_ASV_3405,0,0.2,Plant pathogen,160,161,PNPM
+plant_patho_ASV_3310,1,1,Plant pathogen,161,162,PNPM
+plant_patho_ASV_3638,0,-0.777777778,Plant pathogen,162,163,non_PNPM
+plant_patho_ASV_3552,1,1,Plant pathogen,163,164,PNPM
+plant_patho_ASV_3513,0,-1,Plant pathogen,164,165,non_PNPM
+plant_patho_ASV_3879,0,-0.368421053,Plant pathogen,165,166,non_PNPM
+plant_patho_ASV_3440,0,0.857142857,Plant pathogen,166,167,PNPM
+plant_patho_ASV_4074,0,0.818181818,Plant pathogen,167,168,PNPM
+plant_patho_ASV_3618,0,-0.583333333,Plant pathogen,168,169,non_PNPM
+plant_patho_ASV_3644,1,1,Plant pathogen,169,170,PNPM
+plant_patho_ASV_3650,1,1,Plant pathogen,170,171,PNPM
+plant_patho_ASV_3652,0,-0.583333333,Plant pathogen,171,172,non_PNPM
+plant_patho_ASV_4071,0,-0.466666667,Plant pathogen,172,173,non_PNPM
+plant_patho_ASV_3889,1,1,Plant pathogen,173,174,PNPM
+plant_patho_ASV_4081,0,0.5,Plant pathogen,174,175,PNPM
+plant_patho_ASV_3647,1,1,Plant pathogen,175,176,PNPM
+plant_patho_ASV_3683,0,-1,Plant pathogen,176,177,non_PNPM
+plant_patho_ASV_3761,1,1,Plant pathogen,177,178,PNPM
+plant_patho_ASV_8596,0,-1,Plant pathogen,178,179,non_PNPM
+plant_patho_ASV_4193,0,-0.833333333,Plant pathogen,179,180,non_PNPM
+plant_patho_ASV_4013,1,1,Plant pathogen,180,181,PNPM
+plant_patho_ASV_4402,0,-0.333333333,Plant pathogen,181,182,non_PNPM
+plant_patho_ASV_3961,0,-1,Plant pathogen,182,183,non_PNPM
+plant_patho_ASV_4585,0,0.75,Plant pathogen,183,184,PNPM
+plant_patho_ASV_4590,0,0.384615385,Plant pathogen,184,185,PNPM
+plant_patho_ASV_3966,1,1,Plant pathogen,185,186,PNPM
+plant_patho_ASV_4653,0,-1,Plant pathogen,186,187,non_PNPM
+plant_patho_ASV_6015,0,-0.066666667,Plant pathogen,187,188,non_PNPM
+plant_patho_ASV_4307,1,1,Plant pathogen,188,189,PNPM
+plant_patho_ASV_5413,0,0.333333333,Plant pathogen,189,190,PNPM
+plant_patho_ASV_7629,0,-0.222222222,Plant pathogen,190,191,non_PNPM
+plant_patho_ASV_4254,1,1,Plant pathogen,191,192,PNPM
+plant_patho_ASV_4255,1,1,Plant pathogen,192,193,PNPM
+plant_patho_ASV_4660,1,1,Plant pathogen,193,194,PNPM
+plant_patho_ASV_5446,0,-0.5,Plant pathogen,194,195,non_PNPM
+plant_patho_ASV_4269,0,-1,Plant pathogen,195,196,non_PNPM
+plant_patho_ASV_4433,0,-0.066666667,Plant pathogen,196,197,non_PNPM
+plant_patho_ASV_4472,0,-0.333333333,Plant pathogen,197,198,non_PNPM
+plant_patho_ASV_4393,0,-0.268292683,Plant pathogen,198,199,non_PNPM
+plant_patho_ASV_4571,0,-0.142857143,Plant pathogen,199,200,non_PNPM
+plant_patho_ASV_4536,1,1,Plant pathogen,200,201,PNPM
+plant_patho_ASV_4476,0,-1,Plant pathogen,201,202,non_PNPM
+plant_patho_ASV_4584,1,1,Plant pathogen,202,203,PNPM
+plant_patho_ASV_4686,1,1,Plant pathogen,203,204,PNPM
+plant_patho_ASV_4621,0,-1,Plant pathogen,204,205,non_PNPM
+plant_patho_ASV_4769,0,-1,Plant pathogen,205,206,non_PNPM
+plant_patho_ASV_5259,0,-0.333333333,Plant pathogen,206,207,non_PNPM
+plant_patho_ASV_6698,0,-0.714285714,Plant pathogen,207,208,non_PNPM
+plant_patho_ASV_4851,0,-1,Plant pathogen,208,209,non_PNPM
+plant_patho_ASV_5649,0,-0.777777778,Plant pathogen,209,210,non_PNPM
+plant_patho_ASV_5020,0,-1,Plant pathogen,210,211,non_PNPM
+plant_patho_ASV_8721,0,2.78E-17,Plant pathogen,211,212,PNPM
+plant_patho_ASV_4973,1,1,Plant pathogen,212,213,PNPM
+plant_patho_ASV_5391,1,1,Plant pathogen,213,214,PNPM
+plant_patho_ASV_5256,0,-0.428571429,Plant pathogen,214,215,non_PNPM
+plant_patho_ASV_8936,0,0.523809524,Plant pathogen,215,216,PNPM
+plant_patho_ASV_5510,1,1,Plant pathogen,216,217,PNPM
+plant_patho_ASV_6221,0,0.333333333,Plant pathogen,217,218,PNPM
+plant_patho_ASV_5915,0,0.076923077,Plant pathogen,218,219,PNPM
+plant_patho_ASV_5178,0,-1,Plant pathogen,219,220,non_PNPM
+plant_patho_ASV_5563,1,1,Plant pathogen,220,221,PNPM
+plant_patho_ASV_5264,0,-1,Plant pathogen,221,222,non_PNPM
+plant_patho_ASV_5404,1,1,Plant pathogen,222,223,PNPM
+plant_patho_ASV_5493,1,1,Plant pathogen,223,224,PNPM
+plant_patho_ASV_5475,0,-1,Plant pathogen,224,225,non_PNPM
+plant_patho_ASV_5804,1,1,Plant pathogen,225,226,PNPM
+plant_patho_ASV_6493,0,-1,Plant pathogen,226,227,non_PNPM
+plant_patho_ASV_5757,0,-1,Plant pathogen,227,228,non_PNPM
+plant_patho_ASV_6719,0,-0.333333333,Plant pathogen,228,229,non_PNPM
+plant_patho_ASV_5597,1,1,Plant pathogen,229,230,PNPM
+plant_patho_ASV_6369,0,-0.5,Plant pathogen,230,231,non_PNPM
+plant_patho_ASV_5870,0,-0.75,Plant pathogen,231,232,non_PNPM
+plant_patho_ASV_6669,0,-1,Plant pathogen,232,233,non_PNPM
+plant_patho_ASV_5806,1,1,Plant pathogen,233,234,PNPM
+plant_patho_ASV_6148,0,0.4,Plant pathogen,234,235,PNPM
+plant_patho_ASV_6204,1,1,Plant pathogen,235,236,PNPM
+plant_patho_ASV_6220,1,1,Plant pathogen,236,237,PNPM
+plant_patho_ASV_6448,1,1,Plant pathogen,237,238,PNPM
+plant_patho_ASV_7084,0,-1,Plant pathogen,238,239,non_PNPM
+plant_patho_ASV_6262,0,-1,Plant pathogen,239,240,non_PNPM
+plant_patho_ASV_6186,0,-1,Plant pathogen,240,241,non_PNPM
+plant_patho_ASV_6355,1,1,Plant pathogen,241,242,PNPM
+plant_patho_ASV_6602,1,1,Plant pathogen,242,243,PNPM
+plant_patho_ASV_7207,0,-0.25,Plant pathogen,243,244,non_PNPM
+plant_patho_ASV_6205,1,1,Plant pathogen,244,245,PNPM
+plant_patho_ASV_6332,1,1,Plant pathogen,245,246,PNPM
+plant_patho_ASV_6953,0,-0.333333333,Plant pathogen,246,247,non_PNPM
+plant_patho_ASV_7942,1,1,Plant pathogen,247,248,PNPM
+plant_patho_ASV_6505,0,0.6,Plant pathogen,248,249,PNPM
+plant_patho_ASV_6534,0,-0.714285714,Plant pathogen,249,250,non_PNPM
+plant_patho_ASV_6563,1,1,Plant pathogen,250,251,PNPM
+plant_patho_ASV_8420,1,1,Plant pathogen,251,252,PNPM
+plant_patho_ASV_6711,0,-1,Plant pathogen,252,253,non_PNPM
+plant_patho_ASV_6872,1,1,Plant pathogen,253,254,PNPM
+plant_patho_ASV_7096,1,1,Plant pathogen,254,255,PNPM
+plant_patho_ASV_10283,0,-0.142857143,Plant pathogen,255,256,non_PNPM
+plant_patho_ASV_7136,1,1,Plant pathogen,256,257,PNPM
+plant_patho_ASV_8260,0,0.2,Plant pathogen,257,258,PNPM
+plant_patho_ASV_6812,1,1,Plant pathogen,258,259,PNPM
+plant_patho_ASV_6871,1,1,Plant pathogen,259,260,PNPM
+plant_patho_ASV_7252,0,0,Plant pathogen,260,261,non_PNPM
+plant_patho_ASV_10666,1,1,Plant pathogen,261,262,PNPM
+plant_patho_ASV_6886,1,1,Plant pathogen,262,263,PNPM
+plant_patho_ASV_6979,0,-1,Plant pathogen,263,264,non_PNPM
+plant_patho_ASV_7335,1,1,Plant pathogen,264,265,PNPM
+plant_patho_ASV_9662,1,1,Plant pathogen,265,266,PNPM
+plant_patho_ASV_7135,0,-1,Plant pathogen,266,267,non_PNPM
+plant_patho_ASV_7617,0,0.428571429,Plant pathogen,267,268,PNPM
+plant_patho_ASV_7957,0,-1,Plant pathogen,268,269,non_PNPM
+plant_patho_ASV_9744,1,1,Plant pathogen,269,270,PNPM
+plant_patho_ASV_7133,0,-1,Plant pathogen,270,271,non_PNPM
+plant_patho_ASV_7474,1,1,Plant pathogen,271,272,PNPM
+plant_patho_ASV_7479,1,1,Plant pathogen,272,273,PNPM
+plant_patho_ASV_8786,1,1,Plant pathogen,273,274,PNPM
+plant_patho_ASV_8957,1,1,Plant pathogen,274,275,PNPM
+plant_patho_ASV_7795,0,0.5,Plant pathogen,275,276,PNPM
+plant_patho_ASV_8140,1,1,Plant pathogen,276,277,PNPM
+plant_patho_ASV_8991,0,0,Plant pathogen,277,278,non_PNPM
+plant_patho_ASV_9317,0,0.2,Plant pathogen,278,279,PNPM
+plant_patho_ASV_7720,1,1,Plant pathogen,279,280,PNPM
+plant_patho_ASV_7866,0,-1,Plant pathogen,280,281,non_PNPM
+plant_patho_ASV_8556,0,-0.5,Plant pathogen,281,282,non_PNPM
+plant_patho_ASV_8622,1,1,Plant pathogen,282,283,PNPM
+plant_patho_ASV_9043,0,0.333333333,Plant pathogen,283,284,PNPM
+plant_patho_ASV_9500,1,1,Plant pathogen,284,285,PNPM
+plant_patho_ASV_9797,0,0.166666667,Plant pathogen,285,286,PNPM
+plant_patho_ASV_9817,0,-0.2,Plant pathogen,286,287,non_PNPM
+plant_patho_ASV_8357,1,1,Plant pathogen,287,288,PNPM
+plant_patho_ASV_10317,0,-1,Plant pathogen,288,289,non_PNPM
+plant_patho_ASV_10631,1,1,Plant pathogen,289,290,PNPM
+plant_patho_ASV_10735,1,1,Plant pathogen,290,291,PNPM
+plant_patho_ASV_7878,1,1,Plant pathogen,291,292,PNPM
+plant_patho_ASV_8266,0,-0.2,Plant pathogen,292,293,non_PNPM
+plant_patho_ASV_8296,0,-1,Plant pathogen,293,294,non_PNPM
+plant_patho_ASV_9011,1,1,Plant pathogen,294,295,PNPM
+plant_patho_ASV_8374,1,1,Plant pathogen,295,296,PNPM
+plant_patho_ASV_8628,0,0,Plant pathogen,296,297,non_PNPM
+plant_patho_ASV_8678,1,1,Plant pathogen,297,298,PNPM
+plant_patho_ASV_9036,0,-0.333333333,Plant pathogen,298,299,non_PNPM
+plant_patho_ASV_9093,0,-1,Plant pathogen,299,300,non_PNPM
+plant_patho_ASV_9513,0,-1,Plant pathogen,300,301,non_PNPM
+plant_patho_ASV_9829,0,0.5,Plant pathogen,301,302,PNPM
+plant_patho_ASV_10126,1,1,Plant pathogen,302,303,PNPM
+plant_patho_ASV_8442,1,1,Plant pathogen,303,304,PNPM
+plant_patho_ASV_8567,0,-1,Plant pathogen,304,305,non_PNPM
+plant_patho_ASV_8568,0,-1,Plant pathogen,305,306,non_PNPM
+plant_patho_ASV_8943,1,1,Plant pathogen,306,307,PNPM
+plant_patho_ASV_9264,0,-1,Plant pathogen,307,308,non_PNPM
+plant_patho_ASV_9347,1,1,Plant pathogen,308,309,PNPM
+plant_patho_ASV_10630,1,1,Plant pathogen,309,310,PNPM
+plant_patho_ASV_9244,1,1,Plant pathogen,310,311,PNPM
+plant_patho_ASV_9378,1,1,Plant pathogen,311,312,PNPM
+plant_patho_ASV_10178,1,1,Plant pathogen,312,313,PNPM
+plant_patho_ASV_9270,1,1,Plant pathogen,313,314,PNPM
+plant_patho_ASV_9399,0,-1,Plant pathogen,314,315,non_PNPM
+plant_patho_ASV_9631,0,-1,Plant pathogen,315,316,non_PNPM
+plant_patho_ASV_9770,1,1,Plant pathogen,316,317,PNPM
+plant_patho_ASV_9811,0,-1,Plant pathogen,317,318,non_PNPM
+plant_patho_ASV_10766,1,1,Plant pathogen,318,319,PNPM
+plant_patho_ASV_9664,1,1,Plant pathogen,319,320,PNPM
+plant_patho_ASV_9779,1,1,Plant pathogen,320,321,PNPM
+plant_patho_ASV_10113,1,1,Plant pathogen,321,322,PNPM
+plant_patho_ASV_10745,1,1,Plant pathogen,322,323,PNPM
+plant_patho_ASV_9910,0,0,Plant pathogen,323,324,non_PNPM
+plant_patho_ASV_10756,1,1,Plant pathogen,324,325,PNPM
+plant_patho_ASV_36,0,0.946953782,Plant pathogen,325,326,PNPM
+plant_patho_ASV_64,0,0.795270877,Plant pathogen,326,327,PNPM
+plant_patho_ASV_773,0,0.18871057,Plant pathogen,327,328,PNPM
+plant_patho_ASV_138,0,-0.531627233,Plant pathogen,328,329,non_PNPM
+plant_patho_ASV_165,0,0.953560372,Plant pathogen,329,330,PNPM
+plant_patho_ASV_180,0,0.937238494,Plant pathogen,330,331,PNPM
+plant_patho_ASV_214,0,0.969465649,Plant pathogen,331,332,PNPM
+plant_patho_ASV_233,0,0.845261122,Plant pathogen,332,333,PNPM
+plant_patho_ASV_230,0,-0.886970173,Plant pathogen,333,334,non_PNPM
+plant_patho_ASV_247,0,-0.018922853,Plant pathogen,334,335,non_PNPM
+plant_patho_ASV_239,0,0.735211268,Plant pathogen,335,336,PNPM
+plant_patho_ASV_274,0,-0.170684667,Plant pathogen,336,337,non_PNPM
+plant_patho_ASV_270,0,0.15942029,Plant pathogen,337,338,PNPM
+plant_patho_ASV_330,0,0.308441558,Plant pathogen,338,339,PNPM
+plant_patho_ASV_291,0,-0.128440367,Plant pathogen,339,340,non_PNPM
+plant_patho_ASV_323,0,-0.258064516,Plant pathogen,340,341,non_PNPM
+plant_patho_ASV_326,0,0.171052632,Plant pathogen,341,342,PNPM
+plant_patho_ASV_339,0,-0.205655527,Plant pathogen,342,343,non_PNPM
+plant_patho_ASV_334,0,-0.493123772,Plant pathogen,343,344,non_PNPM
+plant_patho_ASV_422,0,0.527531083,Plant pathogen,344,345,PNPM
+plant_patho_ASV_358,0,0.563758389,Plant pathogen,345,346,PNPM
+plant_patho_ASV_369,0,-0.514986376,Plant pathogen,346,347,non_PNPM
+plant_patho_ASV_390,0,0.373493976,Plant pathogen,347,348,PNPM
+plant_patho_ASV_356,0,0.994609164,Plant pathogen,348,349,PNPM
+plant_patho_ASV_416,0,0.98,Plant pathogen,349,350,PNPM
+plant_patho_ASV_401,0,0.17,Plant pathogen,350,351,PNPM
+plant_patho_ASV_758,0,-0.229166667,Plant pathogen,351,352,non_PNPM
+plant_patho_ASV_432,0,-0.90960452,Plant pathogen,352,353,non_PNPM
+plant_patho_ASV_451,0,-0.297423888,Plant pathogen,353,354,non_PNPM
+plant_patho_ASV_420,0,-0.829959514,Plant pathogen,354,355,non_PNPM
+plant_patho_ASV_564,0,-0.634028892,Plant pathogen,355,356,non_PNPM
+plant_patho_ASV_459,0,0.875776398,Plant pathogen,356,357,PNPM
+plant_patho_ASV_469,0,0.513108614,Plant pathogen,357,358,PNPM
+plant_patho_ASV_495,0,0.022421525,Plant pathogen,358,359,PNPM
+plant_patho_ASV_516,0,0.629411765,Plant pathogen,359,360,PNPM
+plant_patho_ASV_525,0,-0.065789474,Plant pathogen,360,361,non_PNPM
+plant_patho_ASV_590,0,0.655172414,Plant pathogen,361,362,PNPM
+plant_patho_ASV_591,0,-0.225806452,Plant pathogen,362,363,non_PNPM
+plant_patho_ASV_594,0,0.586206897,Plant pathogen,363,364,PNPM
+plant_patho_ASV_552,0,-0.838150289,Plant pathogen,364,365,non_PNPM
+plant_patho_ASV_550,1,1,Plant pathogen,365,366,PNPM
+plant_patho_ASV_654,0,-0.902702703,Plant pathogen,366,367,non_PNPM
+plant_patho_ASV_535,1,1,Plant pathogen,367,368,PNPM
+plant_patho_ASV_744,0,0.215384615,Plant pathogen,368,369,PNPM
+plant_patho_ASV_598,1,1,Plant pathogen,369,370,PNPM
+plant_patho_ASV_614,0,0.208053691,Plant pathogen,370,371,PNPM
+plant_patho_ASV_572,1,1,Plant pathogen,371,372,PNPM
+plant_patho_ASV_703,0,-0.26746167,Plant pathogen,372,373,non_PNPM
+plant_patho_ASV_677,0,-0.392156863,Plant pathogen,373,374,non_PNPM
+plant_patho_ASV_733,0,0.980582524,Plant pathogen,374,375,PNPM
+plant_patho_ASV_678,0,0.989010989,Plant pathogen,375,376,PNPM
+plant_patho_ASV_743,0,0.176470588,Plant pathogen,376,377,PNPM
+plant_patho_ASV_761,0,-0.931818182,Plant pathogen,377,378,non_PNPM
+plant_patho_ASV_905,0,-0.231884058,Plant pathogen,378,379,non_PNPM
+plant_patho_ASV_755,0,0.777777778,Plant pathogen,379,380,PNPM
+plant_patho_ASV_975,0,-0.43902439,Plant pathogen,380,381,non_PNPM
+plant_patho_ASV_810,0,0.048387097,Plant pathogen,381,382,PNPM
+plant_patho_ASV_854,0,0.123287671,Plant pathogen,382,383,PNPM
+plant_patho_ASV_1008,0,0.043478261,Plant pathogen,383,384,PNPM
+plant_patho_ASV_832,1,1,Plant pathogen,384,385,PNPM
+plant_patho_ASV_843,0,0.425742574,Plant pathogen,385,386,PNPM
+plant_patho_ASV_956,0,-0.574879227,Plant pathogen,386,387,non_PNPM
+plant_patho_ASV_967,0,0.540540541,Plant pathogen,387,388,PNPM
+plant_patho_ASV_926,0,-0.333333333,Plant pathogen,388,389,non_PNPM
+plant_patho_ASV_1025,0,0.76744186,Plant pathogen,389,390,PNPM
+plant_patho_ASV_918,0,0.969230769,Plant pathogen,390,391,PNPM
+plant_patho_ASV_895,0,0.754385965,Plant pathogen,391,392,PNPM
+plant_patho_ASV_849,0,-0.936507937,Plant pathogen,392,393,non_PNPM
+plant_patho_ASV_950,0,-0.285714286,Plant pathogen,393,394,non_PNPM
+plant_patho_ASV_1598,0,0.011764706,Plant pathogen,394,395,PNPM
+plant_patho_ASV_986,0,0.808219178,Plant pathogen,395,396,PNPM
+plant_patho_ASV_1130,1,1,Plant pathogen,396,397,PNPM
+plant_patho_ASV_930,0,0.882352941,Plant pathogen,397,398,PNPM
+plant_patho_ASV_946,1,1,Plant pathogen,398,399,PNPM
+plant_patho_ASV_1453,0,0.078787879,Plant pathogen,399,400,PNPM
+plant_patho_ASV_1124,1,1,Plant pathogen,400,401,PNPM
+plant_patho_ASV_1044,0,0.466666667,Plant pathogen,401,402,PNPM
+plant_patho_ASV_1406,0,-0.582608696,Plant pathogen,402,403,non_PNPM
+plant_patho_ASV_1030,0,-0.940594059,Plant pathogen,403,404,non_PNPM
+plant_patho_ASV_1200,0,-0.95154185,Plant pathogen,404,405,non_PNPM
+plant_patho_ASV_1746,0,-0.164556962,Plant pathogen,405,406,non_PNPM
+plant_patho_ASV_1156,0,0.6,Plant pathogen,406,407,PNPM
+plant_patho_ASV_1122,0,0.210526316,Plant pathogen,407,408,PNPM
+plant_patho_ASV_1143,0,0.92481203,Plant pathogen,408,409,PNPM
+plant_patho_ASV_1219,1,1,Plant pathogen,409,410,PNPM
+plant_patho_ASV_1157,1,1,Plant pathogen,410,411,PNPM
+plant_patho_ASV_1232,0,0.95862069,Plant pathogen,411,412,PNPM
+plant_patho_ASV_1196,0,-0.064220183,Plant pathogen,412,413,non_PNPM
+plant_patho_ASV_1272,0,0.989528796,Plant pathogen,413,414,PNPM
+plant_patho_ASV_1368,0,0.710144928,Plant pathogen,414,415,PNPM
+plant_patho_ASV_1308,0,-0.106382979,Plant pathogen,415,416,non_PNPM
+plant_patho_ASV_1249,0,-0.193548387,Plant pathogen,416,417,non_PNPM
+plant_patho_ASV_1383,0,-0.073170732,Plant pathogen,417,418,non_PNPM
+plant_patho_ASV_1354,0,0.355932203,Plant pathogen,418,419,PNPM
+plant_patho_ASV_1346,1,1,Plant pathogen,419,420,PNPM
+plant_patho_ASV_1390,0,0.720930233,Plant pathogen,420,421,PNPM
+plant_patho_ASV_1588,1,1,Plant pathogen,421,422,PNPM
+plant_patho_ASV_1365,1,1,Plant pathogen,422,423,PNPM
+plant_patho_ASV_1486,0,-0.378378378,Plant pathogen,423,424,non_PNPM
+plant_patho_ASV_1514,1,1,Plant pathogen,424,425,PNPM
+plant_patho_ASV_1489,0,-0.777777778,Plant pathogen,425,426,non_PNPM
+plant_patho_ASV_1454,0,0.482758621,Plant pathogen,426,427,PNPM
+plant_patho_ASV_1496,0,0.888888889,Plant pathogen,427,428,PNPM
+plant_patho_ASV_1579,1,1,Plant pathogen,428,429,PNPM
+plant_patho_ASV_1437,0,-1,Plant pathogen,429,430,non_PNPM
+plant_patho_ASV_1442,1,1,Plant pathogen,430,431,PNPM
+plant_patho_ASV_1473,0,-1,Plant pathogen,431,432,non_PNPM
+plant_patho_ASV_1617,0,-0.358490566,Plant pathogen,432,433,non_PNPM
+plant_patho_ASV_1478,0,-1,Plant pathogen,433,434,non_PNPM
+plant_patho_ASV_1750,0,0.70212766,Plant pathogen,434,435,PNPM
+plant_patho_ASV_1472,0,0.976744186,Plant pathogen,435,436,PNPM
+plant_patho_ASV_1863,0,0.064516129,Plant pathogen,436,437,PNPM
+plant_patho_ASV_1669,0,0.471698113,Plant pathogen,437,438,PNPM
+plant_patho_ASV_1675,0,-0.411764706,Plant pathogen,438,439,non_PNPM
+plant_patho_ASV_1622,0,0.733333333,Plant pathogen,439,440,PNPM
+plant_patho_ASV_2330,0,0.866666667,Plant pathogen,440,441,PNPM
+plant_patho_ASV_1614,0,0.952380952,Plant pathogen,441,442,PNPM
+plant_patho_ASV_1594,0,-1,Plant pathogen,442,443,non_PNPM
+plant_patho_ASV_1729,0,-0.846153846,Plant pathogen,443,444,non_PNPM
+plant_patho_ASV_1610,0,0.507246377,Plant pathogen,444,445,PNPM
+plant_patho_ASV_1690,0,-0.449275362,Plant pathogen,445,446,non_PNPM
+plant_patho_ASV_1607,0,0.666666667,Plant pathogen,446,447,PNPM
+plant_patho_ASV_2690,0,-0.490909091,Plant pathogen,447,448,non_PNPM
+plant_patho_ASV_1658,0,0.555555556,Plant pathogen,448,449,PNPM
+plant_patho_ASV_1665,1,1,Plant pathogen,449,450,PNPM
+plant_patho_ASV_1709,0,-0.450980392,Plant pathogen,450,451,non_PNPM
+plant_patho_ASV_1660,0,-1,Plant pathogen,451,452,non_PNPM
+plant_patho_ASV_1847,0,-0.85,Plant pathogen,452,453,non_PNPM
+plant_patho_ASV_1765,1,1,Plant pathogen,453,454,PNPM
+plant_patho_ASV_2462,0,-0.565217391,Plant pathogen,454,455,non_PNPM
+plant_patho_ASV_1932,0,-0.14893617,Plant pathogen,455,456,non_PNPM
+plant_patho_ASV_1719,1,1,Plant pathogen,456,457,PNPM
+plant_patho_ASV_1922,0,-0.307692308,Plant pathogen,457,458,non_PNPM
+plant_patho_ASV_1829,0,0.746031746,Plant pathogen,458,459,PNPM
+plant_patho_ASV_2034,0,0.04,Plant pathogen,459,460,PNPM
+plant_patho_ASV_1815,0,-0.967213115,Plant pathogen,460,461,non_PNPM
+plant_patho_ASV_1917,0,0.956521739,Plant pathogen,461,462,PNPM
+plant_patho_ASV_1890,1,1,Plant pathogen,462,463,PNPM
+plant_patho_ASV_1862,0,-1,Plant pathogen,463,464,non_PNPM
+plant_patho_ASV_1814,0,-1,Plant pathogen,464,465,non_PNPM
+plant_patho_ASV_1884,1,1,Plant pathogen,465,466,PNPM
+plant_patho_ASV_2588,0,-0.716981132,Plant pathogen,466,467,non_PNPM
+plant_patho_ASV_1978,0,-0.68,Plant pathogen,467,468,non_PNPM
+plant_patho_ASV_1915,1,1,Plant pathogen,468,469,PNPM
+plant_patho_ASV_2063,0,0.7,Plant pathogen,469,470,PNPM
+plant_patho_ASV_2283,0,-0.886792453,Plant pathogen,470,471,non_PNPM
+plant_patho_ASV_2114,0,-0.022222222,Plant pathogen,471,472,non_PNPM
+plant_patho_ASV_1941,1,1,Plant pathogen,472,473,PNPM
+plant_patho_ASV_2312,0,-0.694444444,Plant pathogen,473,474,non_PNPM
+plant_patho_ASV_2074,1,1,Plant pathogen,474,475,PNPM
+plant_patho_ASV_1933,0,-1,Plant pathogen,475,476,non_PNPM
+plant_patho_ASV_2027,0,-0.555555556,Plant pathogen,476,477,non_PNPM
+plant_patho_ASV_1975,0,-0.8,Plant pathogen,477,478,non_PNPM
+plant_patho_ASV_2197,0,-0.925925926,Plant pathogen,478,479,non_PNPM
+plant_patho_ASV_2029,0,-1,Plant pathogen,479,480,non_PNPM
+plant_patho_ASV_2175,0,0.733333333,Plant pathogen,480,481,PNPM
+plant_patho_ASV_2072,0,-0.948717949,Plant pathogen,481,482,non_PNPM
+plant_patho_ASV_2922,0,-0.277777778,Plant pathogen,482,483,non_PNPM
+plant_patho_ASV_2909,0,-0.5,Plant pathogen,483,484,non_PNPM
+plant_patho_ASV_2125,1,1,Plant pathogen,484,485,PNPM
+plant_patho_ASV_2163,1,1,Plant pathogen,485,486,PNPM
+plant_patho_ASV_2158,0,-0.935483871,Plant pathogen,486,487,non_PNPM
+plant_patho_ASV_2131,1,1,Plant pathogen,487,488,PNPM
+plant_patho_ASV_2112,0,-0.333333333,Plant pathogen,488,489,non_PNPM
+plant_patho_ASV_2222,0,0.466666667,Plant pathogen,489,490,PNPM
+plant_patho_ASV_2345,0,-0.802469136,Plant pathogen,490,491,non_PNPM
+plant_patho_ASV_2169,1,1,Plant pathogen,491,492,PNPM
+plant_patho_ASV_2518,1,1,Plant pathogen,492,493,PNPM
+plant_patho_ASV_2494,0,0.944444444,Plant pathogen,493,494,PNPM
+plant_patho_ASV_2257,1,1,Plant pathogen,494,495,PNPM
+plant_patho_ASV_2335,0,-0.951219512,Plant pathogen,495,496,non_PNPM
+plant_patho_ASV_2644,1,1,Plant pathogen,496,497,PNPM
+plant_patho_ASV_2369,0,-0.266666667,Plant pathogen,497,498,non_PNPM
+plant_patho_ASV_2267,1,1,Plant pathogen,498,499,PNPM
+plant_patho_ASV_2360,0,-1,Plant pathogen,499,500,non_PNPM
+plant_patho_ASV_2288,1,1,Plant pathogen,500,501,PNPM
+plant_patho_ASV_2418,0,0.609756098,Plant pathogen,501,502,PNPM
+plant_patho_ASV_2454,0,0.466666667,Plant pathogen,502,503,PNPM
+plant_patho_ASV_2431,0,-0.947368421,Plant pathogen,503,504,non_PNPM
+plant_patho_ASV_5601,1,1,Plant pathogen,504,505,PNPM
+plant_patho_ASV_2586,0,-0.739130435,Plant pathogen,505,506,non_PNPM
+plant_patho_ASV_2653,0,-1,Plant pathogen,506,507,non_PNPM
+plant_patho_ASV_2533,0,-0.448275862,Plant pathogen,507,508,non_PNPM
+plant_patho_ASV_2498,0,-0.714285714,Plant pathogen,508,509,non_PNPM
+plant_patho_ASV_2619,0,0.647058824,Plant pathogen,509,510,PNPM
+plant_patho_ASV_2660,0,-1,Plant pathogen,510,511,non_PNPM
+plant_patho_ASV_2636,1,1,Plant pathogen,511,512,PNPM
+plant_patho_ASV_2753,0,0.2,Plant pathogen,512,513,PNPM
+plant_patho_ASV_2759,0,0.75,Plant pathogen,513,514,PNPM
+plant_patho_ASV_2849,0,0.555555556,Plant pathogen,514,515,PNPM
+plant_patho_ASV_2900,0,0.916666667,Plant pathogen,515,516,PNPM
+plant_patho_ASV_2846,0,0.142857143,Plant pathogen,516,517,PNPM
+plant_patho_ASV_2874,0,-1,Plant pathogen,517,518,non_PNPM
+plant_patho_ASV_2973,0,0.4,Plant pathogen,518,519,PNPM
+plant_patho_ASV_3199,0,-0.771428571,Plant pathogen,519,520,non_PNPM
+plant_patho_ASV_3065,0,-0.764705882,Plant pathogen,520,521,non_PNPM
+plant_patho_ASV_3385,1,1,Plant pathogen,521,522,PNPM
+plant_patho_ASV_3724,0,-1,Plant pathogen,522,523,non_PNPM
+plant_patho_ASV_2866,1,1,Plant pathogen,523,524,PNPM
+plant_patho_ASV_2981,1,1,Plant pathogen,524,525,PNPM
+plant_patho_ASV_3044,0,-0.764705882,Plant pathogen,525,526,non_PNPM
+plant_patho_ASV_3292,0,-0.44,Plant pathogen,526,527,non_PNPM
+plant_patho_ASV_3093,0,0.111111111,Plant pathogen,527,528,PNPM
+plant_patho_ASV_3295,0,-0.866666667,Plant pathogen,528,529,non_PNPM
+plant_patho_ASV_3678,0,0.2,Plant pathogen,529,530,PNPM
+plant_patho_ASV_2947,1,1,Plant pathogen,530,531,PNPM
+plant_patho_ASV_3068,0,-0.875,Plant pathogen,531,532,non_PNPM
+plant_patho_ASV_3178,0,0.538461538,Plant pathogen,532,533,PNPM
+plant_patho_ASV_3252,0,-0.793103448,Plant pathogen,533,534,non_PNPM
+plant_patho_ASV_3177,0,-1,Plant pathogen,534,535,non_PNPM
+plant_patho_ASV_3334,1,1,Plant pathogen,535,536,PNPM
+plant_patho_ASV_3020,0,-1,Plant pathogen,536,537,non_PNPM
+plant_patho_ASV_3075,1,1,Plant pathogen,537,538,PNPM
+plant_patho_ASV_5593,1,1,Plant pathogen,538,539,PNPM
+plant_patho_ASV_3117,1,1,Plant pathogen,539,540,PNPM
+plant_patho_ASV_3306,1,1,Plant pathogen,540,541,PNPM
+plant_patho_ASV_3401,0,-0.533333333,Plant pathogen,541,542,non_PNPM
+plant_patho_ASV_3409,0,0.272727273,Plant pathogen,542,543,PNPM
+plant_patho_ASV_3114,1,1,Plant pathogen,543,544,PNPM
+plant_patho_ASV_3223,0,0.846153846,Plant pathogen,544,545,PNPM
+plant_patho_ASV_3847,0,-0.777777778,Plant pathogen,545,546,non_PNPM
+plant_patho_ASV_3456,0,-0.703703704,Plant pathogen,546,547,non_PNPM
+plant_patho_ASV_3499,1,1,Plant pathogen,547,548,PNPM
+plant_patho_ASV_3214,0,-1,Plant pathogen,548,549,non_PNPM
+plant_patho_ASV_3275,0,-0.368421053,Plant pathogen,549,550,non_PNPM
+plant_patho_ASV_3329,0,-0.923076923,Plant pathogen,550,551,non_PNPM
+plant_patho_ASV_3603,0,-0.666666667,Plant pathogen,551,552,non_PNPM
+plant_patho_ASV_3677,1,1,Plant pathogen,552,553,PNPM
+plant_patho_ASV_3856,1,1,Plant pathogen,553,554,PNPM
+plant_patho_ASV_3245,0,-1,Plant pathogen,554,555,non_PNPM
+plant_patho_ASV_3376,0,-0.571428571,Plant pathogen,555,556,non_PNPM
+plant_patho_ASV_3396,0,-1,Plant pathogen,556,557,non_PNPM
+plant_patho_ASV_3399,0,-1,Plant pathogen,557,558,non_PNPM
+plant_patho_ASV_3442,1,1,Plant pathogen,558,559,PNPM
+plant_patho_ASV_3407,1,1,Plant pathogen,559,560,PNPM
+plant_patho_ASV_3272,0,-1,Plant pathogen,560,561,non_PNPM
+plant_patho_ASV_3814,1,1,Plant pathogen,561,562,PNPM
+plant_patho_ASV_3947,0,-0.7,Plant pathogen,562,563,non_PNPM
+plant_patho_ASV_3566,0,0.75,Plant pathogen,563,564,PNPM
+plant_patho_ASV_3600,0,0.25,Plant pathogen,564,565,PNPM
+plant_patho_ASV_3517,0,-1,Plant pathogen,565,566,non_PNPM
+plant_patho_ASV_3586,1,1,Plant pathogen,566,567,PNPM
+plant_patho_ASV_3495,0,-1,Plant pathogen,567,568,non_PNPM
+plant_patho_ASV_3544,0,-1,Plant pathogen,568,569,non_PNPM
+plant_patho_ASV_3547,0,-1,Plant pathogen,569,570,non_PNPM
+plant_patho_ASV_4258,1,1,Plant pathogen,570,571,PNPM
+plant_patho_ASV_3980,0,-0.461538462,Plant pathogen,571,572,non_PNPM
+plant_patho_ASV_3571,0,-0.875,Plant pathogen,572,573,non_PNPM
+plant_patho_ASV_3803,0,0.428571429,Plant pathogen,573,574,PNPM
+plant_patho_ASV_3748,0,-1,Plant pathogen,574,575,non_PNPM
+plant_patho_ASV_3948,0,0.555555556,Plant pathogen,575,576,PNPM
+plant_patho_ASV_4131,1,1,Plant pathogen,576,577,PNPM
+plant_patho_ASV_3853,0,-0.888888889,Plant pathogen,577,578,non_PNPM
+plant_patho_ASV_3877,0,0.843137255,Plant pathogen,578,579,PNPM
+plant_patho_ASV_3999,0,-0.4,Plant pathogen,579,580,non_PNPM
+plant_patho_ASV_3607,1,1,Plant pathogen,580,581,PNPM
+plant_patho_ASV_3806,0,-1,Plant pathogen,581,582,non_PNPM
+plant_patho_ASV_3821,0,0.875,Plant pathogen,582,583,PNPM
+plant_patho_ASV_3733,1,1,Plant pathogen,583,584,PNPM
+plant_patho_ASV_4048,1,1,Plant pathogen,584,585,PNPM
+plant_patho_ASV_4150,1,1,Plant pathogen,585,586,PNPM
+plant_patho_ASV_3745,0,-1,Plant pathogen,586,587,non_PNPM
+plant_patho_ASV_4114,0,-0.846153846,Plant pathogen,587,588,non_PNPM
+plant_patho_ASV_4174,1,1,Plant pathogen,588,589,PNPM
+plant_patho_ASV_4391,0,-0.714285714,Plant pathogen,589,590,non_PNPM
+plant_patho_ASV_4411,0,-0.846153846,Plant pathogen,590,591,non_PNPM
+plant_patho_ASV_9146,0,0.75,Plant pathogen,591,592,PNPM
+plant_patho_ASV_4375,0,0.7,Plant pathogen,592,593,PNPM
+plant_patho_ASV_4807,0,-0.454545455,Plant pathogen,593,594,non_PNPM
+plant_patho_ASV_4020,1,1,Plant pathogen,594,595,PNPM
+plant_patho_ASV_4197,0,-0.111111111,Plant pathogen,595,596,non_PNPM
+plant_patho_ASV_3967,1,1,Plant pathogen,596,597,PNPM
+plant_patho_ASV_4119,0,-0.333333333,Plant pathogen,597,598,non_PNPM
+plant_patho_ASV_5065,0,0.666666667,Plant pathogen,598,599,PNPM
+plant_patho_ASV_4257,1,1,Plant pathogen,599,600,PNPM
+plant_patho_ASV_4534,1,1,Plant pathogen,600,601,PNPM
+plant_patho_ASV_4120,0,-0.6,Plant pathogen,601,602,non_PNPM
+plant_patho_ASV_4280,0,-0.076923077,Plant pathogen,602,603,non_PNPM
+plant_patho_ASV_4289,0,-1,Plant pathogen,603,604,non_PNPM
+plant_patho_ASV_5013,0,0,Plant pathogen,604,605,non_PNPM
+plant_patho_ASV_4198,0,-1,Plant pathogen,605,606,non_PNPM
+plant_patho_ASV_5192,0,-0.866666667,Plant pathogen,606,607,non_PNPM
+plant_patho_ASV_4568,0,-1,Plant pathogen,607,608,non_PNPM
+plant_patho_ASV_4272,0,-1,Plant pathogen,608,609,non_PNPM
+plant_patho_ASV_4436,0,-0.818181818,Plant pathogen,609,610,non_PNPM
+plant_patho_ASV_4895,0,0.454545455,Plant pathogen,610,611,PNPM
+plant_patho_ASV_4900,0,-0.857142857,Plant pathogen,611,612,non_PNPM
+plant_patho_ASV_5059,0,-1,Plant pathogen,612,613,non_PNPM
+plant_patho_ASV_5130,0,0.333333333,Plant pathogen,613,614,PNPM
+plant_patho_ASV_4238,0,-0.714285714,Plant pathogen,614,615,non_PNPM
+plant_patho_ASV_4427,1,1,Plant pathogen,615,616,PNPM
+plant_patho_ASV_4442,0,-0.818181818,Plant pathogen,616,617,non_PNPM
+plant_patho_ASV_4583,1,1,Plant pathogen,617,618,PNPM
+plant_patho_ASV_4779,0,-1,Plant pathogen,618,619,non_PNPM
+plant_patho_ASV_4506,0,-1,Plant pathogen,619,620,non_PNPM
+plant_patho_ASV_5729,0,0.142857143,Plant pathogen,620,621,PNPM
+plant_patho_ASV_6401,0,-0.625,Plant pathogen,621,622,non_PNPM
+plant_patho_ASV_4333,0,-0.636363636,Plant pathogen,622,623,non_PNPM
+plant_patho_ASV_4457,0,-1,Plant pathogen,623,624,non_PNPM
+plant_patho_ASV_5768,0,2.78E-17,Plant pathogen,624,625,PNPM
+plant_patho_ASV_4677,1,1,Plant pathogen,625,626,PNPM
+plant_patho_ASV_5420,0,-0.7,Plant pathogen,626,627,non_PNPM
+plant_patho_ASV_4462,0,-1,Plant pathogen,627,628,non_PNPM
+plant_patho_ASV_4562,0,-0.714285714,Plant pathogen,628,629,non_PNPM
+plant_patho_ASV_5107,0,-0.333333333,Plant pathogen,629,630,non_PNPM
+plant_patho_ASV_4526,0,0.2,Plant pathogen,630,631,PNPM
+plant_patho_ASV_4668,0,-1,Plant pathogen,631,632,non_PNPM
+plant_patho_ASV_4679,1,1,Plant pathogen,632,633,PNPM
+plant_patho_ASV_4685,1,1,Plant pathogen,633,634,PNPM
+plant_patho_ASV_4576,1,1,Plant pathogen,634,635,PNPM
+plant_patho_ASV_4830,0,-0.846153846,Plant pathogen,635,636,non_PNPM
+plant_patho_ASV_4564,0,-0.8,Plant pathogen,636,637,non_PNPM
+plant_patho_ASV_4745,0,-1,Plant pathogen,637,638,non_PNPM
+plant_patho_ASV_6364,1,1,Plant pathogen,638,639,PNPM
+plant_patho_ASV_4596,0,-1,Plant pathogen,639,640,non_PNPM
+plant_patho_ASV_4786,0,-1,Plant pathogen,640,641,non_PNPM
+plant_patho_ASV_4834,0,-0.272727273,Plant pathogen,641,642,non_PNPM
+plant_patho_ASV_5865,0,-0.285714286,Plant pathogen,642,643,non_PNPM
+plant_patho_ASV_4857,0,-1,Plant pathogen,643,644,non_PNPM
+plant_patho_ASV_4979,1,1,Plant pathogen,644,645,PNPM
+plant_patho_ASV_5002,0,-0.866666667,Plant pathogen,645,646,non_PNPM
+plant_patho_ASV_5053,0,-0.75,Plant pathogen,646,647,non_PNPM
+plant_patho_ASV_5559,0,-0.428571429,Plant pathogen,647,648,non_PNPM
+plant_patho_ASV_4827,0,-1,Plant pathogen,648,649,non_PNPM
+plant_patho_ASV_5041,1,1,Plant pathogen,649,650,PNPM
+plant_patho_ASV_5067,0,0.555555556,Plant pathogen,650,651,PNPM
+plant_patho_ASV_4710,0,0.714285714,Plant pathogen,651,652,PNPM
+plant_patho_ASV_5074,0,-1,Plant pathogen,652,653,non_PNPM
+plant_patho_ASV_5085,0,-0.2,Plant pathogen,653,654,non_PNPM
+plant_patho_ASV_5236,1,1,Plant pathogen,654,655,PNPM
+plant_patho_ASV_5683,0,0.666666667,Plant pathogen,655,656,PNPM
+plant_patho_ASV_5742,0,-0.666666667,Plant pathogen,656,657,non_PNPM
+plant_patho_ASV_4832,0,-0.777777778,Plant pathogen,657,658,non_PNPM
+plant_patho_ASV_4972,1,1,Plant pathogen,658,659,PNPM
+plant_patho_ASV_5386,0,-1,Plant pathogen,659,660,non_PNPM
+plant_patho_ASV_6000,1,1,Plant pathogen,660,661,PNPM
+plant_patho_ASV_5044,1,1,Plant pathogen,661,662,PNPM
+plant_patho_ASV_5476,0,-1,Plant pathogen,662,663,non_PNPM
+plant_patho_ASV_5604,1,1,Plant pathogen,663,664,PNPM
+plant_patho_ASV_5907,1,1,Plant pathogen,664,665,PNPM
+plant_patho_ASV_6394,0,-0.2,Plant pathogen,665,666,non_PNPM
+plant_patho_ASV_8101,1,1,Plant pathogen,666,667,PNPM
+plant_patho_ASV_4977,1,1,Plant pathogen,667,668,PNPM
+plant_patho_ASV_5348,0,-1,Plant pathogen,668,669,non_PNPM
+plant_patho_ASV_5408,1,1,Plant pathogen,669,670,PNPM
+plant_patho_ASV_7944,0,0.2,Plant pathogen,670,671,PNPM
+plant_patho_ASV_5061,0,-1,Plant pathogen,671,672,non_PNPM
+plant_patho_ASV_5124,0,-0.818181818,Plant pathogen,672,673,non_PNPM
+plant_patho_ASV_5370,0,-1,Plant pathogen,673,674,non_PNPM
+plant_patho_ASV_5401,1,1,Plant pathogen,674,675,PNPM
+plant_patho_ASV_5653,0,-0.538461538,Plant pathogen,675,676,non_PNPM
+plant_patho_ASV_5808,1,1,Plant pathogen,676,677,PNPM
+plant_patho_ASV_5866,1,1,Plant pathogen,677,678,PNPM
+plant_patho_ASV_5966,0,-0.454545455,Plant pathogen,678,679,non_PNPM
+plant_patho_ASV_6361,1,1,Plant pathogen,679,680,PNPM
+plant_patho_ASV_6636,0,-1,Plant pathogen,680,681,non_PNPM
+plant_patho_ASV_5304,0,-1,Plant pathogen,681,682,non_PNPM
+plant_patho_ASV_5325,1,1,Plant pathogen,682,683,PNPM
+plant_patho_ASV_5500,1,1,Plant pathogen,683,684,PNPM
+plant_patho_ASV_5509,1,1,Plant pathogen,684,685,PNPM
+plant_patho_ASV_5909,0,0.846153846,Plant pathogen,685,686,PNPM
+plant_patho_ASV_6630,0,0.909090909,Plant pathogen,686,687,PNPM
+plant_patho_ASV_7272,0,-1,Plant pathogen,687,688,non_PNPM
+plant_patho_ASV_5507,1,1,Plant pathogen,688,689,PNPM
+plant_patho_ASV_5533,0,-1,Plant pathogen,689,690,non_PNPM
+plant_patho_ASV_5567,0,-1,Plant pathogen,690,691,non_PNPM
+plant_patho_ASV_6395,0,-1,Plant pathogen,691,692,non_PNPM
+plant_patho_ASV_5311,1,1,Plant pathogen,692,693,PNPM
+plant_patho_ASV_5395,1,1,Plant pathogen,693,694,PNPM
+plant_patho_ASV_5737,0,-1,Plant pathogen,694,695,non_PNPM
+plant_patho_ASV_5981,1,1,Plant pathogen,695,696,PNPM
+plant_patho_ASV_6607,1,1,Plant pathogen,696,697,PNPM
+plant_patho_ASV_7793,1,1,Plant pathogen,697,698,PNPM
+plant_patho_ASV_5472,0,0,Plant pathogen,698,699,non_PNPM
+plant_patho_ASV_5606,1,1,Plant pathogen,699,700,PNPM
+plant_patho_ASV_6293,1,1,Plant pathogen,700,701,PNPM
+plant_patho_ASV_6955,0,0.555555556,Plant pathogen,701,702,PNPM
+plant_patho_ASV_6972,0,-0.6,Plant pathogen,702,703,non_PNPM
+plant_patho_ASV_5668,1,1,Plant pathogen,703,704,PNPM
+plant_patho_ASV_5693,1,1,Plant pathogen,704,705,PNPM
+plant_patho_ASV_5794,1,1,Plant pathogen,705,706,PNPM
+plant_patho_ASV_5944,0,-1,Plant pathogen,706,707,non_PNPM
+plant_patho_ASV_6208,1,1,Plant pathogen,707,708,PNPM
+plant_patho_ASV_6302,0,-0.428571429,Plant pathogen,708,709,non_PNPM
+plant_patho_ASV_6610,1,1,Plant pathogen,709,710,PNPM
+plant_patho_ASV_5795,1,1,Plant pathogen,710,711,PNPM
+plant_patho_ASV_6044,0,0.25,Plant pathogen,711,712,PNPM
+plant_patho_ASV_6239,0,-1,Plant pathogen,712,713,non_PNPM
+plant_patho_ASV_6442,1,1,Plant pathogen,713,714,PNPM
+plant_patho_ASV_6567,0,-0.384615385,Plant pathogen,714,715,non_PNPM
+plant_patho_ASV_6860,0,-0.2,Plant pathogen,715,716,non_PNPM
+plant_patho_ASV_5805,1,1,Plant pathogen,716,717,PNPM
+plant_patho_ASV_5900,1,1,Plant pathogen,717,718,PNPM
+plant_patho_ASV_5920,0,-0.538461538,Plant pathogen,718,719,non_PNPM
+plant_patho_ASV_6496,0,-0.866666667,Plant pathogen,719,720,non_PNPM
+plant_patho_ASV_10724,0,-0.333333333,Plant pathogen,720,721,non_PNPM
+plant_patho_ASV_5722,0,-1,Plant pathogen,721,722,non_PNPM
+plant_patho_ASV_6056,0,-1,Plant pathogen,722,723,non_PNPM
+plant_patho_ASV_6864,0,0.2,Plant pathogen,723,724,PNPM
+plant_patho_ASV_7276,0,-1,Plant pathogen,724,725,non_PNPM
+plant_patho_ASV_6436,0,-1,Plant pathogen,725,726,non_PNPM
+plant_patho_ASV_6768,0,-0.25,Plant pathogen,726,727,non_PNPM
+plant_patho_ASV_6836,1,1,Plant pathogen,727,728,PNPM
+plant_patho_ASV_7688,0,0.666666667,Plant pathogen,728,729,PNPM
+plant_patho_ASV_10297,0,-1,Plant pathogen,729,730,non_PNPM
+plant_patho_ASV_5934,0,-1,Plant pathogen,730,731,non_PNPM
+plant_patho_ASV_5959,0,-1,Plant pathogen,731,732,non_PNPM
+plant_patho_ASV_5996,1,1,Plant pathogen,732,733,PNPM
+plant_patho_ASV_6194,1,1,Plant pathogen,733,734,PNPM
+plant_patho_ASV_6580,0,-1,Plant pathogen,734,735,non_PNPM
+plant_patho_ASV_6615,1,1,Plant pathogen,735,736,PNPM
+plant_patho_ASV_6996,0,0.333333333,Plant pathogen,736,737,PNPM
+plant_patho_ASV_7012,1,1,Plant pathogen,737,738,PNPM
+plant_patho_ASV_7020,1,1,Plant pathogen,738,739,PNPM
+plant_patho_ASV_7405,0,-1,Plant pathogen,739,740,non_PNPM
+plant_patho_ASV_7598,0,-1,Plant pathogen,740,741,non_PNPM
+plant_patho_ASV_9493,0,-0.333333333,Plant pathogen,741,742,non_PNPM
+plant_patho_ASV_6140,0,-1,Plant pathogen,742,743,non_PNPM
+plant_patho_ASV_6347,1,1,Plant pathogen,743,744,PNPM
+plant_patho_ASV_6398,0,-1,Plant pathogen,744,745,non_PNPM
+plant_patho_ASV_6420,0,-1,Plant pathogen,745,746,non_PNPM
+plant_patho_ASV_6533,0,-0.8,Plant pathogen,746,747,non_PNPM
+plant_patho_ASV_6589,1,1,Plant pathogen,747,748,PNPM
+plant_patho_ASV_6835,0,-1,Plant pathogen,748,749,non_PNPM
+plant_patho_ASV_7275,0,0.5,Plant pathogen,749,750,PNPM
+plant_patho_ASV_6351,1,1,Plant pathogen,750,751,PNPM
+plant_patho_ASV_6362,1,1,Plant pathogen,751,752,PNPM
+plant_patho_ASV_6429,0,-1,Plant pathogen,752,753,non_PNPM
+plant_patho_ASV_6616,1,1,Plant pathogen,753,754,PNPM
+plant_patho_ASV_6806,0,-0.714285714,Plant pathogen,754,755,non_PNPM
+plant_patho_ASV_7447,0,-1,Plant pathogen,755,756,non_PNPM
+plant_patho_ASV_8455,0,-0.571428571,Plant pathogen,756,757,non_PNPM
+plant_patho_ASV_9514,0,0.2,Plant pathogen,757,758,PNPM
+plant_patho_ASV_6562,1,1,Plant pathogen,758,759,PNPM
+plant_patho_ASV_6584,1,1,Plant pathogen,759,760,PNPM
+plant_patho_ASV_6735,1,1,Plant pathogen,760,761,PNPM
+plant_patho_ASV_6755,1,1,Plant pathogen,761,762,PNPM
+plant_patho_ASV_6808,0,-1,Plant pathogen,762,763,non_PNPM
+plant_patho_ASV_7116,0,0.333333333,Plant pathogen,763,764,PNPM
+plant_patho_ASV_7231,0,-0.454545455,Plant pathogen,764,765,non_PNPM
+plant_patho_ASV_7575,0,0,Plant pathogen,765,766,non_PNPM
+plant_patho_ASV_7592,0,0.2,Plant pathogen,766,767,PNPM
+plant_patho_ASV_8148,0,0,Plant pathogen,767,768,non_PNPM
+plant_patho_ASV_8635,1,1,Plant pathogen,768,769,PNPM
+plant_patho_ASV_9339,1,1,Plant pathogen,769,770,PNPM
+plant_patho_ASV_6455,1,1,Plant pathogen,770,771,PNPM
+plant_patho_ASV_6550,0,-1,Plant pathogen,771,772,non_PNPM
+plant_patho_ASV_6691,0,-1,Plant pathogen,772,773,non_PNPM
+plant_patho_ASV_6759,1,1,Plant pathogen,773,774,PNPM
+plant_patho_ASV_6974,0,-1,Plant pathogen,774,775,non_PNPM
+plant_patho_ASV_7434,0,0,Plant pathogen,775,776,non_PNPM
+plant_patho_ASV_7813,0,-1,Plant pathogen,776,777,non_PNPM
+plant_patho_ASV_7815,0,0.375,Plant pathogen,777,778,PNPM
+plant_patho_ASV_8690,1,1,Plant pathogen,778,779,PNPM
+plant_patho_ASV_6544,0,-0.25,Plant pathogen,779,780,non_PNPM
+plant_patho_ASV_6688,0,-1,Plant pathogen,780,781,non_PNPM
+plant_patho_ASV_6740,1,1,Plant pathogen,781,782,PNPM
+plant_patho_ASV_6850,0,-1,Plant pathogen,782,783,non_PNPM
+plant_patho_ASV_6887,1,1,Plant pathogen,783,784,PNPM
+plant_patho_ASV_6952,0,-0.714285714,Plant pathogen,784,785,non_PNPM
+plant_patho_ASV_7165,1,1,Plant pathogen,785,786,PNPM
+plant_patho_ASV_7181,1,1,Plant pathogen,786,787,PNPM
+plant_patho_ASV_7334,1,1,Plant pathogen,787,788,PNPM
+plant_patho_ASV_7528,1,1,Plant pathogen,788,789,PNPM
+plant_patho_ASV_6878,1,1,Plant pathogen,789,790,PNPM
+plant_patho_ASV_6901,0,-1,Plant pathogen,790,791,non_PNPM
+plant_patho_ASV_7095,0,-1,Plant pathogen,791,792,non_PNPM
+plant_patho_ASV_7277,0,-1,Plant pathogen,792,793,non_PNPM
+plant_patho_ASV_7357,1,1,Plant pathogen,793,794,PNPM
+plant_patho_ASV_7508,1,1,Plant pathogen,794,795,PNPM
+plant_patho_ASV_7674,1,1,Plant pathogen,795,796,PNPM
+plant_patho_ASV_8330,0,-0.111111111,Plant pathogen,796,797,non_PNPM
+plant_patho_ASV_6873,1,1,Plant pathogen,797,798,PNPM
+plant_patho_ASV_6992,0,-1,Plant pathogen,798,799,non_PNPM
+plant_patho_ASV_7070,0,-1,Plant pathogen,799,800,non_PNPM
+plant_patho_ASV_7132,0,-1,Plant pathogen,800,801,non_PNPM
+plant_patho_ASV_7193,1,1,Plant pathogen,801,802,PNPM
+plant_patho_ASV_7206,0,-1,Plant pathogen,802,803,non_PNPM
+plant_patho_ASV_7314,1,1,Plant pathogen,803,804,PNPM
+plant_patho_ASV_7887,1,1,Plant pathogen,804,805,PNPM
+plant_patho_ASV_8043,0,-1,Plant pathogen,805,806,non_PNPM
+plant_patho_ASV_8526,0,-0.666666667,Plant pathogen,806,807,non_PNPM
+plant_patho_ASV_9751,1,1,Plant pathogen,807,808,PNPM
+plant_patho_ASV_7155,1,1,Plant pathogen,808,809,PNPM
+plant_patho_ASV_7356,1,1,Plant pathogen,809,810,PNPM
+plant_patho_ASV_7507,1,1,Plant pathogen,810,811,PNPM
+plant_patho_ASV_7663,1,1,Plant pathogen,811,812,PNPM
+plant_patho_ASV_8331,0,-1,Plant pathogen,812,813,non_PNPM
+plant_patho_ASV_9145,0,-0.333333333,Plant pathogen,813,814,non_PNPM
+plant_patho_ASV_9773,1,1,Plant pathogen,814,815,PNPM
+plant_patho_ASV_7318,1,1,Plant pathogen,815,816,PNPM
+plant_patho_ASV_7431,0,-1,Plant pathogen,816,817,non_PNPM
+plant_patho_ASV_7487,1,1,Plant pathogen,817,818,PNPM
+plant_patho_ASV_7540,1,1,Plant pathogen,818,819,PNPM
+plant_patho_ASV_7549,0,-0.5,Plant pathogen,819,820,non_PNPM
+plant_patho_ASV_7654,0,-1,Plant pathogen,820,821,non_PNPM
+plant_patho_ASV_8256,0,-0.5,Plant pathogen,821,822,non_PNPM
+plant_patho_ASV_8327,0,-1,Plant pathogen,822,823,non_PNPM
+plant_patho_ASV_8363,1,1,Plant pathogen,823,824,PNPM
+plant_patho_ASV_8372,1,1,Plant pathogen,824,825,PNPM
+plant_patho_ASV_8524,0,-1,Plant pathogen,825,826,non_PNPM
+plant_patho_ASV_10723,1,1,Plant pathogen,826,827,PNPM
+plant_patho_ASV_10728,1,1,Plant pathogen,827,828,PNPM
+plant_patho_ASV_7316,1,1,Plant pathogen,828,829,PNPM
+plant_patho_ASV_7477,0,-1,Plant pathogen,829,830,non_PNPM
+plant_patho_ASV_7493,1,1,Plant pathogen,830,831,PNPM
+plant_patho_ASV_7680,1,1,Plant pathogen,831,832,PNPM
+plant_patho_ASV_7700,1,1,Plant pathogen,832,833,PNPM
+plant_patho_ASV_7819,0,-0.333333333,Plant pathogen,833,834,non_PNPM
+plant_patho_ASV_7823,0,-1,Plant pathogen,834,835,non_PNPM
+plant_patho_ASV_7861,0,-1,Plant pathogen,835,836,non_PNPM
+plant_patho_ASV_8202,0,-1,Plant pathogen,836,837,non_PNPM
+plant_patho_ASV_8434,0,-0.777777778,Plant pathogen,837,838,non_PNPM
+plant_patho_ASV_9021,1,1,Plant pathogen,838,839,PNPM
+plant_patho_ASV_7713,1,1,Plant pathogen,839,840,PNPM
+plant_patho_ASV_7975,0,0.6,Plant pathogen,840,841,PNPM
+plant_patho_ASV_8179,0,-0.6,Plant pathogen,841,842,non_PNPM
+plant_patho_ASV_8527,0,-1,Plant pathogen,842,843,non_PNPM
+plant_patho_ASV_8572,0,-1,Plant pathogen,843,844,non_PNPM
+plant_patho_ASV_9112,0,0.6,Plant pathogen,844,845,PNPM
+plant_patho_ASV_7737,0,-1,Plant pathogen,845,846,non_PNPM
+plant_patho_ASV_7799,0,0.333333333,Plant pathogen,846,847,PNPM
+plant_patho_ASV_7933,1,1,Plant pathogen,847,848,PNPM
+plant_patho_ASV_8048,0,-1,Plant pathogen,848,849,non_PNPM
+plant_patho_ASV_8530,0,-1,Plant pathogen,849,850,non_PNPM
+plant_patho_ASV_8687,1,1,Plant pathogen,850,851,PNPM
+plant_patho_ASV_8691,1,1,Plant pathogen,851,852,PNPM
+plant_patho_ASV_8846,1,1,Plant pathogen,852,853,PNPM
+plant_patho_ASV_9200,1,1,Plant pathogen,853,854,PNPM
+plant_patho_ASV_9369,1,1,Plant pathogen,854,855,PNPM
+plant_patho_ASV_10421,0,-0.333333333,Plant pathogen,855,856,non_PNPM
+plant_patho_ASV_7816,0,-1,Plant pathogen,856,857,non_PNPM
+plant_patho_ASV_7883,1,1,Plant pathogen,857,858,PNPM
+plant_patho_ASV_8931,0,-1,Plant pathogen,858,859,non_PNPM
+plant_patho_ASV_8986,1,1,Plant pathogen,859,860,PNPM
+plant_patho_ASV_9942,0,-0.428571429,Plant pathogen,860,861,non_PNPM
+plant_patho_ASV_10629,1,1,Plant pathogen,861,862,PNPM
+plant_patho_ASV_8105,1,1,Plant pathogen,862,863,PNPM
+plant_patho_ASV_8128,1,1,Plant pathogen,863,864,PNPM
+plant_patho_ASV_8408,1,1,Plant pathogen,864,865,PNPM
+plant_patho_ASV_8508,0,-1,Plant pathogen,865,866,non_PNPM
+plant_patho_ASV_8511,0,-0.6,Plant pathogen,866,867,non_PNPM
+plant_patho_ASV_8723,1,1,Plant pathogen,867,868,PNPM
+plant_patho_ASV_8740,0,0.8,Plant pathogen,868,869,PNPM
+plant_patho_ASV_8901,0,-1,Plant pathogen,869,870,non_PNPM
+plant_patho_ASV_8940,1,1,Plant pathogen,870,871,PNPM
+plant_patho_ASV_8339,1,1,Plant pathogen,871,872,PNPM
+plant_patho_ASV_8364,1,1,Plant pathogen,872,873,PNPM
+plant_patho_ASV_8491,0,-1,Plant pathogen,873,874,non_PNPM
+plant_patho_ASV_8579,0,-1,Plant pathogen,874,875,non_PNPM
+plant_patho_ASV_8778,0,-1,Plant pathogen,875,876,non_PNPM
+plant_patho_ASV_8892,0,-1,Plant pathogen,876,877,non_PNPM
+plant_patho_ASV_8951,1,1,Plant pathogen,877,878,PNPM
+plant_patho_ASV_8966,1,1,Plant pathogen,878,879,PNPM
+plant_patho_ASV_8998,1,1,Plant pathogen,879,880,PNPM
+plant_patho_ASV_9154,0,-1,Plant pathogen,880,881,non_PNPM
+plant_patho_ASV_9158,0,-1,Plant pathogen,881,882,non_PNPM
+plant_patho_ASV_9231,0,-1,Plant pathogen,882,883,non_PNPM
+plant_patho_ASV_9490,0,-1,Plant pathogen,883,884,non_PNPM
+plant_patho_ASV_9516,0,-0.6,Plant pathogen,884,885,non_PNPM
+plant_patho_ASV_9658,1,1,Plant pathogen,885,886,PNPM
+plant_patho_ASV_9745,1,1,Plant pathogen,886,887,PNPM
+plant_patho_ASV_9879,0,-1,Plant pathogen,887,888,non_PNPM
+plant_patho_ASV_10681,0,-1,Plant pathogen,888,889,non_PNPM
+plant_patho_ASV_8562,0,-1,Plant pathogen,889,890,non_PNPM
+plant_patho_ASV_8611,0,-1,Plant pathogen,890,891,non_PNPM
+plant_patho_ASV_9274,1,1,Plant pathogen,891,892,PNPM
+plant_patho_ASV_9300,1,1,Plant pathogen,892,893,PNPM
+plant_patho_ASV_9345,1,1,Plant pathogen,893,894,PNPM
+plant_patho_ASV_10669,1,1,Plant pathogen,894,895,PNPM
+plant_patho_ASV_8788,0,-1,Plant pathogen,895,896,non_PNPM
+plant_patho_ASV_8942,1,1,Plant pathogen,896,897,PNPM
+plant_patho_ASV_9265,0,-1,Plant pathogen,897,898,non_PNPM
+plant_patho_ASV_9272,1,1,Plant pathogen,898,899,PNPM
+plant_patho_ASV_9297,1,1,Plant pathogen,899,900,PNPM
+plant_patho_ASV_9365,1,1,Plant pathogen,900,901,PNPM
+plant_patho_ASV_9403,0,-1,Plant pathogen,901,902,non_PNPM
+plant_patho_ASV_9563,0,-1,Plant pathogen,902,903,non_PNPM
+plant_patho_ASV_9617,0,0.5,Plant pathogen,903,904,PNPM
+plant_patho_ASV_10331,0,-0.714285714,Plant pathogen,904,905,non_PNPM
+plant_patho_ASV_10476,0,-0.5,Plant pathogen,905,906,non_PNPM
+plant_patho_ASV_10657,1,1,Plant pathogen,906,907,PNPM
+plant_patho_ASV_9282,1,1,Plant pathogen,907,908,PNPM
+plant_patho_ASV_9772,1,1,Plant pathogen,908,909,PNPM
+plant_patho_ASV_10127,1,1,Plant pathogen,909,910,PNPM
+plant_patho_ASV_10255,1,1,Plant pathogen,910,911,PNPM
+plant_patho_ASV_10486,0,-1,Plant pathogen,911,912,non_PNPM
+plant_patho_ASV_9597,1,1,Plant pathogen,912,913,PNPM
+plant_patho_ASV_9706,1,1,Plant pathogen,913,914,PNPM
+plant_patho_ASV_9804,1,1,Plant pathogen,914,915,PNPM
+plant_patho_ASV_9993,0,-1,Plant pathogen,915,916,non_PNPM
+plant_patho_ASV_10036,0,-1,Plant pathogen,916,917,non_PNPM
+plant_patho_ASV_10112,1,1,Plant pathogen,917,918,PNPM
+plant_patho_ASV_10298,0,-1,Plant pathogen,918,919,non_PNPM
+plant_patho_ASV_10596,0,-1,Plant pathogen,919,920,non_PNPM
+plant_patho_ASV_10605,0,-1,Plant pathogen,920,921,non_PNPM
+plant_patho_ASV_10616,1,1,Plant pathogen,921,922,PNPM
